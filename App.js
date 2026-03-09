@@ -107,7 +107,7 @@ export default function App() {
             centerCoordinate={finalCoords}
             zoomLevel={INITIAL_ZOOM} 
             animationMode="Flyto"
-            pitch={0}
+            pitch={30}
           />
 
           <MapMarkers finalCoords={finalCoords} styles={styles} />

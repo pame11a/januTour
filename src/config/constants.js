@@ -9,18 +9,20 @@ export const POINTS_OF_INTEREST = [
     id: 'prefeitura_municipal',
     title: 'Prefeitura Municipal',
     message: 'Chegamos à Prefeitura. Você está diante da Prefeitura Municipal de Januária. Este casarão de estilo eclético, com suas cores vibrantes em azul e branco, é o coração administrativo da cidade.',
-    latitude:-15.4888559,
-    longitude: -44.3625900,
+    latitude:-15.488692266036272,
+    longitude: -44.36216932359738,
     radius: 15,
   },
+
   {
     id: 'casa_da_memoria',
     title: 'Casa da Memória do Vale São Francisco',
     message: 'Você está diante da Casa da Memória. Este edifício eclético de 1910 antigamente era uma cadeia, porém foi ressignificada e hoje em dia é rica na cultura de Januária. Entre e descubra fotografias raras, objetos da navegação pelo Rio São Francisco e fósseis encontrados na região. É um mergulho profundo no passado que moldou o povo januarense.',
-    latitude: -15.4886873,
-    longitude: -44.3621868,
+    latitude: -15.488537112917218,
+    longitude: -44.36194030748854,
     radius: 15,
   },
+
   {
     id: 'cartorio',
     title: 'Cartório',
@@ -38,6 +40,7 @@ export const POINTS_OF_INTEREST = [
     longitude: -44.3619033,
     radius: 15,
   },
+
   {
     id: 'lanchonete_lanchinho',
     title: 'Lanchonete Lannchinho',
@@ -46,6 +49,7 @@ export const POINTS_OF_INTEREST = [
     longitude: -44.36185436362453,
     radius: 15,
   },
+
   {
     id: 'go_laser',
     title: 'Clinica Go Laser',
