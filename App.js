@@ -101,12 +101,13 @@ export default function App() {
         
         <Mapbox.MapView
           style={styles.map} 
-          styleURL={Mapbox.StyleURL.Street}
+          styleURL={Mapbox.StyleURL.Street} 
         >
           <Mapbox.Camera
             centerCoordinate={finalCoords}
             zoomLevel={INITIAL_ZOOM} 
             animationMode="Flyto"
+            pitch={0}
           />
 
           <MapMarkers finalCoords={finalCoords} styles={styles} />
