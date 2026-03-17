@@ -1,3 +1,6 @@
+import { MAPBOX_ACCESS_TOKEN } from '@env';
+export const MAPBOX_TOKEN = MAPBOX_ACCESS_TOKEN;
+
 // Coordenada Fallback (IFNMG)
 export const FALLBACK_COORDS = [-44.362229, -15.4885799];
 
