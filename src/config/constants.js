@@ -1,3 +1,6 @@
+import { MAPBOX_ACCESS_TOKEN } from '@env';
+export const MAPBOX_TOKEN = MAPBOX_ACCESS_TOKEN;
+
 // Coordenada Fallback (IFNMG)
 export const FALLBACK_COORDS = [-44.362229, -15.4885799];
 
@@ -68,4 +71,14 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
   },
 
+];
+
+export const SEQUENCIA_ROTA_IGREJA = [
+  'catedral',
+  'cartorio',
+  'lanchonete_lanchinho',
+  'go_laser',
+  'gorilla_celulares',
+  'casa_da_memoria',
+  'prefeitura_municipal'
 ];
