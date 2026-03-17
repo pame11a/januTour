@@ -47,5 +47,13 @@ export const styles = StyleSheet.create({
   closeButtonText: {
     color: 'red',
     fontWeight: 'bold',
-  }
+  },
+  dragIndicator: {
+  width: 40,
+  height: 5,
+  backgroundColor: '#CCC',
+  borderRadius: 3,
+  alignSelf: 'center',
+  marginBottom: 10,
+  },
 });
