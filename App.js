@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { View, Text, Platform, TouchableOpacity } from 'react-native';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
@@ -176,7 +176,40 @@ export default function App() {
     }
   };
 
-  const currentTarget = rotaAtiva.length > 0 ? POINTS_OF_INTEREST.find(p => p.id === rotaAtiva[indiceAtual]) : null;
+  const currentTarget = useMemo(() => {
+    if (rotaAtiva.length > 0 && rotaAtiva[indiceAtual]) {
+      return POINTS_OF_INTEREST.find(p => p.id === rotaAtiva[indiceAtual]);
+    }
+    return null;
+  }, [rotaAtiva, indiceAtual]);
+
+  const distanceLabel = useMemo(() => {
+    console.log("GPS:", userLocation, "Alvo:", currentTarget?.title);
+    if (!userLocation || userLocation.length < 2 || !currentTarget) {
+      return "Calculando...";
+    }
+
+    try {
+      const dist = geolib.getDistance(
+        { 
+          latitude: Number(userLocation[1]), 
+          longitude: Number(userLocation[0]) 
+        },
+        { 
+          latitude: Number(currentTarget.latitude), 
+          longitude: Number(currentTarget.longitude) 
+        }
+      );
+
+      if (dist >= 1000) {
+        return `${(dist / 1000).toFixed(1)} km`;
+      }
+      return `${dist} m`;
+    } catch (error) {
+      console.error("Erro no cálculo geolib:", error);
+      return "Erro GPS";
+    }
+  }, [userLocation, currentTarget]); 
 
   return (
     <SafeAreaProvider>
@@ -236,7 +269,13 @@ export default function App() {
 
         {isRouteSelected && currentTarget && !showAlert && (
           <View style={styles.destinationBadge}>
-            <Text style={styles.destinationText}>📍 Próximo: {currentTarget.title}</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <MaterialIcons name="place" size={18} color={colors.cardBackground} style={{ marginRight: 5 }} />
+              
+              <Text style={styles.destinationText}>
+                {currentTarget.title} • <Text style={{ fontWeight: '900' }}>{distanceLabel}</Text>
+              </Text>
+            </View>
           </View>
         )}
 
