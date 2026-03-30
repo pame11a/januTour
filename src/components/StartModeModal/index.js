@@ -10,7 +10,6 @@ export function StartModeModal({ isVisible, onClose, onSelectMode, routeTitle })
       animationType="fade"
       onRequestClose={onClose}
     >
-      {/* TouchableWithoutFeedback permite fechar ao clicar fora */}
       <TouchableWithoutFeedback onPress={onClose}>
         <View style={styles.overlay}>
           <TouchableWithoutFeedback> 
@@ -19,18 +18,19 @@ export function StartModeModal({ isVisible, onClose, onSelectMode, routeTitle })
               <Text style={styles.subtitle}>Como deseja iniciar seu percurso?</Text>
 
               <TouchableOpacity 
-                style={styles.button} 
-                onPress={() => onSelectMode('PROXIMO')}
-              >
-                <Text style={styles.buttonText}>Ponto mais próximo</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity 
                 style={[styles.button, styles.buttonSecondary]} 
                 onPress={() => onSelectMode('ORIGINAL')}
               >
                 <Text style={styles.buttonText}>Início Oficial</Text>
               </TouchableOpacity>
+
+              <TouchableOpacity 
+                style={styles.button} 
+                onPress={() => onSelectMode('PROXIMO')}
+              >
+                <Text style={styles.buttonText}>Ponto mais próximo</Text>
+              </TouchableOpacity>
+              
             </View>
           </TouchableWithoutFeedback>
         </View>

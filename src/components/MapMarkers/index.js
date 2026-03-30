@@ -1,12 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
 import Mapbox from '@rnmapbox/maps';
-import { POINTS_OF_INTEREST } from '../../config/constants'; 
 
-export function MapMarkers({ finalCoords, styles }) {
+export function MapMarkers({ points, userLocation, styles }) {
   return (
     <>
-      {POINTS_OF_INTEREST.map((point) => (
+      {points && points.map((point) => (
         <Mapbox.PointAnnotation
           key={point.id}
           id={point.id}
@@ -16,10 +15,13 @@ export function MapMarkers({ finalCoords, styles }) {
         </Mapbox.PointAnnotation>
       ))}
 
-      <Mapbox.PointAnnotation
-        id="meuPontoAtual"
-        coordinate={finalCoords}
-      />
+      {userLocation && (
+        <Mapbox.PointAnnotation
+          id="meuPontoAtual"
+          coordinate={userLocation}
+        >
+        </Mapbox.PointAnnotation>
+      )}
     </>
   );
 }
