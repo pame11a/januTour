@@ -1,18 +1,33 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#F8F9FA',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: width, 
+    height: height, 
+    backgroundColor: '#F8F9FA', 
     alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
+    justifyContent: 'center', 
+    zIndex: -1, 
+  },
+  spotlight: {
+    position: 'absolute',
+    width: width * 5, 
+    height: width * 5,
+    borderRadius: (width * 1.5) / 2,
+    backgroundColor: '#E3F2FD', 
+    top: -width * 0.2, 
+    zIndex: -1, 
   },
   logoShadowContainer: {
     borderRadius: 100,
     backgroundColor: '#FFF',
-    elevation: 15, 
-    shadowColor: '#000', 
+    elevation: 15,
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.2,
     shadowRadius: 10,
@@ -24,7 +39,7 @@ export const styles = StyleSheet.create({
     borderRadius: 90,
     overflow: 'hidden',
     borderWidth: 4, 
-    borderColor: '#FFFFFF', 
+    borderColor: '#FFFFFF',
   },
   logo: {
     width: '100%',
@@ -47,22 +62,32 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 20,
     lineHeight: 22,
+    fontWeight: '500',
   },
   button: {
     backgroundColor: '#0077b6',
     paddingVertical: 16,
     paddingHorizontal: 80,
     borderRadius: 35,
-    elevation: 6,
+    elevation: 8,
     shadowColor: '#0077b6',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.4,
     shadowRadius: 6,
   },
   buttonText: {
     color: '#FFFFFF',
     fontSize: 18,
-    fontWeight: '900',
+    fontWeight: 'bold',
     letterSpacing: 2,
+  },
+  pattern: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    opacity: 0.5, 
+    zIndex: 0, 
   },
 });

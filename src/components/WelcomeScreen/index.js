@@ -5,15 +5,21 @@ import { styles } from './styles';
 export function WelcomeScreen({ onEnter }) {
   return (
     <View style={styles.container}>
-      <View style={styles.logoShadowContainer}>
-        <View style={styles.logoRoundWrapper}>
-          <Image 
-            source={require('../../../assets/logo.jpg')} 
-            style={styles.logo}
-            resizeMode="cover" 
-          />
+        <View style={styles.spotlight} />
+        <Image 
+            source={require('../../../assets/pattern.png')} 
+            style={styles.pattern}
+            resizeMode="repeat"
+        />
+        <View style={styles.logoShadowContainer}>
+            <View style={styles.logoRoundWrapper}>
+            <Image 
+                source={require('../../../assets/logo.jpg')} 
+                style={styles.logo}
+                resizeMode="cover" 
+            />
+            </View>
         </View>
-      </View>
 
       <View style={styles.textContainer}>
         <Text style={styles.title}>JanuTour</Text>
@@ -30,13 +36,13 @@ export function WelcomeScreen({ onEnter }) {
 
       </View>
 
-      <TouchableOpacity 
-        style={styles.button} 
-        onPress={onEnter}
-        activeOpacity={0.8}
-      >
+        <TouchableOpacity 
+            style={styles.button} 
+            onPress={onEnter}
+            activeOpacity={0.8}
+        >
         <Text style={styles.buttonText}>ENTRAR</Text>
-      </TouchableOpacity>
+        </TouchableOpacity>
     </View>
   );
 }
