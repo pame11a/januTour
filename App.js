@@ -14,6 +14,7 @@ import { MapMarkers } from './src/components/MapMarkers';
 import { RouteSelector } from './src/components/RouteSelector';
 import { StartModeModal } from './src/components/StartModeModal';
 import { NavigationCard } from './src/components/NavigationCard';
+import { WelcomeScreen } from './src/components/WelcomeScreen';
 
 // Configurações e Estilos
 import { styles } from './styles';
@@ -30,6 +31,7 @@ export default function App() {
   const [isRouteSelected, setIsRouteSelected] = useState(false);
   const [tempSelectedRoute, setTempSelectedRoute] = useState(null);
   const [instruction, setInstruction] = useState('');
+  const [hasStarted, setHasStarted] = useState(false);
 
   // Estados de Localização e Rota
   const [userLocation, setUserLocation] = useState(null);
@@ -210,6 +212,10 @@ export default function App() {
       return "Erro GPS";
     }
   }, [userLocation, currentTarget]); 
+
+  if (!hasStarted) {
+    return <WelcomeScreen onEnter={() => setHasStarted(true)} />;
+  }
 
   return (
     <SafeAreaProvider>
