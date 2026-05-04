@@ -15,7 +15,7 @@ export function WelcomeScreen({ onEnter }) {
         <View style={styles.logoShadowContainer}>
             <View style={styles.logoRoundWrapper}>
             <Image 
-                source={require('../../../assets/logo.jpg')} 
+                source={require('../../../assets/logo.png')} 
                 style={styles.logo}
                 resizeMode="cover" 
             />
