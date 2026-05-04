@@ -11,7 +11,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'prefeitura_municipal',
     title: 'Prefeitura Municipal',
-    message: 'Chegamos à Prefeitura. Você está diante da Prefeitura Municipal de Januária. Este casarão de estilo eclético, com suas cores vibrantes em azul e branco, é o coração administrativo da cidade.',
+    message: 'Você chegou ao prédio histórico da Prefeitura Municipal de Januária. Este casarão, datado de 1890, tem estilo eclético e chama atenção pelas suas cores vibrantes em azul e branco. Durante muito tempo, foi o coração administrativo da cidade. Hoje, abriga o Centro de Atendimento ao Turista (CAT). Aproveite para entrar e descobrir mais sobre Januária',
     latitude:-15.488692266036272,
     longitude: -44.36216932359738,
     radius: 15,
@@ -20,7 +20,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'casa_da_memoria',
     title: 'Casa da Memória do Vale São Francisco',
-    message: 'Você está diante da Casa da Memória. Este edifício eclético de 1910 antigamente era uma cadeia, porém foi ressignificada e hoje em dia é rica na cultura de Januária. Entre e descubra fotografias raras, objetos da navegação pelo Rio São Francisco e fósseis encontrados na região. É um mergulho profundo no passado que moldou o povo januarense.',
+    message: 'Você chegou à Casa da Memória do Vale do São Francisco. Este imponente prédio de estilo eclético, construído por volta da década de 1910, possui dois pavimentos e já abrigou o Fórum e a antiga cadeia municipal. As grades reforçadas nas janelas do andar térreo ainda revelam marcas desse passado como prisão. Atualmente, o imóvel passa por restauração e está temporariamente fechado para visitação.',
     latitude: -15.488537112917218,
     longitude: -44.36194030748854,
     radius: 15,
@@ -29,7 +29,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'cartorio',
     title: 'Cartório',
-    message: 'Este prédio, onde funciona o Cartório do 2º Ofício, apresenta linhas mais retas e sóbrias. Note que ele mantém a tradição dos grandes casarões de Januária, mas com menos adornos rebuscados que os vizinhos, justamente por seu modelo arquitetônico ser protomoderno.',
+    message: 'Você chegou ao imóvel localizado na Praça Dom Daniel, nº 91, atual sede do Cartório do 2º Ofício. Este elegante prédio de tipo arquitetônico protomoderno chama atenção por suas linhas mais retas e sóbrias.',
     latitude: -15.489341286219025, 
     longitude: -44.36216951445289,
     radius: 15,
@@ -38,7 +38,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'catedral',
     title: 'Catedral Nossa Senhora das Dores',
-    message: 'Esta é a Catedral de Januária. Sabia que ela é dedicada a Nossa Senhora das Dores, a padroeira da cidade? O prédio que você vê hoje é o resultado de anos de dedicação da comunidade. Olhe para as duas torres sineiras: elas anunciam as festividades e os momentos mais importantes da vida januarense há décadas.',
+    message: 'Você chegou à Catedral Nossa Senhora das Dores, uma das centralidades que marcaram o desenvolvimento da cidade. A construção atual, inaugurada em 1973, substituiu a antiga matriz, erguida em 1878. Sua fachada está voltada para o Rio São Francisco e, ao fundo, destacam-se os antigos prédios da prefeitura e do fórum.',
     latitude: -15.4892315,
     longitude: -44.3619033,
     radius: 15,
@@ -47,16 +47,16 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'lanchonete_lanchinho',
     title: 'Lanchonete Lannchinho',
-    message: 'Está lanchonete possui um modelo arquitetônico do tipo Regional. Mesmo funcionando como uma lanchonete moderna, o prédio ainda preserva o estilo das casas comerciais antigas da cidade.',
+    message: 'Você chegou ao imóvel da Praça Dom Daniel, número 41, na esquina com a rua Cesário Alvim. Atualmente, o espaço abriga a Lanchonete Lanchino e a loja Osheer. Com tipologia arquitetônica regional, o prédio se destaca pela fachada com frontão central e detalhes decorativos em forma de rosáceas. Embora as aberturas tenham sido adaptadas para uso comercial, o charme original da fachada foi preservado.',
     latitude: -15.489651410087054, 
     longitude: -44.36185436362453,
     radius: 15,
   },
 
   {
-    id: 'go_laser',
-    title: 'Clinica Go Laser',
-    message: 'O imovel da Clinica Go Laser possui arquitetura protomoderna. Assim como o imovel do cartório, essas construções foram construídas por volta dos anos 1930. ',
+    id: 'clinica_novo_sorrisso',
+    title: 'Clinica Novo Sorriso',
+    message: 'Você chegou ao imóvel da Praça Dom Daniel, número 13, onde hoje funciona a Clínica Novo Sorriso no andar térreo. Este sobrado, de arquitetura protomoderna, contribui para a diversidade de estilos presentes no patrimônio histórico da cidade.',
     latitude: -15.489894007607662, 
     longitude: -44.361644541144976,
     radius: 15,
@@ -65,13 +65,22 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'gorilla_celulares',
     title: 'Gorila Celulares',
-    message: 'O imóvel da Loja Gorila Celulares possui o modelo arquitetônico eclético. Repare no acabamento superior desta loja. Esses detalhes em relevo na parte branca e preta são remanescentes do ecletismo regional. Note como a estrutura original foi adaptada: as portas largas, típicas dos antigos casarões comerciais, agora dão lugar a uma vitrine moderna',
+    message: 'Você chegou ao imóvel da Praça Dom Daniel, número 13, onde hoje funciona a Clínica Novo Sorriso no andar térreo. Este sobrado, de arquitetura protomoderna, contribui para a diversidade de estilos presentes no patrimônio histórico da cidade.',
     latitude: -15.4895986371885,  
     longitude: -44.36131792528753,
     radius: 15,
   },
 
+  {
+    id: 'loterica',
+    title: 'Loterica', 
+    message: 'Você chegou ao imóvel número 52 da Praça Dom Daniel, onde atualmente funciona uma agência lotérica. Apesar das dimensões reduzidas, o edifício se destaca pela composição marcante e é um dos mais belos exemplares da arquitetura eclética em Januária. Seu frontão recortado, com linhas curvas que se elevam ao centro, apresenta um conjunto ornamentado com pináculos e arco vazado. O toldo instalado sobre os vãos de acesso acaba ocultando parte desses detalhes, que merecem um olhar mais atento. Reserve um momento para apreciar esta joia do patrimônio arquitetônico januarense.',
+    latitude: -15.489475747332492, 
+    longitude: -44.361398537699074,
+    radius: 15,
+  },
 ];
+
 
 export const SEQUENCIA_ROTA_IGREJA = [
   'catedral',

@@ -18,8 +18,16 @@ export function WelcomeScreen({ onEnter }) {
       <View style={styles.textContainer}>
         <Text style={styles.title}>JanuTour</Text>
         <Text style={styles.subtitle}>
-          Explore o patrimônio histórico de Januária na palma da sua mão.
+          O que é o app Janu Tour?
         </Text>
+
+        <Text>
+          O Janu Tour é um aplicativo desenvolvido para turistas e interessados em explorar o Centro Histórico de Januária. A proposta é oferecer uma experiência guiada que permita ao usuário conhecer, de forma acessível e envolvente, o rico patrimônio arquitetônico da cidade, cuja preservação contribui para contar a história e a identidade cultural do município.
+        </Text>   
+        <Text>
+         Em 2024, o Centro Histórico de Januária foi oficialmente tombado pelo Instituto Estadual do Patrimônio Histórico e Artístico de Minas Gerais (IEPHA-MG), reconhecendo seu valor histórico, cultural e arquitetônico.
+         </Text>
+
       </View>
 
       <TouchableOpacity 
