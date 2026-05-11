@@ -8,8 +8,9 @@ export const ROUTES_LIST = [
       'catedral',
       'cartorio',
       'lanchonete_lanchinho',
-      'go_laser',
+      'clinica_novo_sorrisso',
       'gorilla_celulares',
+      'loterica',
       'casa_da_memoria',
       'prefeitura_municipal'
     ],

@@ -81,14 +81,3 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
   },
 ];
-
-
-export const SEQUENCIA_ROTA_IGREJA = [
-  'catedral',
-  'cartorio',
-  'lanchonete_lanchinho',
-  'go_laser',
-  'gorilla_celulares',
-  'casa_da_memoria',
-  'prefeitura_municipal'
-];

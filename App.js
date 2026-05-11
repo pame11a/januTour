@@ -240,10 +240,13 @@ export default function App() {
             zoomLevel={INITIAL_ZOOM} 
             animationMode="Flyto" 
           />
+          <Mapbox.UserLocation 
+            visible={true} 
+            showsUserHeadingIndicator={true} 
+          />
+
           <MapMarkers 
             points={isRouteSelected && currentTarget ? [currentTarget] : []} 
-            userLocation={userLocation} 
-            styles={styles} 
           />
 
           {routeCoordinates.length > 0 && (

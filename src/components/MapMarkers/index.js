@@ -1,27 +1,25 @@
 import React from 'react';
 import { View } from 'react-native';
 import Mapbox from '@rnmapbox/maps';
+import { MaterialIcons } from '@expo/vector-icons';
 
-export function MapMarkers({ points, userLocation, styles }) {
+export const MapMarkers = ({ points }) => {
+  if (!points || points.length === 0) return null;
+
   return (
     <>
-      {points && points.map((point) => (
+      {points.map((point) => (
         <Mapbox.PointAnnotation
-          key={point.id}
-          id={point.id}
+          key={`marker-${point.id}`}
+          id={`marker-${point.id}`}
           coordinate={[point.longitude, point.latitude]}
+          anchor={{ x: 0.5, y: 1 }} // Garante que a "ponta" do alfinete aponte para a coordenada exata
         >
-          <View style={styles.poiMarker} />
+          <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+            <MaterialIcons name="location-pin" size={46} color="#EA4335" />
+          </View>
         </Mapbox.PointAnnotation>
       ))}
-
-      {userLocation && (
-        <Mapbox.PointAnnotation
-          id="meuPontoAtual"
-          coordinate={userLocation}
-        >
-        </Mapbox.PointAnnotation>
-      )}
     </>
   );
-}
+};
