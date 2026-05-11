@@ -40,6 +40,7 @@ export default function App() {
   const [indiceAtual, setIndiceAtual] = useState(0);
   const [routeCoordinates, setRouteCoordinates] = useState([]);
   const cameraRef = useRef(null);
+  const [fullRouteCoordinates, setFullRouteCoordinates] = useState([]);
 
   // Estados de Alerta
   const [showAlert, setShowAlert] = useState(false);
@@ -79,6 +80,33 @@ export default function App() {
     }
   };
 
+  // Busca o traçado completo 
+  const fetchFullRoute = async (sequenciaIds) => {
+    if (!sequenciaIds || sequenciaIds.length < 2) return;
+
+    try {
+      const coords = sequenciaIds.map(id => {
+        const p = POINTS_OF_INTEREST.find(poi => poi.id === id);
+        return p ? `${p.longitude},${p.latitude}` : null;
+      }).filter(Boolean);
+
+      if (coords.length < 2) return;
+
+      const coordinatesString = coords.join(';');
+      const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${coordinatesString}?geometries=geojson&overview=full&access_token=${MAPBOX_TOKEN}`;
+
+      const response = await fetch(url);
+      if (!response.ok) return;
+
+      const data = await response.json();
+      if (data.routes && data.routes.length > 0) {
+        setFullRouteCoordinates(data.routes[0].geometry.coordinates);
+      }
+    } catch (error) {
+      if (__DEV__) console.log("Erro ao buscar rota completa:", error);
+    }
+  };
+
   // Lógica de Início da Rota
   const iniciarTour = (rota, modo, coords) => {
     let novaSequencia = [...rota.sequence];
@@ -109,6 +137,17 @@ export default function App() {
     setIndiceAtual(0);
     setIsRouteSelected(true);
     setRouteCoordinates([]);
+    fetchFullRoute(novaSequencia);
+  };
+
+  const pularDestino = () => {
+    if (!isRouteSelected || rotaAtiva.length === 0) return;
+
+    Speech.stop(); 
+    setShowAlert(false); 
+
+    setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
+    setRouteCoordinates([]); 
   };
 
   const handleRouteSelect = (rota) => {
@@ -185,6 +224,12 @@ export default function App() {
     }
   };
 
+  const inactivePoints = useMemo(() => {
+    if (!isRouteSelected || rotaAtiva.length === 0) return [];
+    const futureIds = rotaAtiva.slice(indiceAtual + 1);
+    return futureIds.map(id => POINTS_OF_INTEREST.find(p => p.id === id)).filter(Boolean);
+  }, [isRouteSelected, rotaAtiva, indiceAtual]);
+
   const currentTarget = useMemo(() => {
     if (rotaAtiva.length > 0 && rotaAtiva[indiceAtual]) {
       return POINTS_OF_INTEREST.find(p => p.id === rotaAtiva[indiceAtual]);
@@ -246,8 +291,21 @@ export default function App() {
           />
 
           <MapMarkers 
-            points={isRouteSelected && currentTarget ? [currentTarget] : []} 
+            activePoint={isRouteSelected && currentTarget ? currentTarget : null} 
+            inactivePoints={inactivePoints}
           />
+
+          {fullRouteCoordinates.length > 0 && (
+            <Mapbox.ShapeSource
+              id="fullRouteSource"
+              shape={{ type: 'Feature', geometry: { type: 'LineString', coordinates: fullRouteCoordinates }}}
+            >
+              <Mapbox.LineLayer
+                id="fullRouteLayer"
+                style={{ lineColor: '#9E9E9E', lineWidth: 4, lineOpacity: 0.5 }}
+              />
+            </Mapbox.ShapeSource>
+          )}
 
           {routeCoordinates.length > 0 && (
             <Mapbox.ShapeSource
@@ -269,6 +327,17 @@ export default function App() {
         >
           <MaterialIcons name="my-location" size={24} color={colors.cardBackground} />
         </TouchableOpacity>
+
+        {isRouteSelected && (
+          <TouchableOpacity 
+            style={styles.skipButton}
+            onPress={pularDestino}
+            activeOpacity={0.8}
+          >
+            <MaterialIcons name="skip-next" size={20} color="#FFF" />
+            <Text style={styles.skipButtonText}>Pular Destino</Text>
+          </TouchableOpacity>
+        )}
 
         <RouteSelector 
           isVisible={isMenuOpen} 
