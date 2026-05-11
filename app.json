@@ -22,7 +22,11 @@
         "backgroundColor": "#F8F9FA"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.pame11a.prototipoAutoguiado"
+      "package": "com.pame11a.prototipoAutoguiado",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"

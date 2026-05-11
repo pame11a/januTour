@@ -8,6 +8,7 @@ export const FALLBACK_COORDS = [-44.362229, -15.4885799];
 export const INITIAL_ZOOM = 18; 
 
 export const POINTS_OF_INTEREST = [
+
   {
     id: 'prefeitura_municipal',
     title: 'Prefeitura Municipal',

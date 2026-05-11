@@ -6,6 +6,7 @@ import Mapbox from '@rnmapbox/maps';
 import * as Location from 'expo-location';
 import * as geolib from 'geolib';
 import { MaterialIcons } from '@expo/vector-icons';
+import * as Speech from 'expo-speech';
 
 // Componentes Modulares
 import { Header } from './src/components/header';
@@ -146,6 +147,12 @@ export default function App() {
               if (dist < (point.radius || 15)) {
                 setActivePointData({ title: point.title, message: point.message });
                 setShowAlert(true);
+                Speech.stop();
+                Speech.speak(point.message, {
+                  language: 'pt-BR',
+                  pitch: 1.0,
+                  rate: 0.9,
+                });
                 setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
                 setRouteCoordinates([]);
               }
@@ -288,7 +295,10 @@ export default function App() {
         <ProximityAlert 
           isVisible={showAlert} 
           data={activePointData} 
-          onClose={() => setShowAlert(false)} 
+          onClose={() => {
+            setShowAlert(false);
+            Speech.stop();
+          }}
           styles={styles} 
         />
       </SafeAreaView>
