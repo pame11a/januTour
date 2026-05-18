@@ -1,10 +1,14 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { styles } from './styles';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 
-export function WelcomeScreen({ onEnter }) {
+// Transformado em export default function para padronizar!
+export default function WelcomeScreen({ navigation }) {
   return (
+    
     <View style={styles.container}>
+        <ExpoStatusBar style="dark" />
         <View style={styles.spotlight} />
         <Image 
             source={require('../../../assets/pattern.png')} 
@@ -40,7 +44,7 @@ export function WelcomeScreen({ onEnter }) {
 
       <TouchableOpacity 
           style={styles.button} 
-          onPress={onEnter}
+          onPress={() => navigation.navigate('Menu')}
           activeOpacity={0.8}
       >
         <Text style={styles.buttonText}>ENTRAR</Text>
