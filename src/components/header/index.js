@@ -1,15 +1,25 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Entypo, MaterialIcons } from '@expo/vector-icons'; 
 import { styles } from './styles';
-import { Entypo } from '@expo/vector-icons'; 
 
-export function Header({ onOpenMenu }){ 
+export function Header({ navigation }) { 
   return (
     <View style={styles.headerContainer}>
-      <Text style={styles.headerTitle}>JanuTour</Text>
       
-      <TouchableOpacity onPress={onOpenMenu} activeOpacity={0.7}>
-        <Entypo name="dots-three-vertical" size={24} color="#FFFFFF" />
-      </TouchableOpacity>
+      <View style={styles.leftContainer}>
+        {navigation && (
+          <TouchableOpacity 
+            onPress={() => navigation.goBack()} 
+            activeOpacity={0.7}
+            style={styles.backButton}
+          >
+            <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        )}
+        <Text style={styles.headerTitle}>JanuTour</Text>
+      </View>
+    
     </View>
   );
-};
+}

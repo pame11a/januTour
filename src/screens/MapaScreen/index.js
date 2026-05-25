@@ -40,16 +40,27 @@ export default function MapaScreen({ route, navigation }) {
   const [showAlert, setShowAlert] = useState(false);
   const [activePointData, setActivePointData] = useState(null);
 
-  // 5. INICIANDO A ROTA ASSIM QUE A TELA CARREGA
   useEffect(() => {
     if (rotaSelecionada && rotaSelecionada.sequence) {
       setRotaAtiva(rotaSelecionada.sequence);
       setIndiceAtual(0);
       fetchFullRoute(rotaSelecionada.sequence);
+
+      const primeiroId = rotaSelecionada.sequence[0];
+      const primeiroPonto = POINTS_OF_INTEREST.find(p => p.id === primeiroId);
+
+      if (primeiroPonto && cameraRef.current) {
+        cameraRef.current.setCamera({
+          centerCoordinate: [primeiroPonto.longitude, primeiroPonto.latitude],
+          zoomLevel: INITIAL_ZOOM,
+          animationMode: 'flyTo',
+          animationDuration: 2000, 
+        });
+      }
     }
   }, [rotaSelecionada]);
 
-  // Busca o traçado real pelas ruas (trecho azul)
+  // Busca o traçado real pelas ruas
   const fetchRoute = async (start, end) => {
     if (!start || !end || start.length < 2 || end.length < 2) {
       setRouteCoordinates([]);
@@ -73,7 +84,7 @@ export default function MapaScreen({ route, navigation }) {
     }
   };
 
-  // Busca o traçado completo (linha cinza)
+  // Busca o traçado completo 
   const fetchFullRoute = async (sequenciaIds) => {
     if (!sequenciaIds || sequenciaIds.length < 2) return;
     try {
@@ -197,20 +208,11 @@ export default function MapaScreen({ route, navigation }) {
       
       <SafeAreaView style={styles.container} edges={['top', 'left', 'right', 'bottom']}>
         
-        {/* Adicionando um botão de voltar provisório no Header */}
-        <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: colors.cardBackground, padding: 15 }}>
-            <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginRight: 15 }}>
-                <MaterialIcons name="arrow-back" size={24} color="#FFF" />
-            </TouchableOpacity>
-            <Text style={{ color: '#FFF', fontSize: 18, fontWeight: 'bold' }}>
-                {rotaSelecionada ? rotaSelecionada.name : 'Mapa'}
-            </Text>
-        </View>
-
+        <Header onOpenMenu={() => setIsMenuOpen(true)} navigation={navigation} />
         <NavigationCard instruction={rotaAtiva.length > 0 ? instruction : null} />
 
         <Mapbox.MapView style={styles.map} styleURL={Mapbox.StyleURL.Street}>
-          <Mapbox.Camera ref={cameraRef} centerCoordinate={userLocation || FALLBACK_COORDS} zoomLevel={INITIAL_ZOOM} animationMode="Flyto" />
+          <Mapbox.Camera ref={cameraRef} centerCoordinate={userLocation || FALLBACK_COORDS} zoomLevel={INITIAL_ZOOM} animationMode="flyto" />
           <Mapbox.UserLocation visible={true} showsUserHeadingIndicator={true} />
           <MapMarkers activePoint={currentTarget} inactivePoints={inactivePoints} />
 

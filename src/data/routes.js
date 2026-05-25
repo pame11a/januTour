@@ -14,7 +14,9 @@ export const ROUTES_LIST = [
       'casa_da_memoria',
       'prefeitura_municipal'
     ],
-    color: '#0077b6'
+    color: '#0077b6',
+    distance: '... ',
+    duration: '...'
   },
   
 ];

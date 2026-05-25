@@ -1,6 +1,7 @@
 import { StyleSheet, Platform} from 'react-native'; 
 import { colors } from '../../styles/colors';
 
+
 export const styles = StyleSheet.create({
   headerContainer: {
     width: '100%', 
@@ -21,6 +22,13 @@ export const styles = StyleSheet.create({
         elevation: 4,
       },
     }),
+  },
+  leftContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  backButton: {
+    marginRight: 12, 
   },
   headerTitle: {
     color: '#FFFFFF',

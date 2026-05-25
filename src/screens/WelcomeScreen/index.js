@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { styles } from './styles';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 
-// Transformado em export default function para padronizar!
 export default function WelcomeScreen({ navigation }) {
   return (
     

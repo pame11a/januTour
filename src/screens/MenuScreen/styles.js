@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#F8F9FA' },
+  menuBg: { flex: 1, width: '100%', height: '100%' }, 
   container: { padding: 20, flexGrow: 1 },
   header: { flexDirection: 'row', alignItems: 'center', marginBottom: 24, marginTop: 10 },
   title: { fontSize: 22, fontWeight: 'bold', color: '#1C2B40', marginLeft: 10 },
