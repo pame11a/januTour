@@ -1,12 +1,16 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { View, Text, Platform, TouchableOpacity } from 'react-native';
+import { View, Text, Platform, TouchableOpacity, Switch } from 'react-native';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import Mapbox from '@rnmapbox/maps';
 import * as Location from 'expo-location';
-import * as geolib from 'geolib';
+import * as geolib from 'geolib'; // Mantido apenas para a Label de Distância
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
+
+// IMPORTAÇÕES DO TURF.JS (Para a lógica de Polígonos)
+import { point, polygon } from '@turf/helpers';
+import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
 
 // 1. CAMINHOS CORRIGIDOS (Subindo dois andares: ../../)
 import { Header } from '../../components/header';
@@ -36,9 +40,10 @@ export default function MapaScreen({ route, navigation }) {
   const [instruction, setInstruction] = useState('');
   const cameraRef = useRef(null);
 
-  // Estados de Alerta
+  // Estados de Alerta e Polígonos
   const [showAlert, setShowAlert] = useState(false);
   const [activePointData, setActivePointData] = useState(null);
+  const [showPolygons, setShowPolygons] = useState(true); // Controle do Switch das Áreas
 
   useEffect(() => {
     if (rotaSelecionada && rotaSelecionada.sequence) {
@@ -117,7 +122,7 @@ export default function MapaScreen({ route, navigation }) {
     setRouteCoordinates([]); 
   };
 
-  // Monitoramento de GPS e Proximidade
+  // Monitoramento de GPS e Proximidade usando Turf.js e Polígonos
   useEffect(() => {
     let subscription;
     (async () => {
@@ -131,20 +136,28 @@ export default function MapaScreen({ route, navigation }) {
           setUserLocation(newCoords);
 
           if (rotaAtiva.length > 0 && !showAlert) {
-            const point = POINTS_OF_INTEREST.find(p => p.id === rotaAtiva[indiceAtual]);
-            if (point) {
-              const dist = geolib.getDistance(
-                { latitude: newCoords[1], longitude: newCoords[0] },
-                { latitude: point.latitude, longitude: point.longitude }
-              );
+            const pointData = POINTS_OF_INTEREST.find(p => p.id === rotaAtiva[indiceAtual]);
+            
+            // Verifica se o ponto possui o polígono desenhado
+            if (pointData && pointData.polygon) {
+              try {
+                const userPt = point(newCoords);
+                // O Turf espera um array contendo o anel do polígono
+                const targetPoly = polygon([pointData.polygon]); 
+                
+                const isInside = booleanPointInPolygon(userPt, targetPoly);
 
-              if (dist < (point.radius || 15)) {
-                setActivePointData({ title: point.title, message: point.message });
-                setShowAlert(true);
-                Speech.stop();
-                Speech.speak(point.message, { language: 'pt-BR', pitch: 1.0, rate: 0.9 });
-                setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
-                setRouteCoordinates([]);
+                // Gatilho ativado apenas se o usuário estiver DENTRO do polígono
+                if (isInside) {
+                  setActivePointData({ title: pointData.title, message: pointData.message });
+                  setShowAlert(true);
+                  Speech.stop();
+                  Speech.speak(pointData.message, { language: 'pt-BR', pitch: 1.0, rate: 0.9 });
+                  setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
+                  setRouteCoordinates([]);
+                }
+              } catch (error) {
+                console.warn("Erro ao calcular intersecção do polígono:", error);
               }
             }
           }
@@ -202,19 +215,56 @@ export default function MapaScreen({ route, navigation }) {
     }
   }, [userLocation, currentTarget]); 
 
+  // Ajuste de segurança para garantir que a função onOpenMenu não quebre caso mude a prop
+  const handleOpenMenu = () => {
+    if (navigation && navigation.openDrawer) {
+      navigation.openDrawer();
+    } else {
+      console.log("Menu action not fully configured in this screen yet.");
+    }
+  };
+
   return (
     <SafeAreaProvider>
       <ExpoStatusBar style="light" backgroundColor={colors.cardBackground} translucent={false} />
       
       <SafeAreaView style={styles.container} edges={['top', 'left', 'right', 'bottom']}>
         
-        <Header onOpenMenu={() => setIsMenuOpen(true)} navigation={navigation} />
+        <Header onOpenMenu={handleOpenMenu} navigation={navigation} />
         <NavigationCard instruction={rotaAtiva.length > 0 ? instruction : null} />
+
+        {/* Switch flutuante para mostrar/esconder as áreas pintadas */}
+        <View style={{ position: 'absolute', top: 80, right: 15, zIndex: 20, backgroundColor: 'white', padding: 8, borderRadius: 20, flexDirection: 'row', alignItems: 'center', elevation: 4 }}>
+          <Text style={{ fontSize: 12, marginRight: 5, color: colors.cardBackground, fontWeight: 'bold' }}>Áreas</Text>
+          <Switch 
+            value={showPolygons} 
+            onValueChange={setShowPolygons} 
+            thumbColor={showPolygons ? colors.cardBackground : "#f4f3f4"}
+            trackColor={{ false: "#767577", true: "#81b0ff" }}
+          />
+        </View>
 
         <Mapbox.MapView style={styles.map} styleURL={Mapbox.StyleURL.Street}>
           <Mapbox.Camera ref={cameraRef} centerCoordinate={userLocation || FALLBACK_COORDS} zoomLevel={INITIAL_ZOOM} animationMode="flyto" />
           <Mapbox.UserLocation visible={true} showsUserHeadingIndicator={true} />
           <MapMarkers activePoint={currentTarget} inactivePoints={inactivePoints} />
+
+          {/* Renderização do Polígono do Local Ativo (só renderiza se o Switch estiver ON) */}
+          {showPolygons && currentTarget && currentTarget.polygon && (
+             <Mapbox.ShapeSource 
+                id="activePolygonSource" 
+                shape={{ type: 'Feature', geometry: { type: 'Polygon', coordinates: [currentTarget.polygon] } }}
+             >
+                <Mapbox.FillLayer 
+                  id="activePolygonFill" 
+                  style={{ fillColor: colors.cardBackground, fillOpacity: 0.3 }} 
+                />
+                <Mapbox.LineLayer 
+                  id="activePolygonLine" 
+                  style={{ lineColor: colors.cardBackground, lineWidth: 2 }} 
+                />
+             </Mapbox.ShapeSource>
+          )}
 
           {fullRouteCoordinates.length > 0 && (
             <Mapbox.ShapeSource id="fullRouteSource" shape={{ type: 'Feature', geometry: { type: 'LineString', coordinates: fullRouteCoordinates }}}>
