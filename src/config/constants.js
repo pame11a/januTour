@@ -135,5 +135,6 @@ export const POINTS_OF_INTEREST = [
       [-44.361418, -15.489593] 
     ]
   },
+
 ];
 
