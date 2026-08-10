@@ -43,7 +43,7 @@ export default function MapaScreen({ route, navigation }) {
   // Estados de Alerta e Polígonos
   const [showAlert, setShowAlert] = useState(false);
   const [activePointData, setActivePointData] = useState(null);
-  const [showPolygons, setShowPolygons] = useState(true); // Controle do Switch das Áreas
+  const DEBUG_SHOW_POLYGONS = false;
 
   useEffect(() => {
     if (rotaSelecionada && rotaSelecionada.sequence) {
@@ -149,7 +149,11 @@ export default function MapaScreen({ route, navigation }) {
 
                 // Gatilho ativado apenas se o usuário estiver DENTRO do polígono
                 if (isInside) {
-                  setActivePointData({ title: pointData.title, message: pointData.message });
+                  setActivePointData({ 
+                    title: pointData.title, 
+                    message: pointData.message, 
+                    imagens: pointData.imagens 
+                  });
                   setShowAlert(true);
                   Speech.stop();
                   Speech.speak(pointData.message, { language: 'pt-BR', pitch: 1.0, rate: 0.9 });
@@ -233,24 +237,12 @@ export default function MapaScreen({ route, navigation }) {
         <Header onOpenMenu={handleOpenMenu} navigation={navigation} />
         <NavigationCard instruction={rotaAtiva.length > 0 ? instruction : null} />
 
-        {/* Switch flutuante para mostrar/esconder as áreas pintadas */}
-        <View style={{ position: 'absolute', top: 80, right: 15, zIndex: 20, backgroundColor: 'white', padding: 8, borderRadius: 20, flexDirection: 'row', alignItems: 'center', elevation: 4 }}>
-          <Text style={{ fontSize: 12, marginRight: 5, color: colors.cardBackground, fontWeight: 'bold' }}>Áreas</Text>
-          <Switch 
-            value={showPolygons} 
-            onValueChange={setShowPolygons} 
-            thumbColor={showPolygons ? colors.cardBackground : "#f4f3f4"}
-            trackColor={{ false: "#767577", true: "#81b0ff" }}
-          />
-        </View>
-
         <Mapbox.MapView style={styles.map} styleURL={Mapbox.StyleURL.Street}>
           <Mapbox.Camera ref={cameraRef} centerCoordinate={userLocation || FALLBACK_COORDS} zoomLevel={INITIAL_ZOOM} animationMode="flyto" />
           <Mapbox.UserLocation visible={true} showsUserHeadingIndicator={true} />
           <MapMarkers activePoint={currentTarget} inactivePoints={inactivePoints} />
 
-          {/* Renderização do Polígono do Local Ativo (só renderiza se o Switch estiver ON) */}
-          {showPolygons && currentTarget && currentTarget.polygon && (
+          {DEBUG_SHOW_POLYGONS && currentTarget && currentTarget.polygon && (
              <Mapbox.ShapeSource 
                 id="activePolygonSource" 
                 shape={{ type: 'Feature', geometry: { type: 'Polygon', coordinates: [currentTarget.polygon] } }}

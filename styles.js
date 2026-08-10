@@ -57,6 +57,7 @@ export const styles = StyleSheet.create({
   },
   alertBox: {
     width: '85%',
+    maxHeight: '80%',
     backgroundColor: 'white',
     borderRadius: 15,
     padding: 25,
@@ -78,7 +79,7 @@ export const styles = StyleSheet.create({
   },
   alertButton: {
     backgroundColor: colors.cardBackground,
-    paddingVertical: 12,
+    paddingVertical: 16,
     paddingHorizontal: 30,
     borderRadius: 10,
   },
@@ -143,4 +144,24 @@ export const styles = StyleSheet.create({
     marginLeft: 6,
     fontSize: 14, 
   },
+  carouselItem: {
+    width: 200, 
+    alignItems: 'center',
+    paddingHorizontal: 5,
+    marginBottom: 15,
+  },
+  carouselImage: {
+    width: 200,  
+    height: 180,
+    borderRadius: 8,
+    backgroundColor: '#e2e8f0',
+    marginBottom: 10,
+    resizeMode: 'cover', 
+  },
+  carouselDescription: {
+    fontSize: 14,
+    color: '#4a5568',
+    textAlign: 'center',
+    lineHeight: 20,
+  }
 });

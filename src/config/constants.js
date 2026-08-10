@@ -21,6 +21,18 @@ export const POINTS_OF_INTEREST = [
       [-44.362144, -15.488898],
       [-44.361908, -15.488795],
       [-44.362133, -15.488366] 
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/icon.png'), // Importação direta do arquivo
+        descricao: 'Vista frontal do casarão.' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/icon.png'), 
+        descricao: 'Detalhes em azul e branco.' 
+      }
     ]
   },
 
