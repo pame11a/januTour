@@ -1,7 +1,7 @@
 
 export const ROUTES_LIST = [
   {
-    id: 'núcleo_histórico',
+    id: 'nucleo_historico',
     title: 'Trajeto Núcleo Histórico',
     description: 'A definir',
     sequence: [
@@ -46,6 +46,25 @@ export const ROUTES_LIST = [
       'imovel_91'
     ],
     color: '#0077b6',
+  },
+
+  {
+    id: 'mata_machado',
+    title: 'Trajeto Mata Machado',
+    description: 'A definir',
+    sequence: [
+      'imovel_92',
+      'imovel_96',
+      'imovel_99',
+      'imovel_101',
+      'imovel_105',
+      'imovel_106',
+      'imovel_110',
+      'imovel_111',
+      'imovel_112',
+      'imovel_114'
+    ],
+    color: '#0077b6'
   }
   
 ];

@@ -91,7 +91,6 @@ export const POINTS_OF_INTEREST = [
       }
     ]
   },
-
   {
     id: 'casa_da_memoria',
     title: 'Casa da Memória do Vale São Francisco',
@@ -108,7 +107,6 @@ export const POINTS_OF_INTEREST = [
       [-44.362181, -15.488469]
     ]
   },
-
   {
     id: 'catedral',
     title: 'Catedral Nossa Senhora das Dores',
@@ -125,7 +123,6 @@ export const POINTS_OF_INTEREST = [
       [-44.361913, -15.48879] 
     ]
   },
-
   {
     id: 'ponto_x',
     title: 'Ponto X',
@@ -142,7 +139,6 @@ export const POINTS_OF_INTEREST = [
       [-44.360703, -15.490706]  
     ],
   },
-
   {
     id: 'imovel_17',
     title: 'Imóvel 17',
@@ -159,7 +155,6 @@ export const POINTS_OF_INTEREST = [
       [-44.359906, -15.490814]
     ]
   },
-
   {
     id: 'imovel_19',
     title: 'Imóvel 19',
@@ -176,7 +171,6 @@ export const POINTS_OF_INTEREST = [
       [-44.359772, -15.490493]
     ]
   },
-
   {
     id: 'imovel_21',
     title: 'Imóvel 21',
@@ -193,7 +187,6 @@ export const POINTS_OF_INTEREST = [
       [-44.359769, -15.490479]
     ]
   },
-
   {
     id: 'imovel_31',
     title: 'Imóvel 31',
@@ -210,7 +203,6 @@ export const POINTS_OF_INTEREST = [
       [-44.360210, -15.488328]
     ]
   },
-
   {
     id: 'imovel_32',
     title: 'Imóvel 32',
@@ -227,7 +219,6 @@ export const POINTS_OF_INTEREST = [
       [-44.360655, -15.487973]
     ]
   },
-
   {
     id: 'imovel_33',
     title: 'Imóvel 33',
@@ -244,7 +235,6 @@ export const POINTS_OF_INTEREST = [
       [-44.361086, -15.487622]
     ]
   },
-
   {
     id: 'imovel_34',
     title: 'Imóvel 34',
@@ -261,7 +251,6 @@ export const POINTS_OF_INTEREST = [
       [-44.361129, -15.487736]
     ]
   },
-
   {
     id: 'imovel_35',
     title: 'Imóvel 35',
@@ -551,6 +540,169 @@ export const POINTS_OF_INTEREST = [
       [-44.362493, -15.493133],
       [-44.362773, -15.493133],
       [-44.362773, -15.492863]
+    ]
+  },
+
+  // Mata machado
+
+  {
+    id: 'imovel_92',
+    title: 'Imóvel 92',
+    message: 'Você está no Imóvel número 92, situado na esquina da Praça Getúlio Vargas com a Rua Mata Machado. Esta edificação térrea destaca-se por ser dividida em três espaços comerciais com pinturas coloridas e independentes. Seu topo traz uma platibanda decorada com rosáceas, rostos neoclássicos e desenhos de coroas de louro em massa, mantendo o charme do centro histórico',
+    latitude: -15.490781849957987,
+    longitude: -44.360469191914696,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.360609, -15.490647],
+      [-44.360329, -15.490647],
+      [-44.360329, -15.490917],
+      [-44.360609, -15.490917],
+      [-44.360609, -15.490647]
+    ]
+  },
+  {
+    id: 'imovel_96',
+    title: 'Imóvel 96',
+    message: 'Você está diante do Imóvel Número 96, um imponente sobrado colonial de dois pavimentos localizado em uma esquina da Rua Mata Machado. O casarão chama a atenção pelo alinhamento das suas portas no andar térreo e pelas várias janelas rasgadas no andar superior. A construção mantém suas características históricas marcantes, como o telhado de quatro águas e os detalhes em madeira.',
+    latitude: -15.490290739014773,
+    longitude: -44.3600277994801,
+    radius: 15,
+    type: 'Colonial',
+    polygon: [
+      [-44.360168, -15.490156],
+      [-44.359888, -15.490156],
+      [-44.359888, -15.490426],
+      [-44.360168, -15.490426],
+      [-44.360168, -15.490156]
+    ]
+  },
+  {
+    id: 'imovel_99',
+    title: 'Imóvel 99',
+    message: 'Você está diante do Imóvel Número 99, uma grande edificação de estilo eclético situada na esquina da Rua Mata Machado com a Rua Lindolfo Caetano. O casarão térreo chama a atenção pela sequência harmoniosa de janelas em arco pleno e pela porta principal com uma pequena escada de acesso. Sua fachada é ornamentada por pilastras, detalhes decorativos em massa e uma platibanda que esconde o telhado de quatro águas.',
+    latitude: -15.489419951441798,
+    longitude: -44.35924034405003,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.359380, -15.489285],
+      [-44.359100, -15.489285],
+      [-44.359100, -15.489555],
+      [-44.359380, -15.489555],
+      [-44.359380, -15.489285]
+    ]
+  },
+  {
+    id: 'imovel_101',
+    title: 'Imóvel 101',
+    message: 'Você está diante do Imóvel Número 101, uma edificação residencial de estilo eclético. A residência térrea se destaca por sua platibanda rendada com elementos vazados, pilaretes com coruchéus e um frontão central ornamentado em alto-relevo. Sua fachada conta com seis vãos em arco abatido, sendo uma porta central e cinco janelas, todos com emolduramento trabalhado em massa e vedações de madeira.',
+    latitude: -15.488853246680613,
+    longitude: -44.35870381940221,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.358844, -15.488718],
+      [-44.358564, -15.488718],
+      [-44.358564, -15.488988],
+      [-44.358844, -15.488988],
+      [-44.358844, -15.488718]
+    ]
+  },
+  {
+    id: 'imovel_105',
+    title: 'Imóvel 105',
+    message: 'Você está diante do Imóvel Número 105, uma relevante edificação comercial de estilo eclético situada na esquina da Rua Barão de São Romão com a Rua Mata Machado. A construção térrea chama a atenção pela sua esquina chanfrada, pilastras moduladas e platibanda ornada com pináculos e frisos decorativos. Em bom estado de conservação, a fachada combina janelas originais de madeira com intervenções mais recentes.',
+    latitude: -15.488638134573783,
+    longitude: -44.35829509824856,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.358435, -15.488503],
+      [-44.358155, -15.488503],
+      [-44.358155, -15.488773],
+      [-44.358435, -15.488773],
+      [-44.358435, -15.488503]
+    ]
+  },
+  {
+    id: 'imovel_106',
+    title: 'Imóvel 106',
+    message: 'Você está diante de uma edificação comercial de estilo regional, situada numa esquina da Rua Barão de São Romão. Esta construção térrea de partido retangular destaca-se pelos seus três panos de parede modulados por pilares e pelo friso decorado com desenhos em alto-relevo. O telhado possui cobertura em duas águas com telhas artesanais do tipo capa e bica.',
+    latitude: -15.4884848869256,
+    longitude: -44.35815894432452,
+    radius: 15,
+    type: 'Regional',
+    polygon: [
+      [-44.358299, -15.488350],
+      [-44.358019, -15.488350],
+      [-44.358019, -15.488620],
+      [-44.358299, -15.488620],
+      [-44.358299, -15.488350]
+    ]
+  },
+  {
+    id: 'imovel_110',
+    title: 'Imóvel 110',
+    message: 'Você está diante do antigo Edifício do Batalhão da Polícia Militar, uma edificação de estilo eclético construída em dois pavimentos na esquina da Praça Santa Cruz com a Rua Mata Machado. O prédio chama a atenção por seus alicerces elevados de pedra, ritmo rítmico das aberturas e platibanda decorada com balaustrada e frontão central. O imóvel encontra-se atualmente em avançado estado de degradação.',
+    latitude: -15.487476966637827,
+    longitude: -44.357394374275145,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.357534, -15.487342],
+      [-44.357254, -15.487342],
+      [-44.357254, -15.487612],
+      [-44.357534, -15.487612],
+      [-44.357534, -15.487342]
+    ]
+  },
+  {
+    id: 'imovel_111',
+    title: 'Imóvel 111',
+    message: 'Você está diante desta pequena edificação de estilo regional com o Número 7 gravado na fachada. O imóvel térreo destaca-se pela sua platibanda decorada com recorte curvo no topo e pelo enquadramento que une a porta e a janela frontal, onde se lê o ano "1909" em relevo.',
+    latitude: -15.487178783444588,
+    longitude: -44.35768087885222,
+    radius: 15,
+    type: 'Regional',
+    polygon: [
+      [-44.357821, -15.487044],
+      [-44.357541, -15.487044],
+      [-44.357541, -15.487314],
+      [-44.357821, -15.487314],
+      [-44.357821, -15.487044]
+    ]
+  },
+  {
+    id: 'imovel_112',
+    title: 'Imóvel 112',
+    message: 'Você está diante de um relevante conjunto arquitetônico de estilo colonial situado na Rua Operária, composto por edificações térreas de partido retangular implantadas no alinhamento da via e em parede-meia. O conjunto abrange o prédio de número 65 e 73, que possui platibanda ornamental reta e cunhais, e a sequência de casas geminadas de número 79, 83, 87, 91 e 97, destacando-se pela fachada modulada por pilares, frisos, cornijas e ritmo ordenado de portas e janelas.',
+    latitude: -15.487890218330442,
+    longitude: -44.35893415684557,
+    radius: 15,
+    type: 'Colonial',
+    polygon: [
+      [-44.359074, -15.487755],
+      [-44.358794, -15.487755],
+      [-44.358794, -15.488025],
+      [-44.359074, -15.488025],
+      [-44.359074, -15.487755]
+    ]
+  },
+  {
+    id: 'imovel_114',
+    title: 'Imóvel 114',
+    message: 'Você está diante do antigo Cine Januária, edificação de estilo protomoderno e único cinema de rua da história do município. Inaugurado na década de 1950, o espaço funcionou regularmente até os anos 1980 e operou com exibições intermitentes até seu fechamento definitivo nos anos 1990. O imóvel destaca-se por sua fachada geométrica com platibanda escalonada, portão central pantográfico com letreiro original e barrado inferior em revestimento de pedra.',
+    latitude: -15.490052143109176,
+    longitude: -44.36077058209159,
+    radius: 15,
+    type: 'Protomoderno',
+    polygon: [
+      [-44.360911, -15.489917],
+      [-44.360631, -15.489917],
+      [-44.360631, -15.490187],
+      [-44.360911, -15.490187],
+      [-44.360911, -15.489917]
     ]
   }
 
