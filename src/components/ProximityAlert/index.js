@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons'; // Importando as setinhas
+import { MaterialIcons } from '@expo/vector-icons'; 
 
 export function ProximityAlert({ isVisible, onClose, styles, data }) {
   const [imagemAtualIndex, setImagemAtualIndex] = useState(0);

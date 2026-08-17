@@ -8,6 +8,11 @@ import MapaScreen from './src/screens/MapaScreen';
 import MenuScreen from './src/screens/MenuScreen';
 import PreviaRotaScreen from './src/screens/PreviaRotaScreen';
 
+import Mapbox from '@rnmapbox/maps';
+import { MAPBOX_TOKEN } from './src/config/constants';
+
+Mapbox.setAccessToken(MAPBOX_TOKEN);
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {

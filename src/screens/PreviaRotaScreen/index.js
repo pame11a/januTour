@@ -13,8 +13,11 @@ export default function PreviaRotaScreen({ route, navigation }) {
   const { rotaSelecionada } = route.params || {};
   const [isResumoOpen, setIsResumoOpen] = useState(true);
   
-  // NOVO: Estado para guardar o desenho da linha nas ruas
   const [fullRouteCoordinates, setFullRouteCoordinates] = useState([]);
+  
+  // NOVOS ESTADOS: Para guardar a distância e duração reais da API
+  const [distanciaCalculada, setDistanciaCalculada] = useState('Calculando...');
+  const [duracaoCalculada, setDuracaoCalculada] = useState('Calculando...');
 
   const routePoints = useMemo(() => {
     if (!rotaSelecionada || !rotaSelecionada.sequence) return [];
@@ -22,6 +25,30 @@ export default function PreviaRotaScreen({ route, navigation }) {
       .map(id => POINTS_OF_INTEREST.find(p => p.id === id))
       .filter(Boolean); 
   }, [rotaSelecionada]);
+
+  // NOVO: Calcula dinamicamente a quantidade de imóveis por tipo
+  const statsImoveis = useMemo(() => {
+    const counts = { colonial: 0, regional: 0, ecletico: 0, protomoderno: 0, moderno: 0 };
+    
+    routePoints.forEach(ponto => {
+      if (ponto.type) {
+        // Padroniza para letras minúsculas para evitar erros de digitação
+        const tipo = ponto.type.toLowerCase(); 
+        
+        if (tipo.includes('colonial')) counts.colonial++;
+        if (tipo.includes('regional')) counts.regional++;
+        if (tipo.includes('eclético') || tipo.includes('ecletico')) counts.ecletico++;
+        // Garante que não vai contar 'protomoderno' como 'moderno' duas vezes
+        if (tipo.includes('protomoderno')) {
+            counts.protomoderno++;
+        } else if (tipo.includes('moderno')) {
+            counts.moderno++;
+        }
+      }
+    });
+    
+    return counts;
+  }, [routePoints]);
 
   const mapCameraConfig = useMemo(() => {
     if (routePoints.length === 0) return null;
@@ -48,14 +75,16 @@ export default function PreviaRotaScreen({ route, navigation }) {
     };
   }, [routePoints]);
 
-  // NOVO: Busca o traçado real pelas ruas assim que a tela abre
   useEffect(() => {
     const fetchFullRoute = async () => {
-      if (!routePoints || routePoints.length < 2) return;
+      if (!routePoints || routePoints.length < 2) {
+        setDistanciaCalculada('-');
+        setDuracaoCalculada('-');
+        return;
+      }
       try {
         const coords = routePoints.map(p => `${p.longitude},${p.latitude}`).join(';');
         
-        // Usamos o perfil 'walking' para fazer caminhos de pedestre
         const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${coords}?geometries=geojson&overview=full&access_token=${MAPBOX_TOKEN}`;
         const response = await fetch(url);
         
@@ -63,10 +92,25 @@ export default function PreviaRotaScreen({ route, navigation }) {
 
         const data = await response.json();
         if (data.routes && data.routes.length > 0) {
-          setFullRouteCoordinates(data.routes[0].geometry.coordinates);
+          const rota = data.routes[0];
+          setFullRouteCoordinates(rota.geometry.coordinates);
+
+          // LÓGICA DE DISTÂNCIA E DURAÇÃO DA API
+          const metros = rota.distance;
+          if (metros > 1000) {
+            setDistanciaCalculada((metros / 1000).toFixed(1) + ' km');
+          } else {
+            setDistanciaCalculada(Math.round(metros) + ' m');
+          }
+
+          const segundos = rota.duration;
+          const minutos = Math.round(segundos / 60);
+          setDuracaoCalculada(minutos + ' min');
         }
       } catch (error) {
         console.log("Erro ao buscar rota completa na prévia:", error);
+        setDistanciaCalculada('Erro');
+        setDuracaoCalculada('Erro');
       }
     };
 
@@ -198,16 +242,16 @@ export default function PreviaRotaScreen({ route, navigation }) {
               <View style={styles.accordionContent}>
                 <Text style={styles.summaryText}>
                   <Text style={styles.summaryLabel}>Distância: </Text>
-                  {rotaSelecionada?.distance || 'A calcular...'}
+                  {distanciaCalculada}
                 </Text>
                 
                 <Text style={styles.summaryText}>
-                  <Text style={styles.summaryLabel}>Duração: </Text>
-                  {rotaSelecionada?.duration || 'A calcular...'}
+                  <Text style={styles.summaryLabel}>Duração estimada: </Text>
+                  {duracaoCalculada}
                 </Text>
                 
                 <Text style={styles.summaryText}>
-                  <Text style={styles.summaryLabel}>Quantidade de Imóveis históricos: </Text>
+                  <Text style={styles.summaryLabel}>Quantidade de Imóveis: </Text>
                   {routePoints.length}
                 </Text>
 
@@ -215,11 +259,11 @@ export default function PreviaRotaScreen({ route, navigation }) {
                   Imóveis por tipo:
                 </Text>
                 
-                <Text style={styles.summaryText}>- Colonial: {rotaSelecionada?.stats?.colonial || '-'}</Text>
-                <Text style={styles.summaryText}>- Regional: {rotaSelecionada?.stats?.regional || '-'}</Text>
-                <Text style={styles.summaryText}>- Eclético: {rotaSelecionada?.stats?.ecletico || '-'}</Text>
-                <Text style={styles.summaryText}>- Protomoderno: {rotaSelecionada?.stats?.protomoderno || '-'}</Text>
-                <Text style={styles.summaryText}>- Moderno: {rotaSelecionada?.stats?.moderno || '-'}</Text>
+                <Text style={styles.summaryText}>- Colonial: {statsImoveis.colonial}</Text>
+                <Text style={styles.summaryText}>- Regional: {statsImoveis.regional}</Text>
+                <Text style={styles.summaryText}>- Eclético: {statsImoveis.ecletico}</Text>
+                <Text style={styles.summaryText}>- Protomoderno: {statsImoveis.protomoderno}</Text>
+                <Text style={styles.summaryText}>- Moderno: {statsImoveis.moderno}</Text>
               </View>
             )}
           </View>

@@ -1,18 +1,23 @@
 
 export const ROUTES_LIST = [
   {
-    id: 'rota_igreja',
-    title: 'Rota da Igreja',
-    description: 'Conheça o entorno da Catedral.',
+    id: 'núcleo_histórico',
+    title: 'Trajeto Núcleo Histórico',
+    description: 'A definir',
     sequence: [
-      'catedral',
-      'cartorio',
-      'lanchonete_lanchinho',
-      'clinica_novo_sorrisso',
-      'gorilla_celulares',
-      'loterica',
+      'prefeitura_municipal',
       'casa_da_memoria',
-      'prefeitura_municipal'
+      'catedral',
+      'ponto_x',
+      'imovel_17',
+      'imovel_19',
+      'imovel_21',
+      'imovel_31',
+      'imovel_32',
+      'imovel_33',
+      'imovel_34',
+      'imovel_35'
+
     ],
     color: '#0077b6',
     distance: '... ',

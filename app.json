@@ -36,7 +36,7 @@
       [
         "@rnmapbox/maps",
         {
-          "accessToken": "pk.eyJ1IjoicGFtZTExYSIsImEiOiJjbWlnMjY5c2IwMmRsM2Zwb3FzamxkbGg3In0.335QLoA_FqHQDF6EGP49EQ"
+          "RNMapboxMapsImpl": "mapbox"
         }
       ],
       [
