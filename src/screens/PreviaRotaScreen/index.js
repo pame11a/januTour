@@ -26,12 +26,14 @@ export default function PreviaRotaScreen({ route, navigation }) {
       .filter(Boolean); 
   }, [rotaSelecionada]);
 
-  // NOVO: Calcula dinamicamente a quantidade de imóveis por tipo
+
   const statsImoveis = useMemo(() => {
-    const counts = { colonial: 0, regional: 0, ecletico: 0, protomoderno: 0, moderno: 0 };
-    
+    const counts = { colonial: 0, regional: 0, ecletico: 0, protomoderno: 0, moderno: 0, naoTombado: 0 };
+
     routePoints.forEach(ponto => {
-      if (ponto.type) {
+      if (ponto.type && (ponto.type.toLowerCase().includes('não tombado') || ponto.type.toLowerCase().includes('nao tombado'))) {
+        counts.naoTombado++;
+      } else if (ponto.type) {
         // Padroniza para letras minúsculas para evitar erros de digitação
         const tipo = ponto.type.toLowerCase(); 
         
@@ -264,6 +266,7 @@ export default function PreviaRotaScreen({ route, navigation }) {
                 <Text style={styles.summaryText}>- Eclético: {statsImoveis.ecletico}</Text>
                 <Text style={styles.summaryText}>- Protomoderno: {statsImoveis.protomoderno}</Text>
                 <Text style={styles.summaryText}>- Moderno: {statsImoveis.moderno}</Text>
+                <Text style={styles.summaryText}>- Não Tombado: {statsImoveis.naoTombado}</Text>
               </View>
             )}
           </View>

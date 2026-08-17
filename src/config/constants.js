@@ -704,7 +704,41 @@ export const POINTS_OF_INTEREST = [
       [-44.360911, -15.490187],
       [-44.360911, -15.489917]
     ]
-  }
+  },
 
+  //Trajeto D. São Francisco 
+
+  {
+    id: 'imovel_115',
+    title: 'Imóvel 115',
+    message: 'Você está diante da edificação número 115, localizada na Avenida São Francisco. Este imóvel de arquitetura simples apresenta um estado atual de conservação bastante deteriorado, com marcas do tempo visíveis em sua estrutura.',
+    latitude: -15.49118598076174,
+    longitude: -44.35964844483142,
+    radius: 15,
+    type: 'Colonial',
+    polygon: [
+      [-44.359788, -15.491051],
+      [-44.359508, -15.491051],
+      [-44.359508, -15.491321],
+      [-44.359788, -15.491321],
+      [-44.359788, -15.491051]
+    ]
+  },
+  {
+    id: 'imovel_118',
+    title: 'Imóvel 118',
+    message: 'Você está diante do Imóvel número 118, antiga sede da "Cooperativa de Consumo dos Rodoviários de Minas Gerais Ltda.", localizado em uma esquina da Rua Humaitá. A construção fica em um nível mais alto que a calçada, com acesso por uma escada frontal. Chama a atenção pela sua fachada com empena triangular emoldurada e estilo simples, apresentando desgaste no acabamento.',
+    latitude: -15.490418660275342,
+    longitude: -44.358915556137376,
+    radius: 15,
+    type: 'Colonial',
+    polygon: [
+      [-44.359056, -15.490284],
+      [-44.358776, -15.490284],
+      [-44.358776, -15.490554],
+      [-44.359056, -15.490554],
+      [-44.359056, -15.490284]
+    ]
+  }
 ];
 
