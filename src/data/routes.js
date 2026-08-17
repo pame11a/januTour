@@ -20,8 +20,32 @@ export const ROUTES_LIST = [
 
     ],
     color: '#0077b6',
-    distance: '... ',
-    duration: '...'
   },
+
+  {
+    id: 'patrocinio_mota',
+    title: 'Trajeto Patrocínio Mota',
+    description: 'A definir',
+    sequence: [
+      'imovel_37',
+      'imovel_41',
+      'imovel_44',
+      'imovel_47',
+      'imovel_48',
+      'imovel_49',
+      'imovel_50',
+      'imovel_54',
+      'imovel_60',
+      'imovel_61',
+      'imovel_67',
+      'imovel_68',
+      'imovel_79',
+      'imovel_83',
+      'imovel_86',
+      'imovel_90',
+      'imovel_91'
+    ],
+    color: '#0077b6',
+  }
   
 ];
