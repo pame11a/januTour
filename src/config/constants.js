@@ -6,60 +6,6 @@ export const FALLBACK_COORDS = [-44.3916585, -15.4802473];
 export const INITIAL_ZOOM = 18; 
 
 export const POINTS_OF_INTEREST = [
-  {
-    id: 'casa',
-    title: 'Casa',
-    message: 'Você chegou em casa',
-    latitude: -15.470266,
-    longitude: -44.376689,
-    radius: 15,
-    polygon: [
-      [-44.376829, -15.470131], // Topo-Esquerda (Noroeste)
-      [-44.376549, -15.470131], // Topo-Direita (Nordeste)
-      [-44.376549, -15.470401], // Baixo-Direita (Sudeste)
-      [-44.376829, -15.470401], // Baixo-Esquerda (Sudoeste)
-      [-44.376829, -15.470131]  // Fechamento do polígono
-    ],
-  
-    imagens: [{ 
-        id: '1', 
-        imagem: require('../../assets/icon.png'), // Importação direta do arquivo
-        descricao: 'Vista frontal do casarão.' 
-      },
-      { 
-        id: '2', 
-        imagem: require('../../assets/icon.png'), 
-        descricao: 'Detalhes em azul e branco.' 
-      }
-    ] 
-  },
-  {
-    id: 'predio_sup',
-    title: 'predio_sup', 
-    message: 'Você chegou ao Prédio do Superior',
-    latitude: -15.447412174500034, 
-    longitude: -44.368119072314094,
-    radius: 15,
-    polygon: [
-      [-44.368259, -15.447277], 
-      [-44.367979, -15.447277], 
-      [-44.367979, -15.447547], 
-      [-44.368259, -15.447547], 
-      [-44.368259, -15.447277]  
-    ],
-    imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/icon.png'), // Importação direta do arquivo
-        descricao: 'Vista frontal do casarão.' 
-      },
-      { 
-        id: '2', 
-        imagem: require('../../assets/icon.png'), 
-        descricao: 'Detalhes em azul e branco.' 
-      }
-    ]
-  },
 
 // Núcleo Histórico
 
@@ -81,13 +27,13 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/icon.png'), // Importação direta do arquivo
-        descricao: 'Vista frontal do casarão.' 
+        imagem: require('../../assets/images/prefeitura_1.png'), 
+        descricao: '' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/icon.png'), 
-        descricao: 'Detalhes em azul e branco.' 
+        imagem: require('../../assets/images/prefeitura_2.png'), 
+        descricao: '' 
       }
     ]
   },
@@ -105,6 +51,18 @@ export const POINTS_OF_INTEREST = [
       [-44.361586, -15.488588],
       [-44.36202, -15.488836],
       [-44.362181, -15.488469]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/memoria_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/memoria_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -121,6 +79,13 @@ export const POINTS_OF_INTEREST = [
       [-44.361742, -15.489643],
       [-44.362273, -15.489017],
       [-44.361913, -15.48879] 
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/catedral_1.png'), 
+        descricao: '' 
+      },
     ]
   },
   {
@@ -138,6 +103,18 @@ export const POINTS_OF_INTEREST = [
       [-44.360703, -15.490976], 
       [-44.360703, -15.490706]  
     ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/pontox_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/pontox_2.png'), 
+        descricao: '' 
+      }
+    ]
   },
   {
     id: 'imovel_17',
@@ -153,6 +130,18 @@ export const POINTS_OF_INTEREST = [
       [-44.359626, -15.491084],
       [-44.359906, -15.491084],
       [-44.359906, -15.490814]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/17_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/17_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -169,6 +158,18 @@ export const POINTS_OF_INTEREST = [
       [-44.359492, -15.490763],
       [-44.359772, -15.490763],
       [-44.359772, -15.490493]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/19_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/19_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -185,6 +186,18 @@ export const POINTS_OF_INTEREST = [
       [-44.359489, -15.490749],
       [-44.359769, -15.490749],
       [-44.359769, -15.490479]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/21_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/21_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -201,6 +214,18 @@ export const POINTS_OF_INTEREST = [
       [-44.359930, -15.488598],
       [-44.360210, -15.488598],
       [-44.360210, -15.488328]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/3_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/31_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -217,6 +242,18 @@ export const POINTS_OF_INTEREST = [
       [-44.360375, -15.488243],
       [-44.360655, -15.488243],
       [-44.360655, -15.487973]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/32_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/32_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -233,6 +270,18 @@ export const POINTS_OF_INTEREST = [
       [-44.360806, -15.487892],
       [-44.361086, -15.487892],
       [-44.361086, -15.487622]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/33_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/33_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -249,6 +298,18 @@ export const POINTS_OF_INTEREST = [
       [-44.360849, -15.488006],
       [-44.361129, -15.488006],
       [-44.361129, -15.487736]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/34_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/34_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -265,6 +326,18 @@ export const POINTS_OF_INTEREST = [
       [-44.361426, -15.488712],
       [-44.361706, -15.488712],
       [-44.361706, -15.488442]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/35_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/35_2.png'), 
+        descricao: '' 
+      }
     ]
   },
 
@@ -284,6 +357,23 @@ export const POINTS_OF_INTEREST = [
       [-44.359946, -15.491811],
       [-44.360226, -15.491811],
       [-44.360226, -15.491541]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/37_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/37_2.png'), 
+        descricao: '' 
+      },
+      {
+        id: '3',
+        imagem: require('../../assets/images/37_3.png'),
+        descricao: ''
+      }
     ]
   },
   {
@@ -300,6 +390,23 @@ export const POINTS_OF_INTEREST = [
       [-44.360641, -15.492410],
       [-44.360921, -15.492410],
       [-44.360921, -15.492140]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/41_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/41_2.png'), 
+        descricao: '' 
+      },
+      {
+        id: '3',
+        imagem: require('../../assets/images/41_3.png'),
+        descricao: ''
+      }
     ]
   },
   {
@@ -316,6 +423,18 @@ export const POINTS_OF_INTEREST = [
       [-44.360945, -15.492548],
       [-44.361225, -15.492548],
       [-44.361225, -15.492278]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/44_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/44_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -332,6 +451,18 @@ export const POINTS_OF_INTEREST = [
       [-44.361191, -15.492656],
       [-44.361471, -15.492656],
       [-44.361471, -15.492386]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/47_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/47_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -348,6 +479,18 @@ export const POINTS_OF_INTEREST = [
       [-44.361279, -15.492696],
       [-44.361559, -15.492696],
       [-44.361559, -15.492426]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/48_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/48_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -364,6 +507,28 @@ export const POINTS_OF_INTEREST = [
       [-44.361519, -15.492807],
       [-44.361799, -15.492807],
       [-44.361799, -15.492537]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/49_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/49_2.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '3', 
+        imagem: require('../../assets/images/49_3.png'), 
+        descricao: '' 
+      },
+      {
+        id: '4',
+        imagem: require('../../assets/images/49_4.png'),
+        descricao: ''
+      }
     ]
   },
   {
@@ -380,6 +545,13 @@ export const POINTS_OF_INTEREST = [
       [-44.361878, -15.493026],
       [-44.362158, -15.493026],
       [-44.362158, -15.492756]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/50_1.png'), 
+        descricao: '' 
+      },
     ]
   },
   {
@@ -396,6 +568,23 @@ export const POINTS_OF_INTEREST = [
       [-44.362094, -15.492787],
       [-44.362374, -15.492787],
       [-44.362374, -15.492517]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/54_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/54_2.png'), 
+        descricao: '' 
+      },
+      {
+        id: '3',
+        imagem: require('../../assets/images/54_3.png'),
+        descricao: ''
+      }
     ]
   },
   {
@@ -412,6 +601,18 @@ export const POINTS_OF_INTEREST = [
       [-44.361482, -15.492043],
       [-44.361762, -15.492043],
       [-44.361762, -15.491773]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/60_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/60_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -428,6 +629,23 @@ export const POINTS_OF_INTEREST = [
       [-44.361166, -15.491880],
       [-44.361446, -15.491880],
       [-44.361446, -15.491609]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/61_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/61_2.png'), 
+        descricao: '' 
+      },
+      {
+        id: '3',
+        imagem: require('../../assets/images/61_3.png'),
+        descricao: ''
+      }
     ]
   },
   {
@@ -444,6 +662,18 @@ export const POINTS_OF_INTEREST = [
       [-44.361256, -15.491134],
       [-44.361536, -15.491134],
       [-44.361536, -15.490864]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/67_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/67_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -460,6 +690,18 @@ export const POINTS_OF_INTEREST = [
       [-44.361382, -15.491042],
       [-44.361662, -15.491042],
       [-44.361662, -15.490772]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/68_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/68_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -476,6 +718,13 @@ export const POINTS_OF_INTEREST = [
       [-44.361602, -15.491462],
       [-44.361882, -15.491462],
       [-44.361882, -15.491192]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/79_1.png'), 
+        descricao: '' 
+      },
     ]
   },
   {
@@ -492,6 +741,18 @@ export const POINTS_OF_INTEREST = [
       [-44.362336, -15.492169],
       [-44.362616, -15.492169],
       [-44.362616, -15.491899]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/83_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/83_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -508,6 +769,18 @@ export const POINTS_OF_INTEREST = [
       [-44.362593, -15.493025],
       [-44.362873, -15.493025],
       [-44.362873, -15.492754]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/86_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/86_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -524,6 +797,13 @@ export const POINTS_OF_INTEREST = [
       [-44.362728, -15.493118],
       [-44.363008, -15.493118],
       [-44.363008, -15.492848]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/90_1.png'), 
+        descricao: '' 
+      },
     ]
   },
   {
@@ -540,6 +820,18 @@ export const POINTS_OF_INTEREST = [
       [-44.362493, -15.493133],
       [-44.362773, -15.493133],
       [-44.362773, -15.492863]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/91_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/91_2.png'), 
+        descricao: '' 
+      }
     ]
   },
 
@@ -559,6 +851,18 @@ export const POINTS_OF_INTEREST = [
       [-44.360329, -15.490917],
       [-44.360609, -15.490917],
       [-44.360609, -15.490647]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/92_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/92_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -575,6 +879,18 @@ export const POINTS_OF_INTEREST = [
       [-44.359888, -15.490426],
       [-44.360168, -15.490426],
       [-44.360168, -15.490156]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/96_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/96_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -591,6 +907,18 @@ export const POINTS_OF_INTEREST = [
       [-44.359100, -15.489555],
       [-44.359380, -15.489555],
       [-44.359380, -15.489285]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/99_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/99_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -607,6 +935,18 @@ export const POINTS_OF_INTEREST = [
       [-44.358564, -15.488988],
       [-44.358844, -15.488988],
       [-44.358844, -15.488718]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/101_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/101_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -623,6 +963,18 @@ export const POINTS_OF_INTEREST = [
       [-44.358155, -15.488773],
       [-44.358435, -15.488773],
       [-44.358435, -15.488503]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/105_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/105_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -639,6 +991,18 @@ export const POINTS_OF_INTEREST = [
       [-44.358019, -15.488620],
       [-44.358299, -15.488620],
       [-44.358299, -15.488350]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/106_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/106_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -655,6 +1019,18 @@ export const POINTS_OF_INTEREST = [
       [-44.357254, -15.487612],
       [-44.357534, -15.487612],
       [-44.357534, -15.487342]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/110_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/110_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -671,6 +1047,13 @@ export const POINTS_OF_INTEREST = [
       [-44.357541, -15.487314],
       [-44.357821, -15.487314],
       [-44.357821, -15.487044]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/111_1.png'), 
+        descricao: '' 
+      },
     ]
   },
   {
@@ -687,6 +1070,18 @@ export const POINTS_OF_INTEREST = [
       [-44.358794, -15.488025],
       [-44.359074, -15.488025],
       [-44.359074, -15.487755]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/112_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/112_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -703,6 +1098,13 @@ export const POINTS_OF_INTEREST = [
       [-44.360631, -15.490187],
       [-44.360911, -15.490187],
       [-44.360911, -15.489917]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/114_1.png'), 
+        descricao: '' 
+      },
     ]
   },
 
@@ -722,6 +1124,18 @@ export const POINTS_OF_INTEREST = [
       [-44.359508, -15.491321],
       [-44.359788, -15.491321],
       [-44.359788, -15.491051]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/115_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/115_2.png'), 
+        descricao: '' 
+      }
     ]
   },
   {
@@ -738,6 +1152,18 @@ export const POINTS_OF_INTEREST = [
       [-44.358776, -15.490554],
       [-44.359056, -15.490554],
       [-44.359056, -15.490284]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/118_1.png'), 
+        descricao: '' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/118_2.png'), 
+        descricao: '' 
+      }
     ]
   }
 ];
