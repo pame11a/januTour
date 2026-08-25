@@ -223,7 +223,7 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/3_1.png'), 
+        imagem: require('../../assets/images/31_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
