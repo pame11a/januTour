@@ -28,12 +28,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/prefeitura_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/prefeitura_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -56,12 +56,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/memoria_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/memoria_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -84,7 +84,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/catedral_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/catedral_2.png'), 
+        descricao: 'IFNMG Campus Januária - 2026' 
       },
     ]
   },
@@ -107,12 +112,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/pontox_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/pontox_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -135,12 +140,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/17_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/17_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -163,12 +168,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/19_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/19_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -191,12 +196,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/21_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/21_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -219,12 +224,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/3_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/31_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -247,12 +252,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/32_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/32_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -275,12 +280,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/33_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/33_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -303,12 +308,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/34_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/34_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -331,12 +336,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/35_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/35_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -362,17 +367,17 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/37_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/37_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       {
         id: '3',
         imagem: require('../../assets/images/37_3.png'),
-        descricao: ''
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -395,17 +400,17 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/41_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/41_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       {
         id: '3',
         imagem: require('../../assets/images/41_3.png'),
-        descricao: ''
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -428,12 +433,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/44_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/44_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -456,12 +461,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/47_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/47_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -484,12 +489,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/48_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/48_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -512,22 +517,22 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/49_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/49_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '3', 
         imagem: require('../../assets/images/49_3.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       {
         id: '4',
         imagem: require('../../assets/images/49_4.png'),
-        descricao: ''
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -550,7 +555,7 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/50_1.png'), 
-        descricao: '' 
+        descricao: 'Google Maps - 2026' 
       },
     ]
   },
@@ -573,17 +578,17 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/54_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/54_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       },
       {
         id: '3',
         imagem: require('../../assets/images/54_3.png'),
-        descricao: ''
+        descricao: 'Google Maps - 2026'
       }
     ]
   },
@@ -606,12 +611,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/60_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/60_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -634,17 +639,17 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/61_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/61_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       {
         id: '3',
         imagem: require('../../assets/images/61_3.png'),
-        descricao: ''
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -667,12 +672,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/67_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/67_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -695,12 +700,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/68_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/68_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -723,7 +728,7 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/79_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
   },
@@ -746,12 +751,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/83_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/83_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -774,12 +779,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/86_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/86_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -802,7 +807,7 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/90_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
   },
@@ -825,12 +830,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/91_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/91_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -856,12 +861,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/92_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/92_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -884,12 +889,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/96_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/96_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -912,12 +917,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/99_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/99_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -940,12 +945,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/101_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/101_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -968,12 +973,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/105_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/105_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -996,12 +1001,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/106_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/106_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -1024,12 +1029,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/110_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/110_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -1052,7 +1057,7 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/111_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
   },
@@ -1075,12 +1080,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/112_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/112_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -1103,7 +1108,7 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/114_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
   },
@@ -1129,12 +1134,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/115_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/115_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
@@ -1157,12 +1162,12 @@ export const POINTS_OF_INTEREST = [
       { 
         id: '1', 
         imagem: require('../../assets/images/118_1.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
         imagem: require('../../assets/images/118_2.png'), 
-        descricao: '' 
+        descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   }
