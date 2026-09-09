@@ -1,4 +1,5 @@
 import { MAPBOX_ACCESS_TOKEN } from '@env';
+import { polygon } from '@turf/helpers';
 export const MAPBOX_TOKEN = MAPBOX_ACCESS_TOKEN;
 export const FALLBACK_COORDS = [-44.3916585, -15.4802473];
 
@@ -11,7 +12,7 @@ export const POINTS_OF_INTEREST = [
 
   {
     id: 'prefeitura_municipal',
-    title: 'Prefeitura Municipal',
+    title: 'Prédio Histórico da Prefeitura Municipal de Januária',
     message: 'Você chegou ao prédio histórico da Prefeitura Municipal de Januária. Este casarão, datado de 1890, tem estilo eclético e chama atenção pelas suas cores vibrantes em azul e branco. Durante muito tempo, foi o coração administrativo da cidade. Hoje, abriga o Centro de Atendimento ao Turista (CAT). Aproveite para entrar e descobrir mais sobre Januária.',
     latitude:-15.488692266036272,
     longitude: -44.36216932359738,
@@ -94,9 +95,149 @@ export const POINTS_OF_INTEREST = [
     ]
   },
   {
+    id: 'lanchonete_lanchinho',
+    title: 'Imóvel Comercial - Lanchonete Lannchinho',
+    message: 'Você chegou ao imóvel número 41 da Praça Dom Daniel, na esquina com a Rua Cesário Alvim. Atualmente, o prédio abriga uma lanchonete e uma loja de roupas. De arquitetura regional, destaca-se pela fachada ornamentada com rosáceas, elementos decorativos em forma de flores, dispostos em círculos vazados na parte superior do imóvel.', 
+    latitude: -15.48963386619075,
+    longitude: -44.36183772809814,
+    radius: 15,
+    type: 'Regional',
+    polygon: [
+      [-44.361951, -15.489684],
+      [-44.36186, -15.489782],
+      [-44.361693, -15.489664],
+      [-44.36179, -15.489529],
+      [-44.361951, -15.489684]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/04_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/04_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+  {
+    id: 'loterica',
+    title: 'Lotérica',
+    message: 'Você chegou ao imóvel onde atualmente funciona uma casa lotérica. Apesar de pequeno, o prédio se destaca pela beleza de sua fachada eclética, bastante ornamentada. Entre os detalhes, estão os cunhais decorados, o frontão de linhas curvas, os pináculos e os desenhos em baixo-relevo. Atualmente, o toldo e a placa comercial escondem parte desses elementos. Por isso, vale observar a fachada com atenção para descobrir os detalhes que revelam a riqueza arquitetônica deste imóvel.', 
+    latitude: -15.489477831549058,
+    longitude: -44.361387568523824,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.361409, -15.489581],
+      [-44.361253, -15.489488],
+      [-44.361323, -15.48939],
+      [-44.361495, -15.489503],
+      [-44.361409, -15.489581]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/loterica_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/loterica_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+    {
+    id: 'imovel_8',
+    title: 'Imóvel na Rua Cônego Livínio, 33',
+    message: 'tVocê chegou ao imóvel número 33 da Rua Cônego Livínio. De estilo eclético, o prédio se destaca pela fachada com feições mouriscas, marcada por formas e ornamentos inspirados na tradição arquitetônica islâmica.', 
+    latitude: -15.490536909094978,
+    longitude: -44.36103355798111,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.361211, -15.490625],
+      [-44.361146, -15.490718],
+      [-44.360948, -15.490527],
+      [-44.361012, -15.490486],
+      [-44.361211, -15.490625]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/8_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/8_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+   {
+    id: 'imovel_12',
+    title: 'Imóvel na Rua Cônego Livínio, 24/28/32',
+    message: ' Você chegou ao conjunto de imóveis de números 24, 28 e 32 da Rua Cônego Livínio. De tipo colonial, as fachadas apresentam sete óculos circulares sobre os vãos, pequenas aberturas na parte superior que contribuem para a ornamentação dos imóveis e também podem favorecer a iluminação e a ventilação naturais.', 
+    latitude: -15.490475290076127,
+    longitude: -44.36089654999652,
+    radius: 15,
+    type: 'Colonial',
+    polygon: [
+      [-44.360958, -15.490491],
+      [-44.360846, -15.49061],
+      [-44.360738, -15.49048],
+      [-44.36084, -15.490387],
+      [-44.360958, -15.490491]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/12_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/12_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+      {
+    id: 'imovel_14',
+    title: 'Imóvel na Rua Cônego Livínio, 2',
+    message: 'Você chegou ao imóvel número 2 da Rua Cônego Livínio. De estilo eclético, o prédio chama a atenção pela platibanda bastante ornamentada, com elementos vazados e um frontão central que se integra à composição da fachada.', 
+    latitude: -15.490671481490825,
+    longitude: -44.3606893694373,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.360797, -15.490682],
+      [-44.360717, -15.49078],
+      [-44.360417, -15.490553],
+      [-44.360535, -15.490434],
+      [-44.360797, -15.490682]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/14_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/14_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+  {
     id: 'ponto_x',
-    title: 'Ponto X',
-    message: 'Você está diante do Imóvel Número 16, de estilo eclético, situado na esquina da Praça Getúlio Vargas com a Rua Mata Machado. A edificação térrea comercial destaca-se por sua coluna de esquina com capitel decorado e pela platibanda reta ornada com rosáceas vazadas, além de sobrevergas, frisos e cimalha. Seus vãos originais foram descaracterizados com adaptações comerciais recentes.', 
+    title: 'Lanchonete Ponto X',
+    message: ' Você chegou ao imóvel número 114 da Praça Getúlio Vargas, onde há algumas décadas funciona a Lanchonete Ponto X. De estilo eclético, a construção se destaca pela platibanda ornamentada com rosáceas vazadas e pela interessante coluna de esquina, que apresenta a parte superior decorada. Os imóveis geminados da Rua Mata-Machado seguem características arquitetônicas semelhantes.', 
     latitude: -15.490841607366924,
     longitude: -44.360563459707386,
     radius: 15,
@@ -123,8 +264,8 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_17',
-    title: 'Imóvel 17',
-    message: 'Você está diante do casarão antigo número 17. Ele chama a atenção por sua fachada alta com topo em degraus e duas janelinhas no sótão. A frente da casa é dividida por pilares e molduras de massa, e conta também com dois portões nas laterais. Infelizmente, o imóvel está bastante deteriorado, e suas portas e janelas de baixo foram fechadas com tijolos.',
+    title: 'Imóvel na Rua Dom Joaquim, 54',
+    message: 'Você chegou às ruínas de um antigo imóvel na Rua Dom Joaquim, número 54. De tipo regional, a construção foi demolida, restando apenas a fachada, com os vãos de portas e janelas atualmente bloqueados. Mesmo em ruínas, a fachada chama a atenção por suas grandes dimensões, pelo topo em degraus e pelo oitão vazado, que integrava o sótão do imóvel e podia favorecer a iluminação e a ventilação naturais.',
     latitude: -15.49094930313358,
     longitude: -44.359765768306275,
     radius: 15,
@@ -150,37 +291,37 @@ export const POINTS_OF_INTEREST = [
     ]
   },
   {
-    id: 'imovel_19',
-    title: 'Imóvel 19',
-    message: 'Você está diante do imóvel número 19, uma construção térrea de estilo protomoderno localizada em uma esquina. O prédio se destaca pelas suas linhas simples e modernas, com platibanda no topo trazendo detalhes geométricos escalonados. Suas portas comerciais possuem enrolamento metálico e pequenas aberturas superiores para ventilação e iluminação.',
-    latitude: -15.490627699819317,
-    longitude: -44.35963238843153,
+    id: 'imovel_18',
+    title: 'Imóvel na Rua Dom Joaquim, 67 ',
+    message: 'Você chegou ao imóvel número 67 da Rua Dom Joaquim. O imóvel de tipo colonial teve seus vãos adaptados para abrigar duas residências. O imóvel apresenta fachada com platibanda, ornamentada apenas por cunhais, cimalha e um frontão circular.',
+    latitude:  -15.490794970678929,
+    longitude: -44.35977152065295,
     radius: 15,
-    type: 'Protomoderno',
-    polygon: [
-      [-44.359574, -15.490718],
-      [-44.359467, -15.490635],
-      [-44.359649, -15.49047],
-      [-44.359767, -15.490563],
-      [-44.359574, -15.490718]
+    type: 'Colonial',
+    polygon:[
+      [-44.359767, -15.490863],
+      [-44.359687, -15.490785],
+      [-44.3598, -15.490698],
+      [-44.359885, -15.490775],
+      [-44.359767, -15.490863]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/19_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/18_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/19_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
-      }
+      {
+        id: '2',
+        imagem: require('../../assets/images/18_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
+      },
     ]
   },
   {
     id: 'imovel_21',
-    title: 'Imóvel 21',
-    message: 'Você está diante de um imóvel térreo de estilo protomoderno, localizado na esquina da Rua Dom Joaquim com um beco. A construção chama a atenção pela sua esquina chanfrada e pela platibanda reta com detalhes em relevo geométrico. Ao longo do tempo, o imóvel passou por significativas modificações em sua fachada: as antigas portas de madeira foram totalmente substituídas e já não existem na construção atual, dando lugar a novos fechamentos em alvenaria e portas de enrolar metálicas.',
+    title: 'Imóvel na esquina da rua Dom Joaquim com rua Gualberto de Almeida, 330',
+    message: 'Você chegou ao imóvel localizado na esquina da Rua Dom Joaquim com a Rua Gualberto de Almeida, nº 330. De tipologia protomoderna, foi construído originalmente para uso residencial e posteriormente adaptado para atividades comerciais, encontrando-se atualmente sem uso. Destaca-se pela esquina chanfrada e pela platibanda reta com elementos geométricos em relevo. Ao longo do tempo, sua fachada foi modificada, com a substituição das antigas portas de madeira por fechamentos em alvenaria e portas metálicas de enrolar',
     latitude: -15.490614411215406,
     longitude: -44.35962893189584,
     radius: 15,
@@ -206,9 +347,106 @@ export const POINTS_OF_INTEREST = [
     ]
   },
   {
+    id: 'imovel_24',
+    title: 'Imóvel na Rua Dom Joaquim, 144',
+    text: 'Você está diante da edificação térrea de esquina onde funciona o Sindicato Rural. O imóvel possui implantação no alinhamento da via com o canto chanfrado, onde se localiza o acesso principal por meio de pequena escada. A estrutura simples apresenta barrado pintado em tom verde na base, janelas retangulares protegidas por grades de ferro e telhado em duas águas com telhas coloniais de barro e beiral aparente.',
+    latitude: -15.49025637462457,
+    longitude: -44.35899387005083,
+    radius: 15,
+    type: 'Protomoderno',
+    polygon: [
+      [-44.359081, -15.490274],
+      [-44.359016, -15.490356],
+      [-44.358855, -15.490227],
+      [-44.358952, -15.490134],
+      [-44.359081, -15.490274]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/24_1.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+  {
+    id: 'imovel_26',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, 62',
+    text: 'Você está diante do imóvel térreo de número 62, implantado no alinhamento da rua com parede-meia de um dos lados. Sua fachada destaca-se pelos cunhais ornamentados e moldura decorativa no topo, encimados por uma platibanda reta com relevos geométricos. A composição inclui porta de madeira central, janelas com grades de ferro e uma grande porta de enrolar em aço. O telhado possui calhas e canos projetados na fachada para escoamento da água.',
+    latitude: -15.48956846305711,
+    longitude: -44.358772131975776,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.358882, -15.489591],
+      [-44.358759, -15.489684],
+      [-44.358587, -15.489503],
+      [-44.358727, -15.4894],
+      [-44.358882, -15.489591]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/26_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/26_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+  {
+    id: 'imovel_28',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, 120',
+    text: 'Você está diante do imóvel residencial térreo de alto pé-direito, implantado no alinhamento da via. O principal destaque da edificação é sua platibanda trabalhada com pilaretes encimados por pináculos e vedações rendilhadas em alvenaria. A fachada amarela conta com sete vãos de verga reta (uma porta central ladeada por seis janelas de madeira com tapa-vento em veneziana) e apresenta um revestimento de pedras na base.',
+    latitude:  -15.489189188843834, 
+    longitude: -44.35921145451291,
+    radius: 15,
+    type: 'Regional',
+    polygon: [
+      [-44.359317, -15.489193],
+      [-44.359215, -15.489286],
+      [-44.359043, -15.489116],
+      [-44.359145, -15.489038],
+      [-44.359317, -15.489193]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/28_1.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+  {
+    id: 'imovel_30',
+    title: 'Rua Lindolfo Caetano, 229',
+    text: 'Você está diante desta casa de esquina de um andar, localizada no cruzamento da Rua Lindolfo Caetano com a Rua Francisco Sá. O imóvel foi construído bem no limite da calçada e chama a atenção por sua parede lateral alta na esquina, que traz pequenos furos redondos no topo para ventilação. As janelas têm formato retangular e são protegidas por grades de ferro, enquanto a parte da frente conta com uma mureta escondendo o telhado de telhas de barro. ',
+    latitude: -15.488579545087962, 
+    longitude: -44.36013427047611,
+    radius: 15,
+    type: 'Regional',
+    polygon: [
+      [-44.360143, -15.488692],
+      [-44.36002, -15.488568],
+      [-44.360127, -15.4885],
+      [-44.360218, -15.488599],
+      [-44.360143, -15.488692]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/30.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+  {
     id: 'imovel_31',
-    title: 'Imóvel 31',
-    message: 'Você está diante de um imóvel comercial térreo de pé-direito alto, situado na esquina da Rua Lindolfo Caetano com a Rua onze de Março. O prédio destaca-se por sua platibanda reta com pilaretes nos cantos, molduras na parte superior e um conjunto de cinco portas antigas de madeira espalhadas pelas duas frentes. A construção preserva suas características originais, porém encontra-se fechada e com marcas do tempo em sua pintura e fachada.',
+    title: 'Imóvel na Rua Lindolfo Caetano, 224',
+    message: 'Você está diante de um imóvel comercial térreo de pé-direito alto, situado na esquina da Rua Lindolfo Caetano com a Rua 11 de Março. O prédio destaca-se por sua platibanda reta com pilaretes nos cantos, molduras na parte superior e um conjunto de cinco portas antigas de madeira espalhadas pelas duas frentes. A construção preserva suas características originais, porém encontra-se fechada e com marcas do tempo em sua pintura e fachada. ',
     latitude: -15.488463424921578,
     longitude: -44.36006984211007,
     radius: 15,
@@ -235,8 +473,8 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_32',
-    title: 'Imóvel 32',
-    message: 'Você está diante de um casarão de uso misto - residencial e comercial - com alto pé-direito, que se destaca pela fachada bem dividida por pilares ornamentados e frisos de massa. A edificação possui portas e janelas de madeira dispostas de forma organizada, além de um portão lateral. Hoje, o imóvel abriga o "CEMEI Mundo Mágico", contando com rampa de acessibilidade na entrada e pintura recente em tons de verde. ',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, 278',
+    message: 'Você está diante de um casarão de uso misto (residencial e comercial) com alto pé-direito, que se destaca pela fachada bem dividida por pilares ornamentados e frisos de massa. A edificação possui portas e janelas de madeira dispostas de forma organizada, além de um portão lateral. Hoje, o imóvel abriga o "CEMEI Mundo Mágico", contando com rampa de acessibilidade na entrada e pintura recente em tons de verde. ',
     latitude: -15.48810807897231,
     longitude: -44.36051451082531,
     radius: 15,
@@ -263,8 +501,8 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_33',
-    title: 'Imóvel 33',
-    message: 'Você está diante do conjunto de casas de números 330 e 340. A casa 330, à direita, é mais simples, com fachada amarela, detalhes azuis e topo em formato triangular (frontão). Já a casa 340, à esquerda, é mais trabalhada, com uma porta central, cinco janelas e um topo decorado com balaustrada. Entre as duas construções há um portão de garagem azul, e ambas preservam suas portas e janelas originais de madeira. ',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, 330/340',
+    message: ' Você está diante do conjunto de casas de números 330 e 340. A casa 330, à direita, é mais simples, com fachada amarela, detalhes azuis e topo em formato triangular (frontão). Já a casa 340, à esquerda, é mais trabalhada, com uma porta central, cinco janelas e um topo decorado com balaustrada. Entre as duas construções há um portão de garagem azul, e ambas preservam suas portas e janelas originais de madeira. ',
     latitude: -15.487756728243626,
     longitude: -44.36094554862254,
     radius: 15,
@@ -291,7 +529,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_34',
-    title: 'Imóvel 34',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, 331/339 ',
     message: 'Você está diante de um imóvel de estilo regional situado na esquina da Rua Lindolfo Caetano com a Rua 24 de Fevereiro. O prédio, onde antigamente funcionavam um comércio e uma oficina, encontra-se atualmente fechado e sem uso ativo. Destaca-se por sua fachada dividida em módulos por pilares, frisos e platibanda reta no topo. Ao longo do tempo, a edificação passou por alterações visíveis: a pintura foi alterada para tons rosados e parte das antigas portas de madeira deu lugar a portas de enrolar metálicas, além de vãos que foram adaptados ou fechados. ',
     latitude: -15.487871067625445,
     longitude: -44.360988811096334,
@@ -319,7 +557,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_35',
-    title: 'Imóvel 35',
+    title: 'Imóvel localizado na Rua Gualberto de Almeida, 294/298',
     message: 'Você está diante de um conjunto de casas geminadas localizado na esquina da Rua Gualberto de Almeida. A edificação térrea, com sótão, chama a atenção por sua platibanda reta com frisos decorativos e divisão da fachada em módulos. Ao comparar com o registro antigo, percebe-se que o imóvel passou por significativas modificações: as esquadrias originais de madeira foram substituídas por portas e janelas modernas com frestas e grades metálicas, além da alteração nas cores da pintura e inclusão de barrado inferior texturizado. ',
     latitude: -15.488576901778771,
     longitude: -44.361565854909095,
