@@ -1223,7 +1223,7 @@ export const POINTS_OF_INTEREST = [
     ]
   },
   {
-    id: 'imovel_101',
+    id: 'imovel_89',
     title: 'Imóvel 101',
     message: 'Você está diante do Imóvel Número 101, uma edificação residencial de estilo eclético. A residência térrea se destaca por sua platibanda rendada com elementos vazados, pilaretes com coruchéus e um frontão central ornamentado em alto-relevo. Sua fachada conta com seis vãos em arco abatido, sendo uma porta central e cinco janelas, todos com emolduramento trabalhado em massa e vedações de madeira.',
     latitude: -15.488853246680613,
@@ -1240,12 +1240,12 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/101_1.png'), 
+        imagem: require('../../assets/images/89_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/101_2.png'), 
+        imagem: require('../../assets/images/89_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
@@ -1412,9 +1412,9 @@ export const POINTS_OF_INTEREST = [
   //Trajeto D. São Francisco 
 
   {
-    id: 'imovel_115',
-    title: 'Imóvel 115',
-    message: 'Você está diante da edificação número 115, localizada na Avenida São Francisco. Este imóvel de arquitetura simples apresenta um estado atual de conservação bastante deteriorado, com marcas do tempo visíveis em sua estrutura.',
+    id: 'imovel_101',
+    title: 'Imóvel localizado na Avenida São Francisco, Nº 262',
+    message: 'Você está diante da edificação número 262, localizada na Avenida São Francisco. Este imóvel de arquitetura simples apresenta um estado atual de conservação bastante deteriorado, com marcas do tempo visíveis em sua estrutura.',
     latitude: -15.49118598076174,
     longitude: -44.35964844483142,
     radius: 15,
@@ -1429,20 +1429,20 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/115_1.png'), 
+        imagem: require('../../assets/images/101_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/115_2.png'), 
+        imagem: require('../../assets/images/101_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_118',
-    title: 'Imóvel 118',
-    message: 'Você está diante do Imóvel número 118, antiga sede da "Cooperativa de Consumo dos Rodoviários de Minas Gerais Ltda.", localizado em uma esquina da Rua Humaitá. A construção fica em um nível mais alto que a calçada, com acesso por uma escada frontal. Chama a atenção pela sua fachada com empena triangular emoldurada e estilo simples, apresentando desgaste no acabamento.',
+    id: 'imovel_103',
+    title: 'Imóvel localizado na Rua Humaitá, Nº 100',
+    message: 'Você está diante do Imóvel número 100, antiga sede da "Cooperativa de Consumo dos Rodoviários de Minas Gerais Ltda.", localizado em uma esquina da Rua Humaitá. A construção fica em um nível mais alto que a calçada, com acesso por uma escada frontal. Chama a atenção pela sua fachada com empena triangular emoldurada e estilo simples, apresentando desgaste no acabamento.',
     latitude: -15.490418660275342,
     longitude: -44.358915556137376,
     radius: 15,
@@ -1457,12 +1457,12 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/118_1.png'), 
+        imagem: require('../../assets/images/103_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/118_2.png'), 
+        imagem: require('../../assets/images/103_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]

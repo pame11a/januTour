@@ -83,8 +83,8 @@ export const ROUTES_LIST = [
     title: 'Trajeto Dom São Francisco',
     description: 'A definir',
     sequence: [
-      'imovel_115',
-      'imovel_118'
+      'imovel_101',
+      'imovel_103'
     ],
     color: '#0077b6'
   }
