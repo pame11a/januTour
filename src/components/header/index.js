@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native'; 
 import { Entypo, MaterialIcons } from '@expo/vector-icons'; 
 import { styles } from './styles';
 
@@ -20,6 +20,12 @@ export function Header({ navigation }) {
         <Text style={styles.headerTitle}>JanuTour</Text>
       </View>
     
+      <Image 
+        source={require('../../../assets/ifnmg.png')} 
+        style={styles.logoIfnmg}
+        resizeMode="contain"
+      />
+
     </View>
   );
 }

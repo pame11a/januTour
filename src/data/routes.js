@@ -3,7 +3,7 @@ export const ROUTES_LIST = [
   {
     id: 'nucleo_historico',
     title: 'Trajeto Núcleo Histórico',
-    description: 'A definir',
+    description: 'O coração de Januária. Caminhe pelas ruas mais antigas da cidade, sinta a história ao redor da Igreja Matriz e descubra os atalhos por onde os comerciantes e viajantes desciam até o porto.',
     sequence: [
       'prefeitura_municipal',
       'casa_da_memoria',
@@ -34,7 +34,7 @@ export const ROUTES_LIST = [
   {
     id: 'patrocinio_mota',
     title: 'Trajeto Patrocínio Mota',
-    description: 'A definir',
+    description: 'Um passeio charmoso pelas nossas famosas ruas de pedra. Caminhe paralelo ao rio São Francisco e aprecie os antigos casarões, armazéns e praças que guardam a memória dos tempos de ouro da navegação.',
     sequence: [
       'imovel_37',
       'imovel_41',
@@ -62,7 +62,7 @@ export const ROUTES_LIST = [
   {
     id: 'mata_machado',
     title: 'Trajeto Mata Machado',
-    description: 'A definir',
+    description: 'O caminho da tradição e do dia a dia. Esse trajeto leva você por ruas acolhedoras, repletas de casas ribeirinhas e da rotina pacata dos moradores.',
     sequence: [
       'imovel_92',
       'imovel_96',
@@ -81,7 +81,7 @@ export const ROUTES_LIST = [
   {
     id: 'dom_sao_francisco',
     title: 'Trajeto Dom São Francisco',
-    description: 'A definir',
+    description: 'A rota das águas e da cultura. Passeie pela orla do Velho Chico, sinta a brisa do rio e encante-se com o cenário que é palco do nosso tradicional Carnaval, dividindo espaço com os antigos galpões do cais.',
     sequence: [
       'imovel_101',
       'imovel_103'

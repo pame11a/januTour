@@ -11,6 +11,10 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.cardBackground,
     paddingHorizontal: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between', 
+    paddingHorizontal: 15, 
     ...Platform.select({
       ios: {
         shadowColor: '#000',
@@ -35,4 +39,8 @@ export const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
   },
+  logoIfnmg: {
+    width: 70, 
+    height: 30,
+  }
 });

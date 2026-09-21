@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { View, Text, Platform, TouchableOpacity, Switch } from 'react-native';
+import { View, Text, Platform, TouchableOpacity, Switch, Image} from 'react-native';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import Mapbox from '@rnmapbox/maps';
@@ -237,7 +237,13 @@ export default function MapaScreen({ route, navigation }) {
         <Header onOpenMenu={handleOpenMenu} navigation={navigation} />
         <NavigationCard instruction={rotaAtiva.length > 0 ? instruction : null} />
 
-        <Mapbox.MapView style={styles.map} styleURL={Mapbox.StyleURL.Street}>
+        <Mapbox.MapView 
+          style={styles.map} 
+          styleURL={Mapbox.StyleURL.Street}
+          logoPosition={{ bottom: 120, left: 10 }} 
+          attributionPosition={{ bottom: 120, right: 10 }} 
+          compassPosition={{ top: 10, right: 10 }} 
+        >
           <Mapbox.Camera ref={cameraRef} centerCoordinate={userLocation || FALLBACK_COORDS} zoomLevel={INITIAL_ZOOM} animationMode="flyto" />
           <Mapbox.UserLocation visible={true} showsUserHeadingIndicator={true} />
           <MapMarkers activePoint={currentTarget} inactivePoints={inactivePoints} />
@@ -247,14 +253,8 @@ export default function MapaScreen({ route, navigation }) {
                 id="activePolygonSource" 
                 shape={{ type: 'Feature', geometry: { type: 'Polygon', coordinates: [currentTarget.polygon] } }}
              >
-                <Mapbox.FillLayer 
-                  id="activePolygonFill" 
-                  style={{ fillColor: colors.cardBackground, fillOpacity: 0.3 }} 
-                />
-                <Mapbox.LineLayer 
-                  id="activePolygonLine" 
-                  style={{ lineColor: colors.cardBackground, lineWidth: 2 }} 
-                />
+                <Mapbox.FillLayer id="activePolygonFill" style={{ fillColor: colors.cardBackground, fillOpacity: 0.3 }} />
+                <Mapbox.LineLayer id="activePolygonLine" style={{ lineColor: colors.cardBackground, lineWidth: 2 }} />
              </Mapbox.ShapeSource>
           )}
 
@@ -284,9 +284,22 @@ export default function MapaScreen({ route, navigation }) {
 
         {currentTarget && !showAlert && (
           <View style={styles.destinationBadge}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-              <MaterialIcons name="place" size={18} color={colors.cardBackground} style={{ marginRight: 5 }} />
-              <Text style={styles.destinationText}>{currentTarget.title} • <Text style={{ fontWeight: '900' }}>{distanceLabel}</Text></Text>
+            <View style={styles.badgeIconContainer}>
+              <MaterialIcons name="place" size={24} color={colors.cardBackground} />
+            </View>
+            
+            <View style={styles.badgeTextContainer}>
+              <Text 
+                style={styles.destinationTitle} 
+                numberOfLines={2} 
+                ellipsizeMode="tail"
+              >
+                {currentTarget.title}
+              </Text>
+              
+              <Text style={styles.destinationDistance}>
+                Distância: <Text style={{ fontWeight: 'bold' }}>{distanceLabel}</Text>
+              </Text>
             </View>
           </View>
         )}
