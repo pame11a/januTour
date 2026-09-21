@@ -64,16 +64,19 @@ export const ROUTES_LIST = [
     title: 'Trajeto Mata Machado',
     description: 'A definir',
     sequence: [
+      'imovel_81',
+      'imovel_84',
+      'imovel_85',
+      'imovel_87',
+      'imovel_89',
       'imovel_92',
-      'imovel_96',
+      'imovel_93',
+      'imovel_94',
+      'imovel_95',
+      'imovel_97',
+      'imovel_98',
       'imovel_99',
-      'imovel_101',
-      'imovel_105',
-      'imovel_106',
-      'imovel_110',
-      'imovel_111',
-      'imovel_112',
-      'imovel_114'
+      'imovel_100'
     ],
     color: '#0077b6'
   },

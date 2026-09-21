@@ -1139,8 +1139,8 @@ export const POINTS_OF_INTEREST = [
   // Mata machado
 
   {
-    id: 'imovel_92',
-    title: 'Imóvel 92',
+    id: 'imovel_81',
+    title: 'Imóvel localizado na Rua Mata Machado, Nª 9/11/21/25',
     message: 'Você está no Imóvel número 92, situado na esquina da Praça Getúlio Vargas com a Rua Mata Machado. Esta edificação térrea destaca-se por ser dividida em três espaços comerciais com pinturas coloridas e independentes. Seu topo traz uma platibanda decorada com rosáceas, rostos neoclássicos e desenhos de coroas de louro em massa, mantendo o charme do centro histórico',
     latitude: -15.490781849957987,
     longitude: -44.360469191914696,
@@ -1156,20 +1156,43 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/92_1.png'), 
+        imagem: require('../../assets/images/81_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/92_2.png'), 
+        imagem: require('../../assets/images/81_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_96',
-    title: 'Imóvel 96',
-    message: 'Você está diante do Imóvel Número 96, um imponente sobrado colonial de dois pavimentos localizado em uma esquina da Rua Mata Machado. O casarão chama a atenção pelo alinhamento das suas portas no andar térreo e pelas várias janelas rasgadas no andar superior. A construção mantém suas características históricas marcantes, como o telhado de quatro águas e os detalhes em madeira.',
+    id: 'imovel_84',
+    title: 'Imóvel localizado na Rua Mata Machado, Nº 57',
+    message: 'Você está diante deste imóvel em estilo eclético, construído bem no limite da calçada. O destaque fica por conta de sua imponente mureta no topo (platibanda), rica em relevos ornamentais e detalhes em tom de verde que escondem o telhado. A parte inferior da fachada possui revestimento em pedras rústicas, enquanto suas grandes janelas emolduradas trazem esquadrias de madeira e vidro, com um portão metálico claro de acesso na lateral esquerda.',
+    latitude: -15.490495092575669,
+    longitude: -44.36024224552906,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.360185, -15.490585],
+      [-44.360072, -15.49045],
+      [-44.360271, -15.490274],
+      [-44.360351, -15.490414],
+      [-44.360185, -15.490585]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/84_1.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      },
+    ]
+  },
+  {
+    id: 'imovel_85',
+    title: 'Imóvel localizado na Rua Mata Machado, Nº 87/89',
+    message: 'Você está diante do Imóvel Número 87/89, um imponente sobrado colonial de dois pavimentos localizado em uma esquina da Rua Mata Machado. O casarão chama a atenção pelo alinhamento das suas portas no andar térreo e pelas várias janelas rasgadas no andar superior. A construção mantém suas características históricas marcantes, como o telhado de quatro águas e os detalhes em madeira.',
     latitude: -15.490290739014773,
     longitude: -44.3600277994801,
     radius: 15,
@@ -1184,20 +1207,20 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/96_1.png'), 
+        imagem: require('../../assets/images/85_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/96_2.png'), 
+        imagem: require('../../assets/images/85_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_99',
-    title: 'Imóvel 99',
-    message: 'Você está diante do Imóvel Número 99, uma grande edificação de estilo eclético situada na esquina da Rua Mata Machado com a Rua Lindolfo Caetano. O casarão térreo chama a atenção pela sequência harmoniosa de janelas em arco pleno e pela porta principal com uma pequena escada de acesso. Sua fachada é ornamentada por pilastras, detalhes decorativos em massa e uma platibanda que esconde o telhado de quatro águas.',
+    id: 'imovel_87',
+    title: 'Imóvel localizado na  Rua Mata Machado, Nº 209',
+    message: 'Você está diante do Imóvel Número 209, uma grande edificação de estilo eclético situada na esquina da Rua Mata Machado com a Rua Lindolfo Caetano. O casarão térreo chama a atenção pela sequência harmoniosa de janelas em arco pleno e pela porta principal com uma pequena escada de acesso. Sua fachada é ornamentada por pilastras, detalhes decorativos em massa e uma platibanda que esconde o telhado de quatro águas.',
     latitude: -15.489419951441798,
     longitude: -44.35924034405003,
     radius: 15,
@@ -1212,20 +1235,20 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/99_1.png'), 
+        imagem: require('../../assets/images/87_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/99_2.png'), 
+        imagem: require('../../assets/images/87_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
     id: 'imovel_89',
-    title: 'Imóvel 101',
-    message: 'Você está diante do Imóvel Número 101, uma edificação residencial de estilo eclético. A residência térrea se destaca por sua platibanda rendada com elementos vazados, pilaretes com coruchéus e um frontão central ornamentado em alto-relevo. Sua fachada conta com seis vãos em arco abatido, sendo uma porta central e cinco janelas, todos com emolduramento trabalhado em massa e vedações de madeira.',
+    title: 'Imóvel localizado Rua Mata Machado, Nº 297',
+    message: 'Você está diante do Imóvel Número 297, uma edificação residencial de estilo eclético. A residência térrea se destaca por sua platibanda rendada com elementos vazados, pilaretes com coruchéus e um frontão central ornamentado em alto-relevo. Sua fachada conta com seis vãos em arco abatido, sendo uma porta central e cinco janelas, todos com emolduramento trabalhado em massa e vedações de madeira.',
     latitude: -15.488853246680613,
     longitude: -44.35870381940221,
     radius: 15,
@@ -1251,9 +1274,9 @@ export const POINTS_OF_INTEREST = [
     ]
   },
   {
-    id: 'imovel_105',
-    title: 'Imóvel 105',
-    message: 'Você está diante do Imóvel Número 105, uma relevante edificação comercial de estilo eclético situada na esquina da Rua Barão de São Romão com a Rua Mata Machado. A construção térrea chama a atenção pela sua esquina chanfrada, pilastras moduladas e platibanda ornada com pináculos e frisos decorativos. Em bom estado de conservação, a fachada combina janelas originais de madeira com intervenções mais recentes.',
+    id: 'imovel_92',
+    title: 'Imóvel localizado na Rua Barão de São Romão, Nº 69/79',
+    message: 'Você está diante do Imóvel Número 69/79, uma relevante edificação comercial de estilo eclético situada na esquina da Rua Barão de São Romão com a Rua Mata Machado. A construção térrea chama a atenção pela sua esquina chanfrada, pilastras moduladas e platibanda ornada com pináculos e frisos decorativos. Em bom estado de conservação, a fachada combina janelas originais de madeira com intervenções mais recentes.',
     latitude: -15.488638134573783,
     longitude: -44.35829509824856,
     radius: 15,
@@ -1268,19 +1291,19 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/105_1.png'), 
+        imagem: require('../../assets/images/92_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/105_2.png'), 
+        imagem: require('../../assets/images/92_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_106',
-    title: 'Imóvel 106',
+    id: 'imovel_93',
+    title: 'Imóvel localizado na Rua Barão de São Romão, Nº 84',
     message: 'Você está diante de uma edificação comercial de estilo regional, situada numa esquina da Rua Barão de São Romão. Esta construção térrea de partido retangular destaca-se pelos seus três panos de parede modulados por pilares e pelo friso decorado com desenhos em alto-relevo. O telhado possui cobertura em duas águas com telhas artesanais do tipo capa e bica.',
     latitude: -15.4884848869256,
     longitude: -44.35815894432452,
@@ -1296,19 +1319,75 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/106_1.png'), 
+        imagem: require('../../assets/images/93_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/106_2.png'), 
+        imagem: require('../../assets/images/93_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_110',
-    title: 'Imóvel 110',
+   id: 'imovel_94',
+   title: 'Imóvel localizado na Rua Mata Machado, Nº 413/419/423',
+   message: 'Você está diante da casa residencial térrea de números 419/423, construída no limite da calçada e encostada nas vizinhas. O imóvel apresenta duas etapas bem visíveis na fachada: do lado direito, traz acabamento em tom claro com pilastras nas quinas e moldura decorativa abaixo do telhado; do lado esquerdo, possui pintura simples. As portas e janelas têm formato retangular reto e fechamento em madeira, com o telhado de telhas de barro caindo para a rua.',
+   latitude: -15.487994995731786,
+   longitude: -44.35787887397768,
+   radius: 15,
+   type: 'Colonial',
+   polygon: [
+    [-44.357916, -15.488114],
+    [-44.357879, -15.487995],
+    [-44.358045, -15.487845],
+    [-44.358104, -15.487944],
+    [-44.357916, -15.488114]
+   ],
+   imagens: [
+     {
+       id: '1',
+       imagem: require('../../assets/images/94_1.png'),
+       descricao: 'Inventário IEPHA - 1985'
+     },
+     {
+       id: '2',
+       imagem: require('../../assets/images/94_2.png'),
+       descricao: 'Inventário IEPHA - Atualizado'
+     }
+   ]
+  },
+  {
+   id: 'imovel_95',
+   title: 'Imóvel localizado na Rua Mata Machado, Nº 433',
+   message: 'Você está diante da casa residencial de número 95, construída no limite da calçada e com acesso feito por uma pequena escada na entrada principal. A fachada traz pilastras nas quinas e molduras decorativas no topo e ao redor das aberturas, criando um bonito contraste de cores com a pintura da parede. A composição conta com uma porta de madeira ladeada por duas janelas de um lado e uma do outro, todas com fechamento em madeira.',
+   latitude: -15.487929774860937,
+   longitude: -44.357810245770146,
+   radius: 15,
+   type: 'Colonial',
+   polygon: [
+    [-44.357937, -15.487849],
+    [-44.35776, -15.487979],
+    [-44.357717, -15.487901],
+    [-44.357852, -15.487751],
+    [-44.357937, -15.487849]
+   ],
+   imagens: [
+     {
+       id: '1',
+       imagem: require('../../assets/images/95_1.png'),
+       descricao: 'Inventário IEPHA - 1985'
+     },
+     {
+       id: '2',
+       imagem: require('../../assets/images/95_2.png'),
+       descricao: 'Inventário IEPHA - Atualizado'
+     }
+   ]
+  },
+  {
+    id: 'imovel_97',
+    title: 'Imóvel localizado no Rua Mata Machado, Nº 485',
     message: 'Você está diante do antigo Edifício do Batalhão da Polícia Militar, uma edificação de estilo eclético construída em dois pavimentos na esquina da Praça Santa Cruz com a Rua Mata Machado. O prédio chama a atenção por seus alicerces elevados de pedra, ritmo rítmico das aberturas e platibanda decorada com balaustrada e frontão central. O imóvel encontra-se atualmente em avançado estado de degradação.',
     latitude: -15.487476966637827,
     longitude: -44.357394374275145,
@@ -1324,19 +1403,19 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/110_1.png'), 
+        imagem: require('../../assets/images/97_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/110_2.png'), 
+        imagem: require('../../assets/images/97_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_111',
-    title: 'Imóvel 111',
+    id: 'imovel_98',
+    title: 'Imóvel localizado na Rua Padre Idelino, Nº 7',
     message: 'Você está diante desta pequena edificação de estilo regional com o Número 7 gravado na fachada. O imóvel térreo destaca-se pela sua platibanda decorada com recorte curvo no topo e pelo enquadramento que une a porta e a janela frontal, onde se lê o ano "1909" em relevo.',
     latitude: -15.487178783444588,
     longitude: -44.35768087885222,
@@ -1352,14 +1431,14 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/111_1.png'), 
+        imagem: require('../../assets/images/98_1.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
   },
   {
-    id: 'imovel_112',
-    title: 'Imóvel 112',
+    id: 'imovel_99',
+    title: 'Imóvel localizado Praça Sete de Setembro, Nª 73 a 97',
     message: 'Você está diante de um relevante conjunto arquitetônico de estilo colonial situado na Rua Operária, composto por edificações térreas de partido retangular implantadas no alinhamento da via e em parede-meia. O conjunto abrange o prédio de número 65 e 73, que possui platibanda ornamental reta e cunhais, e a sequência de casas geminadas de número 79, 83, 87, 91 e 97, destacando-se pela fachada modulada por pilares, frisos, cornijas e ritmo ordenado de portas e janelas.',
     latitude: -15.487890218330442,
     longitude: -44.35893415684557,
@@ -1375,19 +1454,19 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/112_1.png'), 
+        imagem: require('../../assets/images/99_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/112_2.png'), 
+        imagem: require('../../assets/images/99_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_114',
-    title: 'Imóvel 114',
+    id: 'imovel_100',
+    title: 'Antigo Cine Januária',
     message: 'Você está diante do antigo Cine Januária, edificação de estilo protomoderno e único cinema de rua da história do município. Inaugurado na década de 1950, o espaço funcionou regularmente até os anos 1980 e operou com exibições intermitentes até seu fechamento definitivo nos anos 1990. O imóvel destaca-se por sua fachada geométrica com platibanda escalonada, portão central pantográfico com letreiro original e barrado inferior em revestimento de pedra.',
     latitude: -15.490052143109176,
     longitude: -44.36077058209159,
@@ -1403,7 +1482,7 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/114_1.png'), 
+        imagem: require('../../assets/images/100_1.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
