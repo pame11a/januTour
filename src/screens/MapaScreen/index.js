@@ -82,7 +82,16 @@ export default function MapaScreen({ route, navigation }) {
       setRouteCoordinates(route.geometry.coordinates);
       
       if (route.legs && route.legs[0].steps && route.legs[0].steps.length > 0) {
-        setInstruction(route.legs[0].steps[0].maneuver.instruction);
+        const steps = route.legs[0].steps;
+
+        if (steps.length > 1) {
+          const distanciaAteManobra = Math.round(steps[0].distance); 
+          const proximaManobra = steps[1].maneuver.instruction; 
+          
+          setInstruction(`Em ${distanciaAteManobra}m: ${proximaManobra}`);
+        } else {
+          setInstruction(steps[0].maneuver.instruction);
+        }
       }
     } catch (error) {
       console.log("Erro no fetchRoute", error);
@@ -240,8 +249,8 @@ export default function MapaScreen({ route, navigation }) {
         <Mapbox.MapView 
           style={styles.map} 
           styleURL={Mapbox.StyleURL.Street}
-          logoPosition={{ bottom: 120, left: 10 }} 
-          attributionPosition={{ bottom: 120, right: 10 }} 
+          logoPosition={{ bottom: 125, left: 10 }} 
+          attributionPosition={{ bottom: 125, right: 10 }} 
           compassPosition={{ top: 10, right: 10 }} 
         >
           <Mapbox.Camera ref={cameraRef} centerCoordinate={userLocation || FALLBACK_COORDS} zoomLevel={INITIAL_ZOOM} animationMode="flyto" />
@@ -275,13 +284,6 @@ export default function MapaScreen({ route, navigation }) {
           <MaterialIcons name="my-location" size={24} color={colors.cardBackground} />
         </TouchableOpacity>
 
-        {rotaAtiva.length > 0 && (
-          <TouchableOpacity style={styles.skipButton} onPress={pularDestino} activeOpacity={0.8}>
-            <MaterialIcons name="skip-next" size={20} color="#FFF" />
-            <Text style={styles.skipButtonText}>Pular</Text>
-          </TouchableOpacity>
-        )}
-
         {currentTarget && !showAlert && (
           <View style={styles.destinationBadge}>
             <View style={styles.badgeIconContainer}>
@@ -297,9 +299,18 @@ export default function MapaScreen({ route, navigation }) {
                 {currentTarget.title}
               </Text>
               
-              <Text style={styles.destinationDistance}>
-                Distância: <Text style={{ fontWeight: 'bold' }}>{distanceLabel}</Text>
-              </Text>
+              <View style={styles.badgeFooter}>
+                <Text style={styles.destinationDistance}>
+                  Distância: <Text style={{ fontWeight: 'bold' }}>{distanceLabel}</Text>
+                </Text>
+
+                {rotaAtiva.length > 0 && (
+                  <TouchableOpacity style={styles.inlineSkipButton} onPress={pularDestino} activeOpacity={0.7}>
+                    <Text style={styles.inlineSkipText}>Pular</Text>
+                    <MaterialIcons name="skip-next" size={16} color={colors.cardBackground} />
+                  </TouchableOpacity>
+                )}
+              </View>
             </View>
           </View>
         )}
