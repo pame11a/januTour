@@ -7,6 +7,7 @@ import WelcomeScreen from './src/screens/WelcomeScreen';
 import MapaScreen from './src/screens/MapaScreen';
 import MenuScreen from './src/screens/MenuScreen';
 import PreviaRotaScreen from './src/screens/PreviaRotaScreen';
+import SobreScreen from './src/screens/SobreScreen';
 
 import Mapbox from '@rnmapbox/maps';
 import { MAPBOX_TOKEN } from './src/config/constants';
@@ -24,6 +25,7 @@ export default function App() {
           <Stack.Screen name="Menu" component={MenuScreen} />
           <Stack.Screen name="Previa" component={PreviaRotaScreen} />
           <Stack.Screen name="Mapa" component={MapaScreen} />
+          <Stack.Screen name="Sobre" component={SobreScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

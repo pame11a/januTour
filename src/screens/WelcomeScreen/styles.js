@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
+import { colors } from '../../styles/colors';
 
 const { width, height } = Dimensions.get('window');
 
@@ -53,7 +54,7 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 34,
     fontWeight: 'bold',
-    color: '#2C3E50',
+    color: colors.cardBackground,
     letterSpacing: 1,
     marginBottom: 20, 
   },
@@ -71,12 +72,12 @@ export const styles = StyleSheet.create({
     marginBottom: 15, 
   },
   button: {
-    backgroundColor: '#0077b6',
+    backgroundColor: colors.cardBackground,
     paddingVertical: 16,
     paddingHorizontal: 80,
     borderRadius: 35,
     elevation: 8,
-    shadowColor: '#0077b6',
+    shadowColor: colors.cardBackground,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.4,
     shadowRadius: 6,

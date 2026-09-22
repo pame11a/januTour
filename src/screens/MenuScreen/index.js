@@ -138,7 +138,10 @@ export default function MenuScreen({ navigation }) {
               <Text style={styles.footerButtonText}>Dicas e Histórias</Text>
             </TouchableOpacity>
             
-            <TouchableOpacity style={styles.footerButton}>
+            <TouchableOpacity 
+              style={styles.footerButton} 
+              onPress={() => navigation.navigate('Sobre')}
+            >
               <MaterialIcons name="people-outline" size={22} color="#1C2B40" />
               <Text style={styles.footerButtonText}>Sobre Nós</Text>
             </TouchableOpacity>

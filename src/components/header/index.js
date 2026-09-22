@@ -21,7 +21,7 @@ export function Header({ navigation }) {
       </View>
     
       <Image 
-        source={require('../../../assets/ifnmg.png')} 
+        source={require('../../../assets/images/ifnmg.png')} 
         style={styles.logoIfnmg}
         resizeMode="contain"
       />
