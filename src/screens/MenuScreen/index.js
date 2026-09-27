@@ -133,7 +133,11 @@ export default function MenuScreen({ navigation }) {
           })}
 
           <View style={styles.footer}>
-            <TouchableOpacity style={styles.footerButton}>
+            {/* AQUI ESTÁ A CORREÇÃO: Adicionado o onPress para navegar para a tela Dicas */}
+            <TouchableOpacity 
+              style={styles.footerButton}
+              onPress={() => navigation.navigate('Dicas')}
+            >
               <MaterialIcons name="info-outline" size={22} color="#1C2B40" />
               <Text style={styles.footerButtonText}>Dicas e Histórias</Text>
             </TouchableOpacity>
@@ -143,7 +147,7 @@ export default function MenuScreen({ navigation }) {
               <Text style={styles.footerButtonText}>Sobre Nós</Text>
             </TouchableOpacity>
           </View>
-
+          
         </ScrollView>
       </ImageBackground>
     </SafeAreaView>
