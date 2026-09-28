@@ -152,7 +152,7 @@ export const POINTS_OF_INTEREST = [
   },
     {
     id: 'imovel_8',
-    title: 'Imóvel na Rua Cônego Livínio, 33',
+    title: 'Imóvel localizado na Rua Cônego Livínio, Nº 33',
     message: 'tVocê chegou ao imóvel número 33 da Rua Cônego Livínio. De estilo eclético, o prédio se destaca pela fachada com feições mouriscas, marcada por formas e ornamentos inspirados na tradição arquitetônica islâmica.', 
     latitude: -15.490536909094978,
     longitude: -44.36103355798111,
@@ -180,7 +180,7 @@ export const POINTS_OF_INTEREST = [
   },
    {
     id: 'imovel_12',
-    title: 'Imóvel na Rua Cônego Livínio, 24/28/32',
+    title: 'Imóvel localizado na Rua Cônego Livínio, Nº 24/28/32',
     message: ' Você chegou ao conjunto de imóveis de números 24, 28 e 32 da Rua Cônego Livínio. De tipo colonial, as fachadas apresentam sete óculos circulares sobre os vãos, pequenas aberturas na parte superior que contribuem para a ornamentação dos imóveis e também podem favorecer a iluminação e a ventilação naturais.', 
     latitude: -15.490475290076127,
     longitude: -44.36089654999652,
@@ -208,7 +208,7 @@ export const POINTS_OF_INTEREST = [
   },
       {
     id: 'imovel_14',
-    title: 'Imóvel na Rua Cônego Livínio, 2',
+    title: 'Imóvel localizado na Rua Cônego Livínio, Nº 2',
     message: 'Você chegou ao imóvel número 2 da Rua Cônego Livínio. De estilo eclético, o prédio chama a atenção pela platibanda bastante ornamentada, com elementos vazados e um frontão central que se integra à composição da fachada.', 
     latitude: -15.490671481490825,
     longitude: -44.3606893694373,
@@ -264,7 +264,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_17',
-    title: 'Imóvel na Rua Dom Joaquim, 54',
+    title: 'Imóvel localizado na Rua Dom Joaquim, Nº 54',
     message: 'Você chegou às ruínas de um antigo imóvel na Rua Dom Joaquim, número 54. De tipo regional, a construção foi demolida, restando apenas a fachada, com os vãos de portas e janelas atualmente bloqueados. Mesmo em ruínas, a fachada chama a atenção por suas grandes dimensões, pelo topo em degraus e pelo oitão vazado, que integrava o sótão do imóvel e podia favorecer a iluminação e a ventilação naturais.',
     latitude: -15.49094930313358,
     longitude: -44.359765768306275,
@@ -292,7 +292,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_18',
-    title: 'Imóvel na Rua Dom Joaquim, 67 ',
+    title: 'Imóvel localizado na Rua Dom Joaquim, Nº 67 ',
     message: 'Você chegou ao imóvel número 67 da Rua Dom Joaquim. O imóvel de tipo colonial teve seus vãos adaptados para abrigar duas residências. O imóvel apresenta fachada com platibanda, ornamentada apenas por cunhais, cimalha e um frontão circular.',
     latitude:  -15.490794970678929,
     longitude: -44.35977152065295,
@@ -320,7 +320,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_21',
-    title: 'Imóvel na esquina da rua Dom Joaquim com rua Gualberto de Almeida, 330',
+    title: 'Imóvel localizado na esquina da Rua Dom Joaquim com a Rua Gualberto de Almeida, Nº 330',
     message: 'Você chegou ao imóvel localizado na esquina da Rua Dom Joaquim com a Rua Gualberto de Almeida, nº 330. De tipologia protomoderna, foi construído originalmente para uso residencial e posteriormente adaptado para atividades comerciais, encontrando-se atualmente sem uso. Destaca-se pela esquina chanfrada e pela platibanda reta com elementos geométricos em relevo. Ao longo do tempo, sua fachada foi modificada, com a substituição das antigas portas de madeira por fechamentos em alvenaria e portas metálicas de enrolar',
     latitude: -15.490614411215406,
     longitude: -44.35962893189584,
@@ -348,7 +348,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_24',
-    title: 'Imóvel na Rua Dom Joaquim, 144',
+    title: 'Imóvel localizado na Rua Dom Joaquim, Nº 144',
     text: 'Você está diante da edificação térrea de esquina onde funciona o Sindicato Rural. O imóvel possui implantação no alinhamento da via com o canto chanfrado, onde se localiza o acesso principal por meio de pequena escada. A estrutura simples apresenta barrado pintado em tom verde na base, janelas retangulares protegidas por grades de ferro e telhado em duas águas com telhas coloniais de barro e beiral aparente.',
     latitude: -15.49025637462457,
     longitude: -44.35899387005083,
@@ -371,7 +371,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_26',
-    title: 'Imóvel localizado na Rua Lindolfo Caetano, 62',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 62',
     text: 'Você está diante do imóvel térreo de número 62, implantado no alinhamento da rua com parede-meia de um dos lados. Sua fachada destaca-se pelos cunhais ornamentados e moldura decorativa no topo, encimados por uma platibanda reta com relevos geométricos. A composição inclui porta de madeira central, janelas com grades de ferro e uma grande porta de enrolar em aço. O telhado possui calhas e canos projetados na fachada para escoamento da água.',
     latitude: -15.48956846305711,
     longitude: -44.358772131975776,
@@ -399,7 +399,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_28',
-    title: 'Imóvel localizado na Rua Lindolfo Caetano, 120',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 120',
     text: 'Você está diante do imóvel residencial térreo de alto pé-direito, implantado no alinhamento da via. O principal destaque da edificação é sua platibanda trabalhada com pilaretes encimados por pináculos e vedações rendilhadas em alvenaria. A fachada amarela conta com sete vãos de verga reta (uma porta central ladeada por seis janelas de madeira com tapa-vento em veneziana) e apresenta um revestimento de pedras na base.',
     latitude:  -15.489189188843834, 
     longitude: -44.35921145451291,
@@ -422,7 +422,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_30',
-    title: 'Rua Lindolfo Caetano, 229',
+    title: 'Imóvel localizado Rua Lindolfo Caetano, Nº 229',
     text: 'Você está diante desta casa de esquina de um andar, localizada no cruzamento da Rua Lindolfo Caetano com a Rua Francisco Sá. O imóvel foi construído bem no limite da calçada e chama a atenção por sua parede lateral alta na esquina, que traz pequenos furos redondos no topo para ventilação. As janelas têm formato retangular e são protegidas por grades de ferro, enquanto a parte da frente conta com uma mureta escondendo o telhado de telhas de barro. ',
     latitude: -15.488579545087962, 
     longitude: -44.36013427047611,
@@ -445,7 +445,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_31',
-    title: 'Imóvel na Rua Lindolfo Caetano, 224',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 224',
     message: 'Você está diante de um imóvel comercial térreo de pé-direito alto, situado na esquina da Rua Lindolfo Caetano com a Rua 11 de Março. O prédio destaca-se por sua platibanda reta com pilaretes nos cantos, molduras na parte superior e um conjunto de cinco portas antigas de madeira espalhadas pelas duas frentes. A construção preserva suas características originais, porém encontra-se fechada e com marcas do tempo em sua pintura e fachada. ',
     latitude: -15.488463424921578,
     longitude: -44.36006984211007,
@@ -473,7 +473,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_32',
-    title: 'Imóvel localizado na Rua Lindolfo Caetano, 278',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 278',
     message: 'Você está diante de um casarão de uso misto (residencial e comercial) com alto pé-direito, que se destaca pela fachada bem dividida por pilares ornamentados e frisos de massa. A edificação possui portas e janelas de madeira dispostas de forma organizada, além de um portão lateral. Hoje, o imóvel abriga o "CEMEI Mundo Mágico", contando com rampa de acessibilidade na entrada e pintura recente em tons de verde. ',
     latitude: -15.48810807897231,
     longitude: -44.36051451082531,
@@ -501,7 +501,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_33',
-    title: 'Imóvel localizado na Rua Lindolfo Caetano, 330/340',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 330/340',
     message: ' Você está diante do conjunto de casas de números 330 e 340. A casa 330, à direita, é mais simples, com fachada amarela, detalhes azuis e topo em formato triangular (frontão). Já a casa 340, à esquerda, é mais trabalhada, com uma porta central, cinco janelas e um topo decorado com balaustrada. Entre as duas construções há um portão de garagem azul, e ambas preservam suas portas e janelas originais de madeira. ',
     latitude: -15.487756728243626,
     longitude: -44.36094554862254,
@@ -529,7 +529,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_34',
-    title: 'Imóvel localizado na Rua Lindolfo Caetano, 331/339 ',
+    title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 331/339 ',
     message: 'Você está diante de um imóvel de estilo regional situado na esquina da Rua Lindolfo Caetano com a Rua 24 de Fevereiro. O prédio, onde antigamente funcionavam um comércio e uma oficina, encontra-se atualmente fechado e sem uso ativo. Destaca-se por sua fachada dividida em módulos por pilares, frisos e platibanda reta no topo. Ao longo do tempo, a edificação passou por alterações visíveis: a pintura foi alterada para tons rosados e parte das antigas portas de madeira deu lugar a portas de enrolar metálicas, além de vãos que foram adaptados ou fechados. ',
     latitude: -15.487871067625445,
     longitude: -44.360988811096334,
@@ -557,7 +557,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_35',
-    title: 'Imóvel localizado na Rua Gualberto de Almeida, 294/298',
+    title: 'Imóvel localizado na Rua Gualberto de Almeida, Nº 294/298',
     message: 'Você está diante de um conjunto de casas geminadas localizado na esquina da Rua Gualberto de Almeida. A edificação térrea, com sótão, chama a atenção por sua platibanda reta com frisos decorativos e divisão da fachada em módulos. Ao comparar com o registro antigo, percebe-se que o imóvel passou por significativas modificações: as esquadrias originais de madeira foram substituídas por portas e janelas modernas com frestas e grades metálicas, além da alteração nas cores da pintura e inclusão de barrado inferior texturizado. ',
     latitude: -15.488576901778771,
     longitude: -44.361565854909095,
@@ -588,7 +588,7 @@ export const POINTS_OF_INTEREST = [
 
   {
     id: 'imovel_37',
-    title: 'Imóvel 37',
+    title: 'Antigo Minas Hotel',
     message: 'Você está diante do prédio onde funcionava o Minas Hotel, uma edificação de dois pavimentos com marcantes características neoclássicas situada em frente à Praça Patrocínio Mota. O casarão destaca-se por sua fachada ritmada com dezenas de janelas e portas com balaustradas em madeira no segundo piso, além de cunhais, cimalhas e platibanda decorada com pináculos e frontões. Por sua localização privilegiada de frente para o Rio São Francisco e para a praça do cais.',
     latitude: -15.491675886856795,
     longitude: -44.36008611448064,
@@ -621,7 +621,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_41',
-    title: 'Imóvel 41',
+    title: 'Imóvel localizado na Rua Visconde de Ouro Preto, Nº 92',
     message: 'Você está diante de um casarão histórico construído em 1879, localizado na esquina da Rua Visconde de Ouro Preto com o beco de acesso à Praça Getúlio Vargas. Atualmente, o espaço abriga um Centro de Artesanato e Ponto de Cultura. A edificação chama a atenção pelo pé-direito alto, fachadas em tons de branco, azul e amarelo, além dos frisos ornamentados e cunhais marcantes.',
     latitude: -15.492275377312069,
     longitude: -44.36078105064742,
@@ -654,7 +654,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_44',
-    title: 'Imóvel 44',
+    title: 'Imóvel localizado na Rua Visconde de Ouro Preto, Nº 126/134',
     message: 'Você está diante da edificação de número 126, situada na Rua Visconde de Ouro Preto. Trata-se de uma construção térrea de pé-direito elevado, implantada no alinhamento da via e que forma uma única edificação contínua junto ao número 134. O prédio chama a atenção por sua pintura marcante em azul e branco com detalhes em amarelo, além de uma rica platibanda trabalhada com óculos decorativos e um medalhão central. Sua fachada conta com janelas de caixilhos em madeira, venezianas e bandeiras de vidro, acompanhadas por portas em folha tipo calha.',
     latitude: -15.492413455095432,
     longitude: -44.361085048363776,
@@ -682,7 +682,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_47',
-    title: 'Imóvel 47',
+    title: 'Imóvel localizado na Rua Visconde de Ouro Preto, Nº 156',
     message: 'Você está diante do sobrado de número 156, uma edificação residencial de dois pavimentos implantada no alinhamento da via. Construído com estrutura autônoma de madeira, o imóvel se destaca pelo aproveitamento do vão do telhado para a criação do segundo piso. Sua fachada é enquadrada por cunhais e cimalhas, sendo arrematada no topo por uma platibanda reta com decorações geométricas. A composição conta com quatro vãos bem rítmicos em cada andar, com vergas alteadas, portas e janelas de madeira no térreo e janelas rasgadas com balaustradas torneadas no pavimento superior.',
     latitude: -15.492520661276624,
     longitude: -44.36133110196431,
@@ -710,7 +710,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_48',
-    title: 'Imóvel 48',
+    title: 'Imóvel localizado na Rua Visconde de Ouro Preto, Nº 166',
     message: 'Você está diante da edificação residencial de número 166, uma casa térrea implantada no alinhamento da via. O imóvel destaca-se por sua fachada horizontalizada em tons rosados, enquadrada por cunhais e por uma larga cimalha no topo que remata o beiral do telhado. A composição conta com oito vãos com vergas levemente curvadas (em canga de boi) e esquadrias de madeira, sendo cinco portas e três janelas com venezianas. Lateralmente, há um portão de acesso delimitado por um pilar decorativo em destaque.',
     latitude: -15.492561225888938,
     longitude: -44.361419108622805,
@@ -738,7 +738,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_49',
-    title: 'Imóvel 49',
+    title: 'Imóvel localizado na Rua Visconde de Ouro Preto, Nº 186',
     message: 'Você está diante do imponente prédio de características art-nouveau onde funcionou o Grêmio Recreativo Mário dos Santos Reis, utilizado posteriormente como escola. A edificação de grande porte destaca-se por seus elevados pés-direitos e por sua rica platibanda trabalhada com pequenos pilares, desenhos vazados e o ornamento central de uma águia de asas abertas. Sua fachada apresenta vãos agrupados de dois em dois com verga reta, acompanhados por sobrevergas vazadas em meia-lua e aberturas circulares para ventilação do porão.',
     latitude: -15.492671738203578,
     longitude: -44.36165945597777,
@@ -775,31 +775,8 @@ export const POINTS_OF_INTEREST = [
     ]
   },
   {
-    id: 'imovel_50',
-    title: 'Imóvel 50',
-    message: 'Está edificação de expressão colonial, implantada no alinhamento da via sobre passeio em pedras. O imóvel térreo destaca-se pelo enquadramento da fachada principal com cunhal em destaque na quina e uma elaborada cimalha decorativa que remata o beiral com telhas curvas (capa e bica). A fachada conta com janelas retangulares protegidas por grades de ferro e emolduradas em relevo com acabamento em tom amarelo, contrastando com a pintura em tom neutro da parede.',
-    latitude: -15.492890902326575,
-    longitude: -44.36201799715112,
-    radius: 15,
-    type: 'Colonial',
-    polygon: [
-      [-44.362042, -15.492993],
-      [-44.361897, -15.492926],
-      [-44.362026, -15.492714],
-      [-44.362144, -15.492812],
-      [-44.362042, -15.492993]
-    ],
-    imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/50_1.png'), 
-        descricao: 'Google Maps - 2026' 
-      },
-    ]
-  },
-  {
-    id: 'imovel_54',
-    title: 'Imóvel 54',
+    id: 'imovel_52',
+    title: 'Imóvel localizado na Rua Barão do Rio Branco, Nº 173/177',
     message: 'Você está diante da edificação residencial neoclássica de números 173 e 177, recentemente reformada e em excelente estado de conservação. O imóvel térreo é implantado no alinhamento da via e atende a duas residências. Sua fachada harmoniosa conta com oito vãos em arco pleno (seis janelas e duas portas) ornamentados por molduras em relevo realçadas em tom amarelo sobre paredes brancas. A estrutura é delimitada por cunhais e cimalha destacados, sendo coroada por uma platibanda decorada com rosáceas e detalhes geométricos.',
     latitude: -15.492652474839073,
     longitude: -44.36223404244172,
@@ -815,24 +792,24 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/54_1.png'), 
+        imagem: require('../../assets/images/52_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/54_2.png'), 
+        imagem: require('../../assets/images/52_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       },
       {
         id: '3',
-        imagem: require('../../assets/images/54_3.png'),
+        imagem: require('../../assets/images/52_3.png'),
         descricao: 'Google Maps - 2026'
       }
     ]
   },
   {
-    id: 'imovel_60',
-    title: 'Imóvel 60',
+    id: 'imovel_54',
+    title: 'Imóvel localizado na Rua Barão do Rio Branco, Nº 80',
     message: 'Você está diante da edificação residencial de número 80, implantada na testada do lote diretamente no alinhamento da via. O imóvel destaca-se por sua volumetria com pé-direito elevado e enquadramento frontal marcado por destacados cunhais trabalhados nas extremidades e cornija que arremata a cobertura. No centro da fachada principal, sobre a porta central de verga reta, sobressai-se um escudo ornamental com o ano de 1877 registrado. A composição dos vãos conta com janelas retangulares protegidas por grades de ferro e uma grande abertura lateral adaptada com portão de garagem moderno.',
     latitude: -15.491908400479037,
     longitude: -44.36162219975322,
@@ -844,6 +821,67 @@ export const POINTS_OF_INTEREST = [
       [-44.361597, -15.491752],
       [-44.361747, -15.491907],
       [-44.36164, -15.492021]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/54_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/54_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+  {
+    id: 'imovel_55',
+    title: 'Imóvel localizado na Rua Barão do Rio Branco, Nº 43 ',
+    message: 'Você está diante da elegante casa neoclássica de número 43, elevada sobre porão alteado com aberturas de ventilação. Destaca-se por sua fachada amarela ornamentada por pilastras, almofadas decorativas sob as janelas, vãos em arco pleno e óculos florais. O topo é arrematado por cimalha e platibanda reta.',
+    latitude: -15.491744587053224,
+    longitude: -44.361305896518644,
+    radius: 15,
+    type: 'Regional',
+    polygon: [
+      [-44.3612, -15.491902],
+      [-44.361076, -15.491788],
+      [-44.361216, -15.491659],
+      [-44.361393, -15.491809],
+      [-44.3612, -15.491902]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/55_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/55_2.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      {
+        id: '3',
+        imagem: require('../../assets/images/55_3.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
+      }
+    ]
+  },
+  {
+    id: 'imovel_60',
+    title: 'Imóvel localizado na Rua Professor Manoel Ambrósio, Nº 21',
+    message: 'Você está diante da edificação de esquina situada no cruzamento da Rua Manoel Ambrósio com a Rua Cônego Marinho. O imóvel térreo possui alto pé-direito com sótão aproveitado na cobertura. Destaca-se pelos robustos cunhais ornados na quina, moldura decorativa de argamassa sob o beiral e empena lateral com duas janelas superiores.',
+    latitude: -15.490998531178668,
+    longitude: -44.36139614840612,
+    radius: 15,
+    type: 'Regional',
+    polygon: [
+      [-44.361586, -15.491121],
+      [-44.361441, -15.491266],
+      [-44.361248, -15.491096],
+      [-44.361396, -15.490999],
+      [-44.361586, -15.491121]
     ],
     imagens: [
       { 
@@ -860,69 +898,8 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_61',
-    title: 'Imóvel 61',
-    message: 'Você está diante da elegante casa neoclássica de número 43, elevada sobre porão alteado com aberturas de ventilação. Destaca-se por sua fachada amarela ornamentada por pilastras, almofadas decorativas sob as janelas, vãos em arco pleno e óculos florais. O topo é arrematado por cimalha e platibanda reta.',
-    latitude: -15.491744587053224,
-    longitude: -44.361305896518644,
-    radius: 15,
-    type: 'Regional',
-    polygon: [
-      [-44.3612, -15.491902],
-      [-44.361076, -15.491788],
-      [-44.361216, -15.491659],
-      [-44.361393, -15.491809],
-      [-44.3612, -15.491902]
-    ],
-    imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/61_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
-      },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/61_2.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
-      },
-      {
-        id: '3',
-        imagem: require('../../assets/images/61_3.png'),
-        descricao: 'Inventário IEPHA - Atualizado'
-      }
-    ]
-  },
-  {
-    id: 'imovel_67',
-    title: 'Imóvel 67',
-    message: 'Você está diante da edificação de esquina situada no cruzamento da Rua Manoel Ambrósio com a Rua Cônego Marinho. O imóvel térreo possui alto pé-direito com sótão aproveitado na cobertura. Destaca-se pelos robustos cunhais ornados na quina, moldura decorativa de argamassa sob o beiral e empena lateral com duas janelas superiores.',
-    latitude: -15.490998531178668,
-    longitude: -44.36139614840612,
-    radius: 15,
-    type: 'Regional',
-    polygon: [
-      [-44.361586, -15.491121],
-      [-44.361441, -15.491266],
-      [-44.361248, -15.491096],
-      [-44.361396, -15.490999],
-      [-44.361586, -15.491121]
-    ],
-    imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/67_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
-      },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/67_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
-      }
-    ]
-  },
-  {
-    id: 'imovel_68',
-    title: 'Imóvel 68',
-    message: 'Você está diante da edificação comercial de esquina de número 68, atualmente adaptada para uso comercial. O imóvel térreo destaca-se por sua fachada com enquadramento azul em pilastras e frisos horizontais na platibanda reta. Apresenta aberturas modificadas para portas de enrolar metálicas e vitrines comerciais, além de janela lateral e sótão com duas aberturas na empena da edificação.',
+    title: 'Imóvel localizado na Rua Professor Manoel Ambrósio, Nº 39  ',
+    message: 'Você está diante da edificação comercial de esquina de número 39, atualmente adaptada para uso comercial. O imóvel térreo destaca-se por sua fachada com enquadramento azul em pilastras e frisos horizontais na platibanda reta. Apresenta aberturas modificadas para portas de enrolar metálicas e vitrines comerciais, além de janela lateral e sótão com duas aberturas na empena da edificação.',
     latitude: -15.49090691287588,
     longitude: -44.36152240773368,
     radius: 15,
@@ -937,19 +914,48 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/68_1.png'), 
+        imagem: require('../../assets/images/61_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/68_2.png'), 
+        imagem: require('../../assets/images/61_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_79',
-    title: 'Imóvel 79',
+    id: 'imovel_69',
+    title: 'Imóvel localizado na Rua Cônego Marinho, Nº 242',
+    message: 'Você está diante da casa residencial localizada na Rua Cônego Marinho, construída bem no limite da calçada e encostada nas vizinhas. O imóvel chama a atenção por sua mureta no topo (platibanda) ornamentada com furos em formato de losangos que ajudam na ventilação. A parte de baixo da fachada recebeu um revestimento de pedras, e suas aberturas contam com portas e janelas retangulares protegidas por grades de ferro trabalhadas.',
+    latitude: -15.492605577743749, 
+    longitude: -44.3631363554389,
+    radius: 15,
+    type:  'Eclético',
+    polygon: [
+      [-44.363141, -15.492708],
+      [-44.363007, -15.49259],
+      [-44.363275, -15.492403],
+      [-44.363409, -15.492517],
+      [-44.363141, -15.492708]
+    ],
+    imagens: [
+      {
+        id: '1', 
+        imagem: require('../../assets/images/69_1.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/69_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+
+  },
+  {
+    id: 'imovel_70',
+    title: 'Imóvel localizado na Rua Cônego Marinho, Nº 65',
     message: 'Você está diante da edificação comercial de estilo protomoderno, marcada por sua fachada simétrica e marcante volumetria geométrica. O imóvel térreo destaca-se pelo frontão central escalonado com pilastras verticais, além de frisos e detalhes decorativos em tom azul sobre a pintura branca.',
     latitude: -15.49132682254007,
     longitude: -44.36174248199646,
@@ -965,14 +971,43 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/79_1.png'), 
+        imagem: require('../../assets/images/70_1.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
   },
   {
-    id: 'imovel_83',
-    title: 'Imóvel 83',
+    id: 'imovel_71',
+    title: 'Imóvel localizado na Rua Cônego Marinho, Nº 83/97',
+    message: 'Você está diante do Imovél situado na Rua Cônego Marinho, número 83/97, construído bem no limite da calçada. A fachada traz detalhes azuis nas pilastras e na mureta superior (platibanda) que esconde o telhado, decorada com pequenas rosáceas. As janelas e portas possuem acabamento em tom avermelhado, e no lado esquerdo da construção há um portão de acesso com topo curvado.',
+    latitude: -15.491492770266108, 
+    longitude: -44.36190319768391,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.36195, -15.491519],
+      [-44.361842, -15.491628],
+      [-44.361757, -15.491545],
+      [-44.361864, -15.491437],
+      [-44.36195, -15.491519]
+    ],
+    imagens: [
+      {
+        id: '1', 
+        imagem: require('../../assets/images/71_1.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/71_2.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+
+  },
+  {
+    id: 'imovel_73',
+    title: 'Imóvel localizado na Rua Cônego Marinho, Nº 151/161',
     message: 'Você está diante do imóvel residencial de esquina situado na junção da Rua Cônego Marinho com um beco. A construção térrea conta com aproveitamento de sótão e destaca-se pelo canto chanfrado na quina, onde há uma janela. Suas fachadas são ritmadas por pilastras, cunhais e molduras decorativas sob o beiral, apresentando vãos de verga com cantos arredondados e empena lateral que abriga duas janelas superiores do sótão.',
     latitude: -15.492034261823166,
     longitude: -44.36247576629665,
@@ -988,20 +1023,20 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/83_1.png'), 
+        imagem: require('../../assets/images/73_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/83_2.png'), 
+        imagem: require('../../assets/images/73_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_86',
-    title: 'Imóvel 86',
-    message: 'Você está no Imóvel N.º 86, bem na esquina da Rua Barão do Rio Branco com a Travessa Joaquim Carlos. Este casarão térreo chama a atenção por ter um sótão no telhado com duas janelinhas de madeira, um detalhe bem típico das casas antigas de Januária. A fachada é cheia de detalhes feitos em massa, com portas e janelas de madeira que se abrem direto para a calçada. O local junta comércio e moradia, mantendo vivo o charme histórico da cidade.',
+    id: 'imovel_75',
+    title: 'Imóvel localizado na Travessa Joaquim Carlos, Nº 50',
+    message: 'Você está no Imóvel localizado na Travessa Joaquim Carlos, bem na esquina da Rua Barão do Rio Branco com a Travessa Joaquim Carlos. Este casarão térreo chama a atenção por ter um sótão no telhado com duas janelinhas de madeira, um detalhe bem típico das casas antigas de Januária. A fachada é cheia de detalhes feitos em massa, com portas e janelas de madeira que se abrem direto para a calçada. O local junta comércio e moradia, mantendo vivo o charme histórico da cidade.',
     latitude: -15.49288954210313,
     longitude: -44.36273288616389,
     radius: 15,
@@ -1016,20 +1051,43 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/86_1.png'), 
+        imagem: require('../../assets/images/75_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/86_2.png'), 
+        imagem: require('../../assets/images/75_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_90',
-    title: 'Imóvel 90',
-    message: 'Você está diante do Imóvel número 90, um casarão de esquina muito bem conservado, destacado por sua pintura em tons amarelos e detalhes em branco. A construção chama a atenção pela platibanda decorada no topo da fachada e pelos acabamentos trabalhados na quina do prédio. Suas portas e janelas de madeira vermelha dão acesso direto à calçada e, na lateral, é possível notar duas janelas na parte superior, aproveitando o espaço do sótão.',
+    id: 'imovel_77',
+    title: 'Imóvel localizado na Rua Gualberto de Carvalho, Nº 269',
+    message: 'Você está diante deste imóvel comercial de esquina, onde funciona um minimercado. Construído no limite da calçada, o prédio conta com barrado de pedras na base e cobertura tradicional em telhas de barro. Chama a atenção sua parede lateral alta (empena), que traz duas janelas de madeira no sótão, enquanto as entradas do térreo possuem aberturas em arco e portas de enrolar metálicas protegidas por um toldo vermelho.',
+    latitude: -15.492827386978659, 
+    longitude: -44.36326645865668,
+    radius: 15,
+    type: 'Regional',
+    polygon: [
+      [-44.363302, -15.492864],
+      [-44.363151, -15.493019],
+      [-44.363023, -15.492905],
+      [-44.363157, -15.492755],
+      [-44.363302, -15.492864]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/77_1.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      }
+    ]
+  },
+  {
+    id: 'imovel_79',
+    title: 'Imóvel localizado na Rua Doutor Hermenegildo Barros, Nº 8',
+    message: 'Você está diante do Imóvel localizado na Rua Doutor Hermenegildo Barros, número 8, um casarão de esquina muito bem conservado, destacado por sua pintura em tons amarelos e detalhes em branco. A construção chama a atenção pela platibanda decorada no topo da fachada e pelos acabamentos trabalhados na quina do prédio. Suas portas e janelas de madeira vermelha dão acesso direto à calçada e, na lateral, é possível notar duas janelas na parte superior, aproveitando o espaço do sótão.',
     latitude: -15.492983057309846,
     longitude: -44.362867889626784,
     radius: 15,
@@ -1044,15 +1102,15 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/90_1.png'), 
+        imagem: require('../../assets/images/79_1.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
   },
   {
-    id: 'imovel_91',
-    title: 'Imóvel 91',
-    message: 'Você está no Imóvel N.º 91, localizado na esquina da Rua Barão do Rio Branco com a Travessa Joaquim Carlos. O destaque desta construção neoclássica é o topo da fachada, com detalhes decorativos, esculturas e pinhas nas pontas. As portas e janelas possuem arcos arredondados no topo e, na lateral, o sótão se destaca com janelas acompanhadas de sacadas em ferro fundido. O espaço abriga residência e comércio.',
+    id: 'imovel_80',
+    title: 'Imóvel localizado na Rua Barão do Rio Branco, Nº 223',
+    message: 'Você está no Imóvel localizado na Rua Barão do Rio Branco com a Travessa Joaquim Carlos. O destaque desta construção neoclássica é o topo da fachada, com detalhes decorativos, esculturas e pinhas nas pontas. As portas e janelas possuem arcos arredondados no topo e, na lateral, o sótão se destaca com janelas acompanhadas de sacadas em ferro fundido. O espaço abriga residência e comércio.',
     latitude: -15.49299795079196,
     longitude: -44.362632726027286,
     radius: 15,
@@ -1067,12 +1125,12 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/91_1.png'), 
+        imagem: require('../../assets/images/80_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/91_2.png'), 
+        imagem: require('../../assets/images/80_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
@@ -1081,8 +1139,8 @@ export const POINTS_OF_INTEREST = [
   // Mata machado
 
   {
-    id: 'imovel_92',
-    title: 'Imóvel 92',
+    id: 'imovel_81',
+    title: 'Imóvel localizado na Rua Mata Machado, Nª 9/11/21/25',
     message: 'Você está no Imóvel número 92, situado na esquina da Praça Getúlio Vargas com a Rua Mata Machado. Esta edificação térrea destaca-se por ser dividida em três espaços comerciais com pinturas coloridas e independentes. Seu topo traz uma platibanda decorada com rosáceas, rostos neoclássicos e desenhos de coroas de louro em massa, mantendo o charme do centro histórico',
     latitude: -15.490781849957987,
     longitude: -44.360469191914696,
@@ -1098,20 +1156,43 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/92_1.png'), 
+        imagem: require('../../assets/images/81_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/92_2.png'), 
+        imagem: require('../../assets/images/81_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_96',
-    title: 'Imóvel 96',
-    message: 'Você está diante do Imóvel Número 96, um imponente sobrado colonial de dois pavimentos localizado em uma esquina da Rua Mata Machado. O casarão chama a atenção pelo alinhamento das suas portas no andar térreo e pelas várias janelas rasgadas no andar superior. A construção mantém suas características históricas marcantes, como o telhado de quatro águas e os detalhes em madeira.',
+    id: 'imovel_84',
+    title: 'Imóvel localizado na Rua Mata Machado, Nº 57',
+    message: 'Você está diante deste imóvel em estilo eclético, construído bem no limite da calçada. O destaque fica por conta de sua imponente mureta no topo (platibanda), rica em relevos ornamentais e detalhes em tom de verde que escondem o telhado. A parte inferior da fachada possui revestimento em pedras rústicas, enquanto suas grandes janelas emolduradas trazem esquadrias de madeira e vidro, com um portão metálico claro de acesso na lateral esquerda.',
+    latitude: -15.490495092575669,
+    longitude: -44.36024224552906,
+    radius: 15,
+    type: 'Eclético',
+    polygon: [
+      [-44.360185, -15.490585],
+      [-44.360072, -15.49045],
+      [-44.360271, -15.490274],
+      [-44.360351, -15.490414],
+      [-44.360185, -15.490585]
+    ],
+    imagens: [
+      { 
+        id: '1', 
+        imagem: require('../../assets/images/84_1.png'), 
+        descricao: 'Inventário IEPHA - Atualizado' 
+      },
+    ]
+  },
+  {
+    id: 'imovel_85',
+    title: 'Imóvel localizado na Rua Mata Machado, Nº 87/89',
+    message: 'Você está diante do Imóvel Número 87/89, um imponente sobrado colonial de dois pavimentos localizado em uma esquina da Rua Mata Machado. O casarão chama a atenção pelo alinhamento das suas portas no andar térreo e pelas várias janelas rasgadas no andar superior. A construção mantém suas características históricas marcantes, como o telhado de quatro águas e os detalhes em madeira.',
     latitude: -15.490290739014773,
     longitude: -44.3600277994801,
     radius: 15,
@@ -1126,20 +1207,20 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/96_1.png'), 
+        imagem: require('../../assets/images/85_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/96_2.png'), 
+        imagem: require('../../assets/images/85_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_99',
-    title: 'Imóvel 99',
-    message: 'Você está diante do Imóvel Número 99, uma grande edificação de estilo eclético situada na esquina da Rua Mata Machado com a Rua Lindolfo Caetano. O casarão térreo chama a atenção pela sequência harmoniosa de janelas em arco pleno e pela porta principal com uma pequena escada de acesso. Sua fachada é ornamentada por pilastras, detalhes decorativos em massa e uma platibanda que esconde o telhado de quatro águas.',
+    id: 'imovel_87',
+    title: 'Imóvel localizado na  Rua Mata Machado, Nº 209',
+    message: 'Você está diante do Imóvel Número 209, uma grande edificação de estilo eclético situada na esquina da Rua Mata Machado com a Rua Lindolfo Caetano. O casarão térreo chama a atenção pela sequência harmoniosa de janelas em arco pleno e pela porta principal com uma pequena escada de acesso. Sua fachada é ornamentada por pilastras, detalhes decorativos em massa e uma platibanda que esconde o telhado de quatro águas.',
     latitude: -15.489419951441798,
     longitude: -44.35924034405003,
     radius: 15,
@@ -1154,20 +1235,20 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/99_1.png'), 
+        imagem: require('../../assets/images/87_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/99_2.png'), 
+        imagem: require('../../assets/images/87_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_101',
-    title: 'Imóvel 101',
-    message: 'Você está diante do Imóvel Número 101, uma edificação residencial de estilo eclético. A residência térrea se destaca por sua platibanda rendada com elementos vazados, pilaretes com coruchéus e um frontão central ornamentado em alto-relevo. Sua fachada conta com seis vãos em arco abatido, sendo uma porta central e cinco janelas, todos com emolduramento trabalhado em massa e vedações de madeira.',
+    id: 'imovel_89',
+    title: 'Imóvel localizado Rua Mata Machado, Nº 297',
+    message: 'Você está diante do Imóvel Número 297, uma edificação residencial de estilo eclético. A residência térrea se destaca por sua platibanda rendada com elementos vazados, pilaretes com coruchéus e um frontão central ornamentado em alto-relevo. Sua fachada conta com seis vãos em arco abatido, sendo uma porta central e cinco janelas, todos com emolduramento trabalhado em massa e vedações de madeira.',
     latitude: -15.488853246680613,
     longitude: -44.35870381940221,
     radius: 15,
@@ -1182,20 +1263,20 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/101_1.png'), 
+        imagem: require('../../assets/images/89_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/101_2.png'), 
+        imagem: require('../../assets/images/89_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_105',
-    title: 'Imóvel 105',
-    message: 'Você está diante do Imóvel Número 105, uma relevante edificação comercial de estilo eclético situada na esquina da Rua Barão de São Romão com a Rua Mata Machado. A construção térrea chama a atenção pela sua esquina chanfrada, pilastras moduladas e platibanda ornada com pináculos e frisos decorativos. Em bom estado de conservação, a fachada combina janelas originais de madeira com intervenções mais recentes.',
+    id: 'imovel_92',
+    title: 'Imóvel localizado na Rua Barão de São Romão, Nº 69/79',
+    message: 'Você está diante do Imóvel Número 69/79, uma relevante edificação comercial de estilo eclético situada na esquina da Rua Barão de São Romão com a Rua Mata Machado. A construção térrea chama a atenção pela sua esquina chanfrada, pilastras moduladas e platibanda ornada com pináculos e frisos decorativos. Em bom estado de conservação, a fachada combina janelas originais de madeira com intervenções mais recentes.',
     latitude: -15.488638134573783,
     longitude: -44.35829509824856,
     radius: 15,
@@ -1210,19 +1291,19 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/105_1.png'), 
+        imagem: require('../../assets/images/92_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/105_2.png'), 
+        imagem: require('../../assets/images/92_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_106',
-    title: 'Imóvel 106',
+    id: 'imovel_93',
+    title: 'Imóvel localizado na Rua Barão de São Romão, Nº 84',
     message: 'Você está diante de uma edificação comercial de estilo regional, situada numa esquina da Rua Barão de São Romão. Esta construção térrea de partido retangular destaca-se pelos seus três panos de parede modulados por pilares e pelo friso decorado com desenhos em alto-relevo. O telhado possui cobertura em duas águas com telhas artesanais do tipo capa e bica.',
     latitude: -15.4884848869256,
     longitude: -44.35815894432452,
@@ -1238,19 +1319,75 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/106_1.png'), 
+        imagem: require('../../assets/images/93_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/106_2.png'), 
+        imagem: require('../../assets/images/93_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_110',
-    title: 'Imóvel 110',
+   id: 'imovel_94',
+   title: 'Imóvel localizado na Rua Mata Machado, Nº 413/419/423',
+   message: 'Você está diante da casa residencial térrea de números 419/423, construída no limite da calçada e encostada nas vizinhas. O imóvel apresenta duas etapas bem visíveis na fachada: do lado direito, traz acabamento em tom claro com pilastras nas quinas e moldura decorativa abaixo do telhado; do lado esquerdo, possui pintura simples. As portas e janelas têm formato retangular reto e fechamento em madeira, com o telhado de telhas de barro caindo para a rua.',
+   latitude: -15.487994995731786,
+   longitude: -44.35787887397768,
+   radius: 15,
+   type: 'Colonial',
+   polygon: [
+    [-44.357916, -15.488114],
+    [-44.357879, -15.487995],
+    [-44.358045, -15.487845],
+    [-44.358104, -15.487944],
+    [-44.357916, -15.488114]
+   ],
+   imagens: [
+     {
+       id: '1',
+       imagem: require('../../assets/images/94_1.png'),
+       descricao: 'Inventário IEPHA - 1985'
+     },
+     {
+       id: '2',
+       imagem: require('../../assets/images/94_2.png'),
+       descricao: 'Inventário IEPHA - Atualizado'
+     }
+   ]
+  },
+  {
+   id: 'imovel_95',
+   title: 'Imóvel localizado na Rua Mata Machado, Nº 433',
+   message: 'Você está diante da casa residencial de número 95, construída no limite da calçada e com acesso feito por uma pequena escada na entrada principal. A fachada traz pilastras nas quinas e molduras decorativas no topo e ao redor das aberturas, criando um bonito contraste de cores com a pintura da parede. A composição conta com uma porta de madeira ladeada por duas janelas de um lado e uma do outro, todas com fechamento em madeira.',
+   latitude: -15.487929774860937,
+   longitude: -44.357810245770146,
+   radius: 15,
+   type: 'Colonial',
+   polygon: [
+    [-44.357937, -15.487849],
+    [-44.35776, -15.487979],
+    [-44.357717, -15.487901],
+    [-44.357852, -15.487751],
+    [-44.357937, -15.487849]
+   ],
+   imagens: [
+     {
+       id: '1',
+       imagem: require('../../assets/images/95_1.png'),
+       descricao: 'Inventário IEPHA - 1985'
+     },
+     {
+       id: '2',
+       imagem: require('../../assets/images/95_2.png'),
+       descricao: 'Inventário IEPHA - Atualizado'
+     }
+   ]
+  },
+  {
+    id: 'imovel_97',
+    title: 'Imóvel localizado no Rua Mata Machado, Nº 485',
     message: 'Você está diante do antigo Edifício do Batalhão da Polícia Militar, uma edificação de estilo eclético construída em dois pavimentos na esquina da Praça Santa Cruz com a Rua Mata Machado. O prédio chama a atenção por seus alicerces elevados de pedra, ritmo rítmico das aberturas e platibanda decorada com balaustrada e frontão central. O imóvel encontra-se atualmente em avançado estado de degradação.',
     latitude: -15.487476966637827,
     longitude: -44.357394374275145,
@@ -1266,19 +1403,19 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/110_1.png'), 
+        imagem: require('../../assets/images/97_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/110_2.png'), 
+        imagem: require('../../assets/images/97_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_111',
-    title: 'Imóvel 111',
+    id: 'imovel_98',
+    title: 'Imóvel localizado na Rua Padre Idelino, Nº 7',
     message: 'Você está diante desta pequena edificação de estilo regional com o Número 7 gravado na fachada. O imóvel térreo destaca-se pela sua platibanda decorada com recorte curvo no topo e pelo enquadramento que une a porta e a janela frontal, onde se lê o ano "1909" em relevo.',
     latitude: -15.487178783444588,
     longitude: -44.35768087885222,
@@ -1294,14 +1431,14 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/111_1.png'), 
+        imagem: require('../../assets/images/98_1.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
   },
   {
-    id: 'imovel_112',
-    title: 'Imóvel 112',
+    id: 'imovel_99',
+    title: 'Imóvel localizado Praça Sete de Setembro, Nª 73 a 97',
     message: 'Você está diante de um relevante conjunto arquitetônico de estilo colonial situado na Rua Operária, composto por edificações térreas de partido retangular implantadas no alinhamento da via e em parede-meia. O conjunto abrange o prédio de número 65 e 73, que possui platibanda ornamental reta e cunhais, e a sequência de casas geminadas de número 79, 83, 87, 91 e 97, destacando-se pela fachada modulada por pilares, frisos, cornijas e ritmo ordenado de portas e janelas.',
     latitude: -15.487890218330442,
     longitude: -44.35893415684557,
@@ -1317,19 +1454,19 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/112_1.png'), 
+        imagem: require('../../assets/images/99_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/112_2.png'), 
+        imagem: require('../../assets/images/99_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_114',
-    title: 'Imóvel 114',
+    id: 'imovel_100',
+    title: 'Antigo Cine Januária',
     message: 'Você está diante do antigo Cine Januária, edificação de estilo protomoderno e único cinema de rua da história do município. Inaugurado na década de 1950, o espaço funcionou regularmente até os anos 1980 e operou com exibições intermitentes até seu fechamento definitivo nos anos 1990. O imóvel destaca-se por sua fachada geométrica com platibanda escalonada, portão central pantográfico com letreiro original e barrado inferior em revestimento de pedra.',
     latitude: -15.490052143109176,
     longitude: -44.36077058209159,
@@ -1345,7 +1482,7 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/114_1.png'), 
+        imagem: require('../../assets/images/100_1.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       },
     ]
@@ -1354,9 +1491,9 @@ export const POINTS_OF_INTEREST = [
   //Trajeto D. São Francisco 
 
   {
-    id: 'imovel_115',
-    title: 'Imóvel 115',
-    message: 'Você está diante da edificação número 115, localizada na Avenida São Francisco. Este imóvel de arquitetura simples apresenta um estado atual de conservação bastante deteriorado, com marcas do tempo visíveis em sua estrutura.',
+    id: 'imovel_101',
+    title: 'Imóvel localizado na Avenida São Francisco, Nº 262',
+    message: 'Você está diante da edificação número 262, localizada na Avenida São Francisco. Este imóvel de arquitetura simples apresenta um estado atual de conservação bastante deteriorado, com marcas do tempo visíveis em sua estrutura.',
     latitude: -15.49118598076174,
     longitude: -44.35964844483142,
     radius: 15,
@@ -1371,20 +1508,20 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/115_1.png'), 
+        imagem: require('../../assets/images/101_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/115_2.png'), 
+        imagem: require('../../assets/images/101_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
   },
   {
-    id: 'imovel_118',
-    title: 'Imóvel 118',
-    message: 'Você está diante do Imóvel número 118, antiga sede da "Cooperativa de Consumo dos Rodoviários de Minas Gerais Ltda.", localizado em uma esquina da Rua Humaitá. A construção fica em um nível mais alto que a calçada, com acesso por uma escada frontal. Chama a atenção pela sua fachada com empena triangular emoldurada e estilo simples, apresentando desgaste no acabamento.',
+    id: 'imovel_103',
+    title: 'Imóvel localizado na Rua Humaitá, Nº 100',
+    message: 'Você está diante do Imóvel número 100, antiga sede da "Cooperativa de Consumo dos Rodoviários de Minas Gerais Ltda.", localizado em uma esquina da Rua Humaitá. A construção fica em um nível mais alto que a calçada, com acesso por uma escada frontal. Chama a atenção pela sua fachada com empena triangular emoldurada e estilo simples, apresentando desgaste no acabamento.',
     latitude: -15.490418660275342,
     longitude: -44.358915556137376,
     radius: 15,
@@ -1399,12 +1536,12 @@ export const POINTS_OF_INTEREST = [
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/118_1.png'), 
+        imagem: require('../../assets/images/103_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/118_2.png'), 
+        imagem: require('../../assets/images/103_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
