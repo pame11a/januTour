@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, Linking, ImageBackground } from 'react-native';
-import { SafeAreaView, SafeAreaProvider  } from 'react-native-safe-area-context';
-import { StatusBar as ExpoStatusBar } from 'expo-status-bar'; // Importação adicionada para a barra de notificações
-import { MaterialIcons } from '@expo/vector-icons';
+import { SafeAreaView, SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
-
 
 const desenvolvedores = [
   {
@@ -27,39 +26,44 @@ const desenvolvedores = [
 ];
 
 export default function SobreScreen({ navigation }) {
+  const insets = useSafeAreaInsets(); // Adicionado para calcular a barra superior
+
   const openLink = (url) => {
     Linking.openURL(url).catch((err) => console.error("Erro ao abrir link:", err));
   };
 
   return (
     <SafeAreaProvider>
-        <SafeAreaView style={{ backgroundColor: colors.cardBackground }} edges={['top']} />
-        <ExpoStatusBar style="light" backgroundColor={colors.cardBackground} translucent={false} />
-        
+        {/* Removido o 'top' da SafeAreaView para o fundo subir */}
         <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
+            <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
             
-            <View style={styles.header}>
-                <View style={styles.headerLeft}>
-                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                    <MaterialIcons name="arrow-back" size={24} color="#FFF" />
-                </TouchableOpacity>
-                <Text style={styles.headerTitle}>Sobre Nós</Text> 
-                </View>
-
-                <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
-                    <Image 
-                        source={require('../../../assets/images/extras/ifnmg.png')} 
-                        style={styles.logoIfnmg}
-                        resizeMode="contain"
-                    />
-                </TouchableOpacity>
-            </View>
             <ImageBackground 
                 source={require('../../../assets/pattern.png')} 
                 style={{ flex: 1, width: '100%' }}
                 resizeMode="repeat"
                 imageStyle={{ opacity: 0.5 }} 
             >
+                {/* Empurramos o cabeçalho dinamicamente para baixo da barra de status */}
+                <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
+                    <View style={styles.headerTopRow}>
+                        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                            <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
+                            <Text style={styles.backButtonText}>Voltar</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
+                            <Image 
+                                source={require('../../../assets/images/extras/ifnmg.png')} 
+                                style={styles.logoIfnmg}
+                                resizeMode="contain"
+                            />
+                        </TouchableOpacity>
+                    </View>
+                    
+                    <Text style={styles.headerTitle}>Sobre Nós</Text> 
+                </View>
+
                 <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
                     
                     <View style={styles.textWrapper}>

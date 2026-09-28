@@ -4,32 +4,36 @@ import { colors } from '../../styles/colors';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
   },
   header: {
-    height: 60,
-    backgroundColor: colors.cardBackground, 
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between', 
-    paddingHorizontal: 15,
+    paddingHorizontal: 20,
+    paddingBottom: 15,
   },
-  headerLeft: {
+  headerTopRow: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    marginBottom: 15,
   },
   backButton: {
-    padding: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  backButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: colors.cardBackground,
+    marginLeft: 8,
   },
   headerTitle: {
-    color: '#FFF',
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: 'bold',
-    marginLeft: 10, 
+    color: colors.cardBackground,
   },
   logoIfnmg: {
     width: 70,
     height: 30,
+    marginTop: 8, 
   },
   scrollContent: {
     padding: 20,

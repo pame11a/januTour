@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
 import Mapbox from '@rnmapbox/maps';
@@ -15,9 +15,11 @@ export default function PreviaRotaScreen({ route, navigation }) {
   
   const [fullRouteCoordinates, setFullRouteCoordinates] = useState([]);
   
-  // NOVOS ESTADOS: Para guardar a distância e duração reais da API
+  // Para guardar a distância e duração reais da API
   const [distanciaCalculada, setDistanciaCalculada] = useState('Calculando...');
   const [duracaoCalculada, setDuracaoCalculada] = useState('Calculando...');
+
+  const insets = useSafeAreaInsets(); 
 
   const routePoints = useMemo(() => {
     if (!rotaSelecionada || !rotaSelecionada.sequence) return [];
@@ -25,7 +27,6 @@ export default function PreviaRotaScreen({ route, navigation }) {
       .map(id => POINTS_OF_INTEREST.find(p => p.id === id))
       .filter(Boolean); 
   }, [rotaSelecionada]);
-
 
   const statsImoveis = useMemo(() => {
     const counts = { colonial: 0, regional: 0, ecletico: 0, protomoderno: 0, moderno: 0, naoTombado: 0 };
@@ -126,8 +127,8 @@ export default function PreviaRotaScreen({ route, navigation }) {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ExpoStatusBar style="dark" />
+    <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
+      <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
       
       <ImageBackground 
         source={require('../../../assets/pattern.png')} 
@@ -135,7 +136,10 @@ export default function PreviaRotaScreen({ route, navigation }) {
         resizeMode="repeat"
         imageStyle={{ opacity: 0.5 }}
       >
-        <ScrollView contentContainerStyle={styles.scrollContent}>
+        <ScrollView 
+          contentContainerStyle={[styles.scrollContent, { paddingTop: insets.top + 20 }]}
+          showsVerticalScrollIndicator={false}
+        >
           
           <TouchableOpacity 
             style={styles.backButton} 

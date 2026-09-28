@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 
 import { ROUTES_LIST } from '../../data/routes';
-// IMPORTANTE: Adicionamos a importação dos pontos e do token do Mapbox
 import { POINTS_OF_INTEREST, MAPBOX_TOKEN } from '../../config/constants'; 
 
 import { styles } from './styles';
 
 export default function MenuScreen({ navigation }) {
   const [rotaExpandida, setRotaExpandida] = useState(null);
-  
-  // NOVO ESTADO: Vai guardar os cálculos de cada rota. Ex: { 'núcleo_histórico': { distance: '1.2 km', duration: '15 min' } }
   const [metricasRotas, setMetricasRotas] = useState({}); 
+  const insets = useSafeAreaInsets(); 
 
   const toggleExpandir = (id) => {
     setRotaExpandida(rotaExpandida === id ? null : id);
@@ -24,9 +22,7 @@ export default function MenuScreen({ navigation }) {
     navigation.navigate('Previa', { rotaSelecionada: rota });
   };
 
-  // NOVO EFEITO: Calcula a distância e duração na hora que o card é aberto
   useEffect(() => {
-    // Só faz o cálculo se a rota foi expandida e se ainda não calculamos ela antes
     if (rotaExpandida && !metricasRotas[rotaExpandida]) {
       const rota = ROUTES_LIST.find(r => r.id === rotaExpandida);
       
@@ -36,7 +32,6 @@ export default function MenuScreen({ navigation }) {
           .filter(Boolean);
 
         if (routePoints.length >= 2) {
-          // Pega as coordenadas de todos os pontos da rota e monta a URL do Mapbox
           const coords = routePoints.map(p => `${p.longitude},${p.latitude}`).join(';');
           const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${coords}?access_token=${MAPBOX_TOKEN}`;
           
@@ -47,14 +42,12 @@ export default function MenuScreen({ navigation }) {
                 const metros = data.routes[0].distance;
                 const segundos = data.routes[0].duration;
                 
-                // Formata os números
                 const distanciaFormatada = metros > 1000 
                   ? (metros / 1000).toFixed(1) + ' km' 
                   : Math.round(metros) + ' m';
                   
                 const duracaoFormatada = Math.round(segundos / 60) + ' min';
 
-                // Salva o resultado no estado para esta rota específica
                 setMetricasRotas(prev => ({
                   ...prev,
                   [rotaExpandida]: { distance: distanciaFormatada, duration: duracaoFormatada }
@@ -65,11 +58,11 @@ export default function MenuScreen({ navigation }) {
         }
       }
     }
-  }, [rotaExpandida]); // Dispara toda vez que você abre um card diferente
+  }, [rotaExpandida]); 
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <ExpoStatusBar style="dark" />
+    <SafeAreaView style={styles.safeArea} edges={['left', 'right', 'bottom']}>
+      <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
       
       <ImageBackground 
         source={require('../../../assets/pattern.png')} 
@@ -77,7 +70,7 @@ export default function MenuScreen({ navigation }) {
         resizeMode="repeat"
         imageStyle={{ opacity: 0.5 }} 
       >
-        <ScrollView contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={[styles.container, { paddingTop: insets.top + 20 }]}>
           
           <View style={styles.header}>
             <MaterialIcons name="alt-route" size={28} color="#1C2B40" />
@@ -85,8 +78,6 @@ export default function MenuScreen({ navigation }) {
           </View>
 
           {ROUTES_LIST && ROUTES_LIST.map((rota) => {
-            
-            // LÓGICA DE EXIBIÇÃO: Mostra o cálculo automático. Se ainda não tiver calculado, mostra 'Calculando...'
             const displayDistance = metricasRotas[rota.id]?.distance || (rota.distance !== '... ' && rota.distance !== '...' ? rota.distance : 'Calculando...');
             const displayDuration = metricasRotas[rota.id]?.duration || (rota.duration !== '... ' && rota.duration !== '...' ? rota.duration : 'Calculando...');
 

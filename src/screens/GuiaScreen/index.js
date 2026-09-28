@@ -1,50 +1,48 @@
 import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, Linking, ImageBackground } from 'react-native';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaView, SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
-import { MaterialIcons } from '@expo/vector-icons';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
 
-
 export default function GuiaScreen({ navigation }) {
+  const insets = useSafeAreaInsets(); 
+
   const openLink = (url) => {
     Linking.openURL(url).catch((err) => console.error("Erro ao abrir link:", err));
   };
 
   return (
     <SafeAreaProvider>
-        {/* Força a área da barra de notificações a ficar azul */}
-        <SafeAreaView style={{ backgroundColor: colors.cardBackground }} edges={['top']} />
-        <ExpoStatusBar style="light" backgroundColor={colors.cardBackground} translucent={false} />
-        
-        {/* O restante da tela com o fundo padrão */}
         <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
+            <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
             
-            {/* Header */}
-            <View style={styles.header}>
-                <View style={styles.headerLeft}>
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                        <MaterialIcons name="arrow-back" size={24} color="#FFF" />
-                    </TouchableOpacity>
-                    <Text style={styles.headerTitle}>Descubra Januária</Text> 
-                </View>
-
-                {/* Logótipo do IFNMG clicável */}
-                <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
-                    <Image 
-                        source={require('../../../assets/images/extras/ifnmg.png')} 
-                        style={styles.logoIfnmg}
-                        resizeMode="contain"
-                    />
-                </TouchableOpacity>
-            </View>
             <ImageBackground 
                 source={require('../../../assets/pattern.png')} 
                 style={{ flex: 1, width: '100%' }} 
                 resizeMode="repeat"
                 imageStyle={{ opacity: 0.5 }} 
             >
+                <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
+                    <View style={styles.headerTopRow}>
+                        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                            <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
+                            <Text style={styles.backButtonText}>Voltar</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
+                            <Image 
+                                source={require('../../../assets/images/extras/ifnmg.png')} 
+                                style={styles.logoIfnmg}
+                                resizeMode="contain"
+                            />
+                        </TouchableOpacity>
+                    </View>
+                    
+                    <Text style={styles.headerTitle}>Descubra Januária</Text> 
+                </View>
+
                 <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
                     
                     <View style={styles.contentWrapper}>

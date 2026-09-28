@@ -12,7 +12,7 @@ export const dicasData = [
   {
     id: '3',
     titulo: 'Colonial',
-    texto: 'Caracteriza-se pela alvenaria de tijolo cozido e fachadas alinhadas à rua, técnicas que ajudaram as edificações a resistir às cheias do rio[cite: 15].',
+    texto: 'Caracteriza-se pela alvenaria de tijolo cozido e fachadas alinhadas à rua, técnicas que ajudaram as edificações a resistir às cheias do rio.',
     imagens: [
       { 
         id: '1', 
@@ -29,7 +29,7 @@ export const dicasData = [
   {
     id: '4',
     titulo: 'Regional',
-    texto: 'Marcado pela solução construtiva do "oitão vazado" (telhados que se prolongam lateralmente), refletindo forte influência da arquitetura nordestina[cite: 15].',
+    texto: 'Marcado pela solução construtiva do "oitão vazado" (telhados que se prolongam lateralmente), refletindo forte influência da arquitetura nordestina.',
     imagens: [
       { 
         id: '1', 
@@ -56,16 +56,16 @@ export const dicasData = [
   {
     id: '5',
     titulo: 'Eclético',
-    texto: 'Reúne referências estilísticas de diversas origens com uso de platibandas decoradas e enquadramentos que simbolizam a prosperidade do comércio[cite: 15].',
+    texto: 'Reúne referências estilísticas de diversas origens com uso de platibandas decoradas e enquadramentos que simbolizam a prosperidade do comércio.',
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/110_1.png'), 
+        imagem: require('../../assets/images/97_1.png'), 
         descricao: 'Inventário IEPHA - 1985' 
       },
       { 
         id: '2', 
-        imagem: require('../../assets/images/110_2.png'), 
+        imagem: require('../../assets/images/97_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
@@ -73,11 +73,16 @@ export const dicasData = [
   {
     id: '6',
     titulo: 'Protomoderno',
-    texto: 'Representa a transição para a modernidade, destacando-se por volumes geométricos limpos, galpões comerciais e influências do estilo Art Déco[cite: 15].',
+    texto: 'Representa a transição para a modernidade, destacando-se por volumes geométricos limpos, galpões comerciais e influências do estilo Art Déco.',
     imagens: [
       { 
         id: '1', 
-        imagem: require('../../assets/images/114_1.png'), 
+        imagem: require('../../assets/images/21_1.png'), 
+        descricao: 'Inventário IEPHA - 1985' 
+      },
+      { 
+        id: '2', 
+        imagem: require('../../assets/images/21_2.png'), 
         descricao: 'Inventário IEPHA - Atualizado' 
       }
     ]
