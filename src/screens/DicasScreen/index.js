@@ -63,6 +63,17 @@ function CardItem({ item }) {
 export default function DicasScreen({ navigation }) {
   const insets = useSafeAreaInsets(); 
 
+  const renderHeader = () => (
+    <View style={[styles.header, { paddingTop: insets.top + 10, paddingHorizontal: 0, marginBottom: 15 }]}>
+      <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+        <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
+        <Text style={styles.backButtonText}>Voltar</Text>
+      </TouchableOpacity>
+      
+      <Text style={styles.headerTitle}>Dicas e histórias</Text>
+    </View>
+  );
+
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
       <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
@@ -73,18 +84,10 @@ export default function DicasScreen({ navigation }) {
         resizeMode="repeat"
         imageStyle={{ opacity: 0.5 }} 
       >
-        <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
-          <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-            <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
-            <Text style={styles.backButtonText}>Voltar</Text>
-          </TouchableOpacity>
-          
-          <Text style={styles.headerTitle}>Dicas e histórias</Text>
-        </View>
-
         <FlatList
           data={dicasData}
           keyExtractor={(item) => item.id}
+          ListHeaderComponent={renderHeader} 
           renderItem={({ item }) => <CardItem item={item} />}
           contentContainerStyle={styles.listContent}
           showsVerticalScrollIndicator={false}

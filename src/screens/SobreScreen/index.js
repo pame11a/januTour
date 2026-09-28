@@ -34,7 +34,6 @@ export default function SobreScreen({ navigation }) {
 
   return (
     <SafeAreaProvider>
-        {/* Removido o 'top' da SafeAreaView para o fundo subir */}
         <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
             <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
             
@@ -44,28 +43,28 @@ export default function SobreScreen({ navigation }) {
                 resizeMode="repeat"
                 imageStyle={{ opacity: 0.5 }} 
             >
-                {/* Empurramos o cabeçalho dinamicamente para baixo da barra de status */}
-                <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
-                    <View style={styles.headerTopRow}>
-                        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                            <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
-                            <Text style={styles.backButtonText}>Voltar</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
-                            <Image 
-                                source={require('../../../assets/images/extras/ifnmg.png')} 
-                                style={styles.logoIfnmg}
-                                resizeMode="contain"
-                            />
-                        </TouchableOpacity>
-                    </View>
-                    
-                    <Text style={styles.headerTitle}>Sobre Nós</Text> 
-                </View>
 
                 <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
                     
+                    <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
+                        <View style={styles.headerTopRow}>
+                            <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                                <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
+                                <Text style={styles.backButtonText}>Voltar</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
+                                <Image 
+                                    source={require('../../../assets/images/extras/ifnmg.png')} 
+                                    style={styles.logoIfnmg}
+                                    resizeMode="contain"
+                                />
+                            </TouchableOpacity>
+                        </View>
+                        
+                        <Text style={styles.headerTitle}>Sobre Nós</Text> 
+                    </View>
+
                     <View style={styles.textWrapper}>
                     <Text style={styles.paragraph}>
                         O <Text style={styles.bold}>JanuTour</Text> é resultado do projeto de extensão “Aplicações de Tecnologia da Informação para o Desenvolvimento do Turismo em Januária/MG”, desenvolvido no Instituto Federal do Norte de Minas Gerais (IFNMG) Campus Januária.

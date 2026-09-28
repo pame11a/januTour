@@ -24,26 +24,27 @@ export default function GuiaScreen({ navigation }) {
                 resizeMode="repeat"
                 imageStyle={{ opacity: 0.5 }} 
             >
-                <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
-                    <View style={styles.headerTopRow}>
-                        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                            <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
-                            <Text style={styles.backButtonText}>Voltar</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
-                            <Image 
-                                source={require('../../../assets/images/extras/ifnmg.png')} 
-                                style={styles.logoIfnmg}
-                                resizeMode="contain"
-                            />
-                        </TouchableOpacity>
-                    </View>
-                    
-                    <Text style={styles.headerTitle}>Descubra Januária</Text> 
-                </View>
 
                 <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+
+                    <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
+                        <View style={styles.headerTopRow}>
+                            <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                                <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
+                                <Text style={styles.backButtonText}>Voltar</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
+                                <Image 
+                                    source={require('../../../assets/images/extras/ifnmg.png')} 
+                                    style={styles.logoIfnmg}
+                                    resizeMode="contain"
+                                />
+                            </TouchableOpacity>
+                        </View>
+                        
+                        <Text style={styles.headerTitle}>Descubra Januária</Text> 
+                    </View>
                     
                     <View style={styles.contentWrapper}>
                         <Image 
