@@ -47,11 +47,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Eclético',
     polygon: [
-      [-44.362181, -15.488469],
-      [-44.361865, -15.488288],
-      [-44.361586, -15.488588],
-      [-44.36202, -15.488836],
-      [-44.362181, -15.488469]
+      [-44.362084, -15.488511],
+      [-44.361923, -15.488418],
+      [-44.361784, -15.488661],
+      [-44.361961, -15.488754],
+      [-44.362084, -15.488511]
     ],
     imagens: [
       { 
@@ -131,11 +131,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Eclético',
     polygon: [
-      [-44.361409, -15.489581],
-      [-44.361253, -15.489488],
-      [-44.361323, -15.48939],
-      [-44.361495, -15.489503],
-      [-44.361409, -15.489581]
+      [-44.36136, -15.489415],
+      [-44.36129, -15.489509],
+      [-44.361424, -15.48956],
+      [-44.361467, -15.489498],
+      [-44.36136, -15.489415]
     ],
     imagens: [
       { 
@@ -153,7 +153,7 @@ export const POINTS_OF_INTEREST = [
     {
     id: 'imovel_8',
     title: 'Imóvel localizado na Rua Cônego Livínio, Nº 33',
-    message: 'tVocê chegou ao imóvel número 33 da Rua Cônego Livínio. De estilo eclético, o prédio se destaca pela fachada com feições mouriscas, marcada por formas e ornamentos inspirados na tradição arquitetônica islâmica.', 
+    message: 'Você chegou ao imóvel número 33 da Rua Cônego Livínio. De estilo eclético, o prédio se destaca pela fachada com feições mouriscas, marcada por formas e ornamentos inspirados na tradição arquitetônica islâmica.', 
     latitude: -15.490536909094978,
     longitude: -44.36103355798111,
     radius: 15,
@@ -187,11 +187,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Colonial',
     polygon: [
-      [-44.360958, -15.490491],
-      [-44.360846, -15.49061],
-      [-44.360738, -15.49048],
-      [-44.36084, -15.490387],
-      [-44.360958, -15.490491]
+      [-44.360952, -15.490527],
+      [-44.36084, -15.490661],
+      [-44.360662, -15.490511],
+      [-44.360829, -15.490387],
+      [-44.360952, -15.490527]
     ],
     imagens: [
       { 
@@ -271,11 +271,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Regional',
     polygon: [
-      [-44.359714, -15.49078],
-      [-44.359569, -15.490935],
-      [-44.35966, -15.491008],
-      [-44.35981, -15.490853],
-      [-44.359714, -15.49078]
+      [-44.359869, -15.490961],
+      [-44.359756, -15.491054],
+      [-44.359681, -15.490956],
+      [-44.359793, -15.490873],
+      [-44.359869, -15.490961]
     ],
     imagens: [
       { 
@@ -299,11 +299,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Colonial',
     polygon:[
-      [-44.359767, -15.490863],
-      [-44.359687, -15.490785],
-      [-44.3598, -15.490698],
-      [-44.359885, -15.490775],
-      [-44.359767, -15.490863]
+      [-44.359858, -15.490785],
+      [-44.359761, -15.490884],
+      [-44.359681, -15.490806],
+      [-44.359761, -15.490718],
+      [-44.359858, -15.490785]
     ],
     imagens: [
       {
@@ -320,7 +320,7 @@ export const POINTS_OF_INTEREST = [
   },
   {
     id: 'imovel_21',
-    title: 'Imóvel localizado na esquina da Rua Dom Joaquim com a Rua Gualberto de Almeida, Nº 330',
+    title: 'Imóvel localizado na esquina da Rua Dom Joaquim, Nº 330',
     message: 'Você chegou ao imóvel localizado na esquina da Rua Dom Joaquim com a Rua Gualberto de Almeida, nº 330. De tipologia protomoderna, foi construído originalmente para uso residencial e posteriormente adaptado para atividades comerciais, encontrando-se atualmente sem uso. Destaca-se pela esquina chanfrada e pela platibanda reta com elementos geométricos em relevo. Ao longo do tempo, sua fachada foi modificada, com a substituição das antigas portas de madeira por fechamentos em alvenaria e portas metálicas de enrolar',
     latitude: -15.490614411215406,
     longitude: -44.35962893189584,
@@ -406,11 +406,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Regional',
     polygon: [
-      [-44.359317, -15.489193],
-      [-44.359215, -15.489286],
-      [-44.359043, -15.489116],
-      [-44.359145, -15.489038],
-      [-44.359317, -15.489193]
+      [-44.359284, -15.489229],
+      [-44.359165, -15.489333],
+      [-44.359031, -15.489167],
+      [-44.359176, -15.489059],
+      [-44.359284, -15.489229]
     ],
     imagens: [
       { 
@@ -452,11 +452,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Colonial',
     polygon: [
-      [-44.359987, -15.488557],
-      [-44.359859, -15.488433],
-      [-44.36003, -15.488299],
-      [-44.360213, -15.488433],
-      [-44.359987, -15.488557]
+      [-44.360126, -15.48849],
+      [-44.360035, -15.488588],
+      [-44.359954, -15.488516],
+      [-44.360024, -15.488402],
+      [-44.360126, -15.48849]
     ],
     imagens: [
       { 
@@ -564,11 +564,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Regional',
     polygon: [
-      [-44.361506, -15.488454],
-      [-44.361355, -15.488599],
-      [-44.361495, -15.488692],
-      [-44.361672, -15.488562],
-      [-44.361506, -15.488454]
+      [-44.361505, -15.488469],
+      [-44.361617, -15.488573],
+      [-44.361526, -15.488681],
+      [-44.361397, -15.488552],
+      [-44.361505, -15.488469]
     ],
     imagens: [
       { 
@@ -1499,11 +1499,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Colonial',
     polygon: [
-      [-44.359648, -15.491186],
-      [-44.35944, -15.491065],
-      [-44.359553, -15.49093],
-      [-44.3598, -15.491106],
-      [-44.359648, -15.491186]
+      [-44.359579, -15.491328],
+      [-44.359428, -15.491194],
+      [-44.359606, -15.491023],
+      [-44.359772, -15.491214],
+      [-44.359579, -15.491328]
     ],
     imagens: [
       { 
