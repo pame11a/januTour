@@ -8,6 +8,7 @@ export const INITIAL_ZOOM = 18;
 
 export const POINTS_OF_INTEREST = [
 
+
 // Núcleo Histórico
 
   {

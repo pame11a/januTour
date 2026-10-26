@@ -44,6 +44,8 @@ export default function MapaScreen({ route, navigation }) {
   const cameraRef = useRef(null);
 
   // Estados de Alerta e Polígonos
+  const [ultimaDistanciaFalada, setUltimaDistanciaFalada] = useState(9999);
+  const [isPointActive, setIsPointActive] = useState(false);
   const [ultimoPontoAvisado, setUltimoPontoAvisado] = useState(null);
   const [showRouteFinished, setShowRouteFinished] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -171,6 +173,7 @@ export default function MapaScreen({ route, navigation }) {
 
                 // Gatilho ativado apenas se o usuário estiver DENTRO do polígono e ainda não tiver visto esta tela
                 if (isInside && ultimoPontoAvisado !== pointData.id) {
+                  setIsPointActive(true);
                   setActivePointData({ 
                     title: pointData.title, 
                     message: pointData.message, 
@@ -208,17 +211,42 @@ export default function MapaScreen({ route, navigation }) {
     }
   }, [userLocation, indiceAtual, rotaAtiva]);
 
-  useEffect(() => {
-    if (instruction && instruction !== ultimaInstrucaoFalada) {
-      Speech.stop();
-      Speech.speak(instruction, { 
-        language: 'pt-BR', 
-        pitch: 1.0, 
-        rate: 1.0 
-      });
-      setUltimaInstrucaoFalada(instruction);
+  // Função para separar a ação dos metros 
+  const analisarInstrucao = (texto) => {
+    if (!texto) return { acao: '', distancia: 0 };
+    const match = texto.match(/Em (\d+)m:(.*)/i);
+    if (match) {
+      return { distancia: parseInt(match[1], 10), acao: match[2].trim() };
     }
-  }, [instruction]);
+    return { acao: texto, distancia: 0 };
+  };
+
+  useEffect(() => {
+    // Se a tela do ponto estiver aberta, o GPS não tem permissão para falar.
+    if (isPointActive || showRouteFinished) return;
+
+    if (instruction) {
+      const atual = analisarInstrucao(instruction);
+      const antiga = analisarInstrucao(ultimaInstrucaoFalada);
+
+      const acaoMudou = atual.acao !== antiga.acao;
+      const diferencaDistancia = antiga.distancia - atual.distancia;
+      
+      // Só fala se a manobra mudou ou se desceu 50 metros desde a última fala
+      const passouMargem = antiga.distancia === 0 || diferencaDistancia >= 50;
+
+      if (acaoMudou || (atual.distancia > 0 && passouMargem)) {
+        Speech.stop();
+        Speech.speak(instruction, { 
+          language: 'pt-BR', 
+          pitch: 1.0, 
+          rate: 1.0 
+        });
+        setUltimaInstrucaoFalada(instruction);
+        setUltimaDistanciaFalada(atual.distancia);
+      }
+    }
+  }, [instruction, isPointActive, showRouteFinished]);
 
   const handleRecenter = () => {
     if (userLocation && cameraRef.current) {
@@ -350,10 +378,12 @@ export default function MapaScreen({ route, navigation }) {
           data={activePointData} 
           onDismiss={() => { 
             setShowAlert(false); 
+            setIsPointActive(false); 
             Speech.stop(); 
           }}
           onClose={() => { 
             setShowAlert(false); 
+            setIsPointActive(false); 
             Speech.stop(); 
             setUltimaInstrucaoFalada(''); 
             setInstruction('');
