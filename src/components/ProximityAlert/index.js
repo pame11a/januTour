@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons'; 
+import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { MaterialIcons } from '@expo/vector-icons';
+import { colors } from '../../styles/colors';
+import { styles } from './styles';
 
-export function ProximityAlert({ isVisible, onClose, styles, data }) {
+export function ProximityAlert({ isVisible, onClose, onDismiss, data }) {
   const [imagemAtualIndex, setImagemAtualIndex] = useState(0);
+  const insets = useSafeAreaInsets(); 
 
   if (!isVisible || !data) return null;
+
   const nextImage = () => {
     if (data.imagens && imagemAtualIndex < data.imagens.length - 1) {
       setImagemAtualIndex(imagemAtualIndex + 1);
@@ -18,60 +24,75 @@ export function ProximityAlert({ isVisible, onClose, styles, data }) {
     }
   };
 
+  const handleNextPoint = () => {
+    setImagemAtualIndex(0);
+    onClose(); 
+  };
+
+  const handleDismiss = () => {
+    setImagemAtualIndex(0);
+    onDismiss();
+  };
+
   return (
-    <View style={styles.alertContainer}>
-      <View style={styles.alertBox}>
-        <Text style={styles.alertTitle}>{data.title}</Text>
-        <Text style={styles.alertMessage}>{data.message}</Text>
+    <View style={styles.fullScreenContainer}>
+        {/* Força a barra de notificações a ficar preta nesta tela */}
+        <ExpoStatusBar style="dark" />
         
-        {data.imagens && data.imagens.length > 0 && (
-          <View style={{ alignItems: 'center', marginTop: 10, marginBottom: 20 }}>
-            
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-              
-              <TouchableOpacity 
-                onPress={prevImage} 
-                disabled={imagemAtualIndex === 0}  imagem
-                style={{ padding: 5, opacity: imagemAtualIndex === 0 ? 0.2 : 1 }}
-              >
-                <MaterialIcons name="chevron-left" size={32} color="#1C2B40" />
-              </TouchableOpacity>
+        <View style={[styles.headerNav, { paddingTop: insets.top + 15 }]}>
+          <TouchableOpacity onPress={handleDismiss} style={styles.iconButton}>
+            <MaterialIcons name="close" size={28} color="#333" />
+          </TouchableOpacity>
 
-              <Image 
-                source={data.imagens[imagemAtualIndex].imagem} 
-                style={{ width: 220, height: 160, borderRadius: 8, backgroundColor: '#e2e8f0', marginHorizontal: 5 }} 
-                resizeMode="cover" 
-              />
+          <TouchableOpacity onPress={handleNextPoint} style={styles.nextButton}>
+            <Text style={styles.nextButtonText}>Próximo</Text>
+            <MaterialIcons name="arrow-forward" size={20} color="#FFF" />
+          </TouchableOpacity>
+        </View>
 
-              <TouchableOpacity 
-                onPress={nextImage} 
-                disabled={imagemAtualIndex === data.imagens.length - 1} 
-                style={{ padding: 5, opacity: imagemAtualIndex === data.imagens.length - 1 ? 0.2 : 1 }}
-              >
-                <MaterialIcons name="chevron-right" size={32} color="#1C2B40" />
-              </TouchableOpacity>
+        <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+          
+          <Text style={styles.title}>{data.title}</Text>
+          
+          {data.imagens && data.imagens.length > 0 && (
+            <View style={styles.imageSection}>
               
+              <View style={styles.carouselRow}>
+                <TouchableOpacity 
+                  onPress={prevImage} 
+                  disabled={imagemAtualIndex === 0}  
+                  style={[styles.arrowButton, { opacity: imagemAtualIndex === 0 ? 0.2 : 1 }]}
+                >
+                  <MaterialIcons name="chevron-left" size={36} color={colors.cardBackground} />
+                </TouchableOpacity>
+
+                <Image 
+                  source={data.imagens[imagemAtualIndex].imagem} 
+                  style={styles.mainImage} 
+                  resizeMode="cover" 
+                />
+
+                <TouchableOpacity 
+                  onPress={nextImage} 
+                  disabled={imagemAtualIndex === data.imagens.length - 1} 
+                  style={[styles.arrowButton, { opacity: imagemAtualIndex === data.imagens.length - 1 ? 0.2 : 1 }]}
+                >
+                  <MaterialIcons name="chevron-right" size={36} color={colors.cardBackground} />
+                </TouchableOpacity>
+              </View>
+
+              {data.imagens[imagemAtualIndex].descricao ? (
+                <Text style={styles.imageDescription}>
+                  {data.imagens[imagemAtualIndex].descricao}
+                </Text>
+              ) : null}
+
             </View>
+          )}
 
-            {data.imagens[imagemAtualIndex].descricao ? (
-              <Text style={[styles.carouselDescription, { marginTop: 8, maxWidth: 220 }]}>
-                {data.imagens[imagemAtualIndex].descricao}
-              </Text>
-            ) : null}
-
-          </View>
-        )}
-        
-        <TouchableOpacity 
-          style={styles.alertButton} 
-          onPress={() => {
-            setImagemAtualIndex(0); 
-            onClose();
-          }}
-        >
-          <Text style={styles.alertButtonText}>Fechar</Text>
-        </TouchableOpacity>
-      </View>
+          <Text style={styles.messageText}>{data.message}</Text>
+          
+        </ScrollView>
     </View>
   );
 }

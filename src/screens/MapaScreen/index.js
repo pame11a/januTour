@@ -41,6 +41,7 @@ export default function MapaScreen({ route, navigation }) {
   const cameraRef = useRef(null);
 
   // Estados de Alerta e Polígonos
+  const [ultimoPontoAvisado, setUltimoPontoAvisado] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
   const [activePointData, setActivePointData] = useState(null);
   const DEBUG_SHOW_POLYGONS = false;
@@ -156,18 +157,18 @@ export default function MapaScreen({ route, navigation }) {
                 
                 const isInside = booleanPointInPolygon(userPt, targetPoly);
 
-                // Gatilho ativado apenas se o usuário estiver DENTRO do polígono
-                if (isInside) {
+                // Gatilho ativado apenas se o usuário estiver DENTRO do polígono e ainda não tiver visto esta tela
+                if (isInside && ultimoPontoAvisado !== pointData.id) {
                   setActivePointData({ 
                     title: pointData.title, 
                     message: pointData.message, 
                     imagens: pointData.imagens 
                   });
                   setShowAlert(true);
+                  setUltimoPontoAvisado(pointData.id); 
                   Speech.stop();
                   Speech.speak(pointData.message, { language: 'pt-BR', pitch: 1.0, rate: 0.9 });
-                  setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
-                  setRouteCoordinates([]);
+                  
                 }
               } catch (error) {
                 console.warn("Erro ao calcular intersecção do polígono:", error);
@@ -178,7 +179,7 @@ export default function MapaScreen({ route, navigation }) {
       );
     })();
     return () => subscription?.remove();
-  }, [rotaAtiva, indiceAtual, showAlert]);
+  }, [rotaAtiva, indiceAtual, showAlert, ultimoPontoAvisado]);
 
   // Atualiza traçado das ruas conforme o usuário anda
   useEffect(() => {
@@ -315,7 +316,20 @@ export default function MapaScreen({ route, navigation }) {
           </View>
         )}
 
-        <ProximityAlert isVisible={showAlert} data={activePointData} onClose={() => { setShowAlert(false); Speech.stop(); }} styles={styles} />
+        <ProximityAlert 
+          isVisible={showAlert} 
+          data={activePointData} 
+          onDismiss={() => { 
+            setShowAlert(false); 
+            Speech.stop(); 
+          }}
+          onClose={() => { 
+            setShowAlert(false); 
+            Speech.stop(); 
+            setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
+            setRouteCoordinates([]);
+          }} 
+        />
       </SafeAreaView>
     </SafeAreaProvider>
   );
