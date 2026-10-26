@@ -1,0 +1,80 @@
+import { StyleSheet } from 'react-native';
+import { colors } from '../../styles/colors';
+
+export const styles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+    top: 0, left: 0, right: 0, bottom: 0,
+    backgroundColor: colors.cardBackground, 
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000,
+  },
+  content: {
+    alignItems: 'center',
+    padding: 30,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#FFF',
+    marginTop: 20,
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  message: {
+    fontSize: 16,
+    color: '#FFF',
+    textAlign: 'center',
+    marginBottom: 40,
+    lineHeight: 24,
+  },
+  button: {
+    backgroundColor: '#FFF',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 30,
+    flexDirection: 'row',
+    alignItems: 'center',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  buttonText: {
+    color: colors.cardBackground,
+    fontWeight: 'bold',
+    fontSize: 16,
+    marginRight: 8,
+  },
+  statsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    marginBottom: 40,
+  },
+  statCard: {
+    flex: 1,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    borderRadius: 16,
+    padding: 15,
+    marginHorizontal: 5,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+  },
+  statValue: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: '#FFF',
+    marginTop: 10,
+    textAlign: 'center',
+  },
+  statLabel: {
+    fontSize: 13,
+    color: '#E0E0E0',
+    marginTop: 4,
+    textAlign: 'center',
+  },
+});

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ScrollView, ImageBackground } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -35,8 +35,12 @@ export function ProximityAlert({ isVisible, onClose, onDismiss, data }) {
   };
 
   return (
-    <View style={styles.fullScreenContainer}>
-        {/* Força a barra de notificações a ficar preta nesta tela */}
+    <ImageBackground 
+      source={require('../../../assets/pattern.png')} // 
+      style={styles.fullScreenContainer}
+      imageStyle={{ opacity: 0.5 }} 
+      resizeMode="repeat" 
+    >
         <ExpoStatusBar style="dark" />
         
         <View style={[styles.headerNav, { paddingTop: insets.top + 15 }]}>
@@ -93,6 +97,6 @@ export function ProximityAlert({ isVisible, onClose, onDismiss, data }) {
           <Text style={styles.messageText}>{data.message}</Text>
           
         </ScrollView>
-    </View>
+    </ImageBackground>
   );
 }

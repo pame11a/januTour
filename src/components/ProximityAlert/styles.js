@@ -17,9 +17,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingBottom: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#E0E0E0',
-    backgroundColor: '#FFF',
+    backgroundColor: 'transparent',
   },
   iconButton: {
     padding: 5,

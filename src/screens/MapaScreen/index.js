@@ -7,6 +7,7 @@ import * as Location from 'expo-location';
 import * as geolib from 'geolib'; // Mantido apenas para a Label de Distância
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
+import { RouteFinishedAlert } from '../../components/RouteFinishedAlert';
 
 // IMPORTAÇÕES DO TURF.JS (Para a lógica de Polígonos)
 import { point, polygon } from '@turf/helpers';
@@ -32,6 +33,7 @@ export default function MapaScreen({ route, navigation }) {
   const { rotaSelecionada } = route.params || {};
 
   // Estados de Localização e Rota
+  const [startTime, setStartTime] = useState(null);
   const [userLocation, setUserLocation] = useState(null);
   const [rotaAtiva, setRotaAtiva] = useState([]);
   const [indiceAtual, setIndiceAtual] = useState(0);
@@ -42,6 +44,7 @@ export default function MapaScreen({ route, navigation }) {
 
   // Estados de Alerta e Polígonos
   const [ultimoPontoAvisado, setUltimoPontoAvisado] = useState(null);
+  const [showRouteFinished, setShowRouteFinished] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [activePointData, setActivePointData] = useState(null);
   const DEBUG_SHOW_POLYGONS = false;
@@ -50,6 +53,7 @@ export default function MapaScreen({ route, navigation }) {
     if (rotaSelecionada && rotaSelecionada.sequence) {
       setRotaAtiva(rotaSelecionada.sequence);
       setIndiceAtual(0);
+      setStartTime(Date.now());
       fetchFullRoute(rotaSelecionada.sequence);
 
       const primeiroId = rotaSelecionada.sequence[0];
@@ -128,8 +132,13 @@ export default function MapaScreen({ route, navigation }) {
     if (rotaAtiva.length === 0) return;
     Speech.stop(); 
     setShowAlert(false); 
-    setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
-    setRouteCoordinates([]); 
+
+    if (indiceAtual < rotaAtiva.length - 1) {
+      setIndiceAtual((prev) => prev + 1);
+      setRouteCoordinates([]); 
+    } else {
+      setShowRouteFinished(true);
+    }
   };
 
   // Monitoramento de GPS e Proximidade usando Turf.js e Polígonos
@@ -326,8 +335,22 @@ export default function MapaScreen({ route, navigation }) {
           onClose={() => { 
             setShowAlert(false); 
             Speech.stop(); 
-            setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
-            setRouteCoordinates([]);
+            
+            if (indiceAtual < rotaAtiva.length - 1) {
+              setIndiceAtual((prev) => prev + 1);
+              setRouteCoordinates([]);
+            } else {
+              setShowRouteFinished(true);
+            }
+          }} 
+        />
+        <RouteFinishedAlert 
+          isVisible={showRouteFinished} 
+          totalPontos={rotaAtiva.length}
+          startTime={startTime}
+          onFinish={() => {
+            setShowRouteFinished(false);
+            navigation.goBack(); 
           }} 
         />
       </SafeAreaView>
