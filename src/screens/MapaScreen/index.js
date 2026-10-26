@@ -33,6 +33,7 @@ export default function MapaScreen({ route, navigation }) {
   const { rotaSelecionada } = route.params || {};
 
   // Estados de Localização e Rota
+  const [ultimaInstrucaoFalada, setUltimaInstrucaoFalada] = useState('');
   const [startTime, setStartTime] = useState(null);
   const [userLocation, setUserLocation] = useState(null);
   const [rotaAtiva, setRotaAtiva] = useState([]);
@@ -132,6 +133,8 @@ export default function MapaScreen({ route, navigation }) {
     if (rotaAtiva.length === 0) return;
     Speech.stop(); 
     setShowAlert(false); 
+    setUltimaInstrucaoFalada(''); 
+    setInstruction('');
 
     if (indiceAtual < rotaAtiva.length - 1) {
       setIndiceAtual((prev) => prev + 1);
@@ -176,7 +179,12 @@ export default function MapaScreen({ route, navigation }) {
                   setShowAlert(true);
                   setUltimoPontoAvisado(pointData.id); 
                   Speech.stop();
-                  Speech.speak(pointData.message, { language: 'pt-BR', pitch: 1.0, rate: 0.9 });
+                  Speech.speak(pointData.message, { 
+                    language: 'pt-BR', 
+                    pitch: 1.0, 
+                    rate: 0.9,
+                    voice: 'pt-br-x-ptd-network'
+                  });
                   
                 }
               } catch (error) {
@@ -199,6 +207,18 @@ export default function MapaScreen({ route, navigation }) {
       }
     }
   }, [userLocation, indiceAtual, rotaAtiva]);
+
+  useEffect(() => {
+    if (instruction && instruction !== ultimaInstrucaoFalada) {
+      Speech.stop();
+      Speech.speak(instruction, { 
+        language: 'pt-BR', 
+        pitch: 1.0, 
+        rate: 1.0 
+      });
+      setUltimaInstrucaoFalada(instruction);
+    }
+  }, [instruction]);
 
   const handleRecenter = () => {
     if (userLocation && cameraRef.current) {
@@ -335,6 +355,8 @@ export default function MapaScreen({ route, navigation }) {
           onClose={() => { 
             setShowAlert(false); 
             Speech.stop(); 
+            setUltimaInstrucaoFalada(''); 
+            setInstruction('');
             
             if (indiceAtual < rotaAtiva.length - 1) {
               setIndiceAtual((prev) => prev + 1);

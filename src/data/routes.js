@@ -91,17 +91,4 @@ export const ROUTES_LIST = [
     ],
     color: '#0077b6'
   },
-
-   {
-    id: 'teste',
-    title: 'teste',
-    description: 'aaaa',
-    sequence: [
-      'ponto_generico_1',
-      'ponto_generico_2',
-      'ponto_generico_3'
-    ],
-    color: '#0077b6'
-  }
-  
 ];

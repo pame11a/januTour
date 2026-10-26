@@ -59,7 +59,6 @@ export default function MenuScreen({ navigation }) {
       }
     }
   }, [rotaExpandida]); 
-
   return (
     <SafeAreaView style={styles.safeArea} edges={['left', 'right', 'bottom']}>
       <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
