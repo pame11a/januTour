@@ -4,17 +4,17 @@ export const MAPBOX_TOKEN = MAPBOX_ACCESS_TOKEN;
 export const FALLBACK_COORDS = [-44.3916585, -15.4802473];
 
 // Nível de zoom inicial do mapa
-export const INITIAL_ZOOM = 18; 
+export const INITIAL_ZOOM = 18;
 
 export const POINTS_OF_INTEREST = [
 
-// Núcleo Histórico
+  // Núcleo Histórico
 
   {
     id: 'prefeitura_municipal',
     title: 'Prédio Histórico da Prefeitura Municipal de Januária',
     message: 'Você chegou ao prédio histórico da Prefeitura Municipal de Januária. Este casarão, datado de 1890, tem estilo eclético e chama atenção pelas suas cores vibrantes em azul e branco. Durante muito tempo, foi o coração administrativo da cidade. Hoje, abriga o Centro de Atendimento ao Turista (CAT). Aproveite para entrar e descobrir mais sobre Januária.',
-    latitude:-15.488692266036272,
+    latitude: -15.488692266036272,
     longitude: -44.36216932359738,
     radius: 15,
     type: 'Eclético',
@@ -23,18 +23,18 @@ export const POINTS_OF_INTEREST = [
       [-44.362391, -15.488475],
       [-44.362144, -15.488898],
       [-44.361908, -15.488795],
-      [-44.362133, -15.488366] 
+      [-44.362133, -15.488366]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/prefeitura_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/prefeitura_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/prefeitura_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/prefeitura_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -42,8 +42,8 @@ export const POINTS_OF_INTEREST = [
     id: 'casa_da_memoria',
     title: 'Casa da Memória do Vale São Francisco',
     message: 'Você chegou à Casa da Memória do Vale do São Francisco. Este imponente prédio de estilo eclético, construído por volta da década de 1910, possui dois pavimentos e já abrigou o Fórum e a antiga cadeia municipal. As grades reforçadas nas janelas do andar térreo ainda revelam marcas desse passado como prisão. Atualmente, o imóvel passa por restauração e está temporariamente fechado para visitação.',
-    latitude: -15.488537112917218,
-    longitude: -44.36194030748854,
+    latitude: -15.488623089825241,
+    longitude: -44.361907500340145,
     radius: 15,
     type: 'Eclético',
     polygon: [
@@ -54,15 +54,15 @@ export const POINTS_OF_INTEREST = [
       [-44.362084, -15.488511]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/memoria_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/memoria_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/memoria_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/memoria_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -79,25 +79,25 @@ export const POINTS_OF_INTEREST = [
       [-44.361452, -15.489421],
       [-44.361742, -15.489643],
       [-44.362273, -15.489017],
-      [-44.361913, -15.48879] 
+      [-44.361913, -15.48879]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/catedral_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/catedral_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/catedral_2.png'), 
-        descricao: 'IFNMG Campus Januária - 2026' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/catedral_2.png'),
+        descricao: 'IFNMG Campus Januária - 2026'
       },
     ]
   },
   {
     id: 'lanchonete_lanchinho',
     title: 'Imóvel Comercial - Lanchonete Lannchinho',
-    message: 'Você chegou ao imóvel número 41 da Praça Dom Daniel, na esquina com a Rua Cesário Alvim. Atualmente, o prédio abriga uma lanchonete e uma loja de roupas. De arquitetura regional, destaca-se pela fachada ornamentada com rosáceas, elementos decorativos em forma de flores, dispostos em círculos vazados na parte superior do imóvel.', 
+    message: 'Você chegou ao imóvel número 41 da Praça Dom Daniel, na esquina com a Rua Cesário Alvim. Atualmente, o prédio abriga uma lanchonete e uma loja de roupas. De arquitetura regional, destaca-se pela fachada ornamentada com rosáceas, elementos decorativos em forma de flores, dispostos em círculos vazados na parte superior do imóvel.',
     latitude: -15.48963386619075,
     longitude: -44.36183772809814,
     radius: 15,
@@ -110,22 +110,22 @@ export const POINTS_OF_INTEREST = [
       [-44.361951, -15.489684]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/04_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/04_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/04_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/04_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
   {
     id: 'loterica',
     title: 'Lotérica',
-    message: 'Você chegou ao imóvel onde atualmente funciona uma casa lotérica. Apesar de pequeno, o prédio se destaca pela beleza de sua fachada eclética, bastante ornamentada. Entre os detalhes, estão os cunhais decorados, o frontão de linhas curvas, os pináculos e os desenhos em baixo-relevo. Atualmente, o toldo e a placa comercial escondem parte desses elementos. Por isso, vale observar a fachada com atenção para descobrir os detalhes que revelam a riqueza arquitetônica deste imóvel.', 
+    message: 'Você chegou ao imóvel onde atualmente funciona uma casa lotérica. Apesar de pequeno, o prédio se destaca pela beleza de sua fachada eclética, bastante ornamentada. Entre os detalhes, estão os cunhais decorados, o frontão de linhas curvas, os pináculos e os desenhos em baixo-relevo. Atualmente, o toldo e a placa comercial escondem parte desses elementos. Por isso, vale observar a fachada com atenção para descobrir os detalhes que revelam a riqueza arquitetônica deste imóvel.',
     latitude: -15.489477831549058,
     longitude: -44.361387568523824,
     radius: 15,
@@ -138,50 +138,50 @@ export const POINTS_OF_INTEREST = [
       [-44.36136, -15.489415]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/loterica_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/loterica_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/loterica_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/loterica_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
-    {
+  {
     id: 'imovel_8',
     title: 'Imóvel localizado na Rua Cônego Livínio, Nº 33',
-    message: 'Você chegou ao imóvel número 33 da Rua Cônego Livínio. De estilo eclético, o prédio se destaca pela fachada com feições mouriscas, marcada por formas e ornamentos inspirados na tradição arquitetônica islâmica.', 
+    message: 'Você chegou ao imóvel número 33 da Rua Cônego Livínio. De estilo eclético, o prédio se destaca pela fachada com feições mouriscas, marcada por formas e ornamentos inspirados na tradição arquitetônica islâmica.',
     latitude: -15.490536909094978,
     longitude: -44.36103355798111,
     radius: 15,
     type: 'Eclético',
     polygon: [
-      [-44.361211, -15.490625],
-      [-44.361146, -15.490718],
-      [-44.360948, -15.490527],
-      [-44.361012, -15.490486],
-      [-44.361211, -15.490625]
+      [-44.361215, -15.49061],
+      [-44.361102, -15.490703],
+      [-44.360904, -15.490496],
+      [-44.361006, -15.490387],
+      [-44.361215, -15.49061]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/8_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/8_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/8_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/8_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
-   {
+  {
     id: 'imovel_12',
     title: 'Imóvel localizado na Rua Cônego Livínio, Nº 24/28/32',
-    message: ' Você chegou ao conjunto de imóveis de números 24, 28 e 32 da Rua Cônego Livínio. De tipo colonial, as fachadas apresentam sete óculos circulares sobre os vãos, pequenas aberturas na parte superior que contribuem para a ornamentação dos imóveis e também podem favorecer a iluminação e a ventilação naturais.', 
+    message: ' Você chegou ao conjunto de imóveis de números 24, 28 e 32 da Rua Cônego Livínio. De tipo colonial, as fachadas apresentam sete óculos circulares sobre os vãos, pequenas aberturas na parte superior que contribuem para a ornamentação dos imóveis e também podem favorecer a iluminação e a ventilação naturais.',
     latitude: -15.490475290076127,
     longitude: -44.36089654999652,
     radius: 15,
@@ -194,50 +194,50 @@ export const POINTS_OF_INTEREST = [
       [-44.360952, -15.490527]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/12_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/12_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/12_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/12_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
-      {
+  {
     id: 'imovel_14',
     title: 'Imóvel localizado na Rua Cônego Livínio, Nº 2',
-    message: 'Você chegou ao imóvel número 2 da Rua Cônego Livínio. De estilo eclético, o prédio chama a atenção pela platibanda bastante ornamentada, com elementos vazados e um frontão central que se integra à composição da fachada.', 
+    message: 'Você chegou ao imóvel número 2 da Rua Cônego Livínio. De estilo eclético, o prédio chama a atenção pela platibanda bastante ornamentada, com elementos vazados e um frontão central que se integra à composição da fachada.',
     latitude: -15.490671481490825,
     longitude: -44.3606893694373,
     radius: 15,
     type: 'Eclético',
     polygon: [
-      [-44.360797, -15.490682],
-      [-44.360717, -15.49078],
-      [-44.360417, -15.490553],
-      [-44.360535, -15.490434],
-      [-44.360797, -15.490682]
+      [-44.360727, -15.490449],
+      [-44.360909, -15.490698],
+      [-44.360668, -15.490878],
+      [-44.360432, -15.490594],
+      [-44.360727, -15.490449]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/14_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/14_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/14_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/14_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
   {
     id: 'ponto_x',
     title: 'Lanchonete Ponto X',
-    message: ' Você chegou ao imóvel número 114 da Praça Getúlio Vargas, onde há algumas décadas funciona a Lanchonete Ponto X. De estilo eclético, a construção se destaca pela platibanda ornamentada com rosáceas vazadas e pela interessante coluna de esquina, que apresenta a parte superior decorada. Os imóveis geminados da Rua Mata-Machado seguem características arquitetônicas semelhantes.', 
+    message: ' Você chegou ao imóvel número 114 da Praça Getúlio Vargas, onde há algumas décadas funciona a Lanchonete Ponto X. De estilo eclético, a construção se destaca pela platibanda ornamentada com rosáceas vazadas e pela interessante coluna de esquina, que apresenta a parte superior decorada. Os imóveis geminados da Rua Mata-Machado seguem características arquitetônicas semelhantes.',
     latitude: -15.490841607366924,
     longitude: -44.360563459707386,
     radius: 15,
@@ -250,15 +250,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360679, -15.490858]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/pontox_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/pontox_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/pontox_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/pontox_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -278,15 +278,15 @@ export const POINTS_OF_INTEREST = [
       [-44.359869, -15.490961]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/17_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/17_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/17_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/17_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -294,16 +294,16 @@ export const POINTS_OF_INTEREST = [
     id: 'imovel_18',
     title: 'Imóvel localizado na Rua Dom Joaquim, Nº 67 ',
     message: 'Você chegou ao imóvel número 67 da Rua Dom Joaquim. O imóvel de tipo colonial teve seus vãos adaptados para abrigar duas residências. O imóvel apresenta fachada com platibanda, ornamentada apenas por cunhais, cimalha e um frontão circular.',
-    latitude:  -15.490794970678929,
+    latitude: -15.490794970678929,
     longitude: -44.35977152065295,
     radius: 15,
     type: 'Colonial',
-    polygon:[
-      [-44.359858, -15.490785],
-      [-44.359761, -15.490884],
-      [-44.359681, -15.490806],
-      [-44.359761, -15.490718],
-      [-44.359858, -15.490785]
+    polygon: [
+      [-44.359885, -15.490765],
+      [-44.359735, -15.49093],
+      [-44.3596, -15.490806],
+      [-44.359772, -15.490641],
+      [-44.359885, -15.490765]
     ],
     imagens: [
       {
@@ -334,45 +334,45 @@ export const POINTS_OF_INTEREST = [
       [-44.359574, -15.490718]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/21_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/21_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/21_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/21_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
   {
     id: 'imovel_24',
     title: 'Imóvel localizado na Rua Dom Joaquim, Nº 144',
-    text: 'Você está diante da edificação térrea de esquina onde funciona o Sindicato Rural. O imóvel possui implantação no alinhamento da via com o canto chanfrado, onde se localiza o acesso principal por meio de pequena escada. A estrutura simples apresenta barrado pintado em tom verde na base, janelas retangulares protegidas por grades de ferro e telhado em duas águas com telhas coloniais de barro e beiral aparente.',
+    message: 'Você está diante da edificação térrea de esquina onde funciona o Sindicato Rural. O imóvel possui implantação no alinhamento da via com o canto chanfrado, onde se localiza o acesso principal por meio de pequena escada. A estrutura simples apresenta barrado pintado em tom verde na base, janelas retangulares protegidas por grades de ferro e telhado em duas águas com telhas coloniais de barro e beiral aparente.',
     latitude: -15.49025637462457,
     longitude: -44.35899387005083,
     radius: 15,
     type: 'Protomoderno',
     polygon: [
-      [-44.359081, -15.490274],
-      [-44.359016, -15.490356],
-      [-44.358855, -15.490227],
-      [-44.358952, -15.490134],
-      [-44.359081, -15.490274]
+      [-44.358994, -15.490139],
+      [-44.359144, -15.49031],
+      [-44.358999, -15.490398],
+      [-44.358854, -15.490222],
+      [-44.358994, -15.490139]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/24_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/24_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
   {
     id: 'imovel_26',
     title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 62',
-    text: 'Você está diante do imóvel térreo de número 62, implantado no alinhamento da rua com parede-meia de um dos lados. Sua fachada destaca-se pelos cunhais ornamentados e moldura decorativa no topo, encimados por uma platibanda reta com relevos geométricos. A composição inclui porta de madeira central, janelas com grades de ferro e uma grande porta de enrolar em aço. O telhado possui calhas e canos projetados na fachada para escoamento da água.',
+    message: 'Você está diante do imóvel térreo de número 62, implantado no alinhamento da rua com parede-meia de um dos lados. Sua fachada destaca-se pelos cunhais ornamentados e moldura decorativa no topo, encimados por uma platibanda reta com relevos geométricos. A composição inclui porta de madeira central, janelas com grades de ferro e uma grande porta de enrolar em aço. O telhado possui calhas e canos projetados na fachada para escoamento da água.',
     latitude: -15.48956846305711,
     longitude: -44.358772131975776,
     radius: 15,
@@ -385,23 +385,23 @@ export const POINTS_OF_INTEREST = [
       [-44.358882, -15.489591]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/26_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/26_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/26_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/26_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
   {
     id: 'imovel_28',
     title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 120',
-    text: 'Você está diante do imóvel residencial térreo de alto pé-direito, implantado no alinhamento da via. O principal destaque da edificação é sua platibanda trabalhada com pilaretes encimados por pináculos e vedações rendilhadas em alvenaria. A fachada amarela conta com sete vãos de verga reta (uma porta central ladeada por seis janelas de madeira com tapa-vento em veneziana) e apresenta um revestimento de pedras na base.',
-    latitude:  -15.489189188843834, 
+    message: 'Você está diante do imóvel residencial térreo de alto pé-direito, implantado no alinhamento da via. O principal destaque da edificação é sua platibanda trabalhada com pilaretes encimados por pináculos e vedações rendilhadas em alvenaria. A fachada amarela conta com sete vãos de verga reta (uma porta central ladeada por seis janelas de madeira com tapa-vento em veneziana) e apresenta um revestimento de pedras na base.',
+    latitude: -15.489189188843834,
     longitude: -44.35921145451291,
     radius: 15,
     type: 'Regional',
@@ -413,33 +413,33 @@ export const POINTS_OF_INTEREST = [
       [-44.359284, -15.489229]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/28_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/28_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
   {
     id: 'imovel_30',
     title: 'Imóvel localizado Rua Lindolfo Caetano, Nº 229',
-    text: 'Você está diante desta casa de esquina de um andar, localizada no cruzamento da Rua Lindolfo Caetano com a Rua Francisco Sá. O imóvel foi construído bem no limite da calçada e chama a atenção por sua parede lateral alta na esquina, que traz pequenos furos redondos no topo para ventilação. As janelas têm formato retangular e são protegidas por grades de ferro, enquanto a parte da frente conta com uma mureta escondendo o telhado de telhas de barro. ',
-    latitude: -15.488579545087962, 
+    message: 'Você está diante desta casa de esquina de um andar, localizada no cruzamento da Rua Lindolfo Caetano com a Rua Francisco Sá. O imóvel foi construído bem no limite da calçada e chama a atenção por sua parede lateral alta na esquina, que traz pequenos furos redondos no topo para ventilação. As janelas têm formato retangular e são protegidas por grades de ferro, enquanto a parte da frente conta com uma mureta escondendo o telhado de telhas de barro. ',
+    latitude: -15.488579545087962,
     longitude: -44.36013427047611,
     radius: 15,
     type: 'Regional',
     polygon: [
-      [-44.360143, -15.488692],
-      [-44.36002, -15.488568],
-      [-44.360127, -15.4885],
-      [-44.360218, -15.488599],
-      [-44.360143, -15.488692]
+      [-44.360212, -15.488588],
+      [-44.36011, -15.488692],
+      [-44.35997, -15.488557],
+      [-44.360077, -15.488464],
+      [-44.360212, -15.488588]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/30.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/30.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -459,15 +459,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360126, -15.48849]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/31_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/31_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/31_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/31_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -487,15 +487,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360497, -15.488211]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/32_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/32_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/32_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/32_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -515,15 +515,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360899, -15.487854]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/33_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/33_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/33_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/33_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -543,15 +543,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360937, -15.487963]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/34_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/34_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/34_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/34_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -571,20 +571,20 @@ export const POINTS_OF_INTEREST = [
       [-44.361505, -15.488469]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/35_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/35_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/35_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/35_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
 
-// Patrocinio mota  
+  // Patrocinio mota  
 
   {
     id: 'imovel_37',
@@ -602,15 +602,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360218, -15.491752]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/37_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/37_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/37_2.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/37_2.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
       {
         id: '3',
@@ -635,15 +635,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360604, -15.492305]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/41_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/41_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/41_2.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/41_2.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
       {
         id: '3',
@@ -668,15 +668,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360953, -15.492434]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/44_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/44_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/44_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/44_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -696,15 +696,15 @@ export const POINTS_OF_INTEREST = [
       [-44.361146, -15.492543]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/47_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/47_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/47_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/47_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -724,15 +724,15 @@ export const POINTS_OF_INTEREST = [
       [-44.361312, -15.4926]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/48_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/48_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/48_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/48_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -752,20 +752,20 @@ export const POINTS_OF_INTEREST = [
       [-44.361522, -15.492724]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/49_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/49_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/49_2.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/49_2.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '3', 
-        imagem: require('../../assets/images/49_3.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '3',
+        imagem: require('../../assets/images/49_3.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
       {
         id: '4',
@@ -790,20 +790,25 @@ export const POINTS_OF_INTEREST = [
       [-44.36238, -15.492739]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/52_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/52_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/52_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/52_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       },
       {
         id: '3',
         imagem: require('../../assets/images/52_3.png'),
-        descricao: 'Google Maps - 2026'
+        descricao: 'Autoria própria - 2026'
+      },
+      {
+        id: '4',
+        imagem: require('../../assets/images/52_3.png'),
+        descricao: 'Autoria própria  - 2026'
       }
     ]
   },
@@ -823,15 +828,15 @@ export const POINTS_OF_INTEREST = [
       [-44.36164, -15.492021]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/54_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/54_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/54_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/54_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -844,22 +849,22 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Regional',
     polygon: [
-      [-44.3612, -15.491902],
-      [-44.361076, -15.491788],
-      [-44.361216, -15.491659],
-      [-44.361393, -15.491809],
-      [-44.3612, -15.491902]
+      [-44.361323, -15.491664],
+      [-44.361157, -15.491865],
+      [-44.361028, -15.491747],
+      [-44.361194, -15.491571],
+      [-44.361323, -15.491664]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/55_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/55_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/55_2.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/55_2.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
       {
         id: '3',
@@ -884,15 +889,15 @@ export const POINTS_OF_INTEREST = [
       [-44.361586, -15.491121]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/60_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/60_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/60_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/60_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -912,15 +917,15 @@ export const POINTS_OF_INTEREST = [
       [-44.361532, -15.491044]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/61_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/61_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/61_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/61_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -928,10 +933,10 @@ export const POINTS_OF_INTEREST = [
     id: 'imovel_69',
     title: 'Imóvel localizado na Rua Cônego Marinho, Nº 242',
     message: 'Você está diante da casa residencial localizada na Rua Cônego Marinho, construída bem no limite da calçada e encostada nas vizinhas. O imóvel chama a atenção por sua mureta no topo (platibanda) ornamentada com furos em formato de losangos que ajudam na ventilação. A parte de baixo da fachada recebeu um revestimento de pedras, e suas aberturas contam com portas e janelas retangulares protegidas por grades de ferro trabalhadas.',
-    latitude: -15.492605577743749, 
+    latitude: -15.492605577743749,
     longitude: -44.3631363554389,
     radius: 15,
-    type:  'Eclético',
+    type: 'Eclético',
     polygon: [
       [-44.363141, -15.492708],
       [-44.363007, -15.49259],
@@ -941,14 +946,14 @@ export const POINTS_OF_INTEREST = [
     ],
     imagens: [
       {
-        id: '1', 
-        imagem: require('../../assets/images/69_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+        id: '1',
+        imagem: require('../../assets/images/69_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/69_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/69_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
 
@@ -969,10 +974,10 @@ export const POINTS_OF_INTEREST = [
       [-44.361849, -15.491385]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/70_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/70_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       },
     ]
   },
@@ -980,7 +985,7 @@ export const POINTS_OF_INTEREST = [
     id: 'imovel_71',
     title: 'Imóvel localizado na Rua Cônego Marinho, Nº 83/97',
     message: 'Você está diante do Imovél situado na Rua Cônego Marinho, número 83/97, construído bem no limite da calçada. A fachada traz detalhes azuis nas pilastras e na mureta superior (platibanda) que esconde o telhado, decorada com pequenas rosáceas. As janelas e portas possuem acabamento em tom avermelhado, e no lado esquerdo da construção há um portão de acesso com topo curvado.',
-    latitude: -15.491492770266108, 
+    latitude: -15.491492770266108,
     longitude: -44.36190319768391,
     radius: 15,
     type: 'Eclético',
@@ -993,14 +998,14 @@ export const POINTS_OF_INTEREST = [
     ],
     imagens: [
       {
-        id: '1', 
-        imagem: require('../../assets/images/71_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+        id: '1',
+        imagem: require('../../assets/images/71_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/71_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/71_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
 
@@ -1021,15 +1026,15 @@ export const POINTS_OF_INTEREST = [
       [-44.362412, -15.491933]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/73_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/73_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/73_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/73_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1049,15 +1054,15 @@ export const POINTS_OF_INTEREST = [
       [-44.362809, -15.492724]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/75_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/75_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/75_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/75_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1065,7 +1070,7 @@ export const POINTS_OF_INTEREST = [
     id: 'imovel_77',
     title: 'Imóvel localizado na Rua Gualberto de Carvalho, Nº 269',
     message: 'Você está diante deste imóvel comercial de esquina, onde funciona um minimercado. Construído no limite da calçada, o prédio conta com barrado de pedras na base e cobertura tradicional em telhas de barro. Chama a atenção sua parede lateral alta (empena), que traz duas janelas de madeira no sótão, enquanto as entradas do térreo possuem aberturas em arco e portas de enrolar metálicas protegidas por um toldo vermelho.',
-    latitude: -15.492827386978659, 
+    latitude: -15.492827386978659,
     longitude: -44.36326645865668,
     radius: 15,
     type: 'Regional',
@@ -1077,10 +1082,10 @@ export const POINTS_OF_INTEREST = [
       [-44.363302, -15.492864]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/77_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/77_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1100,10 +1105,10 @@ export const POINTS_OF_INTEREST = [
       [-44.362766, -15.493117]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/79_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/79_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       },
     ]
   },
@@ -1123,15 +1128,15 @@ export const POINTS_OF_INTEREST = [
       [-44.362509, -15.493143]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/80_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/80_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/80_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/80_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1141,7 +1146,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'imovel_81',
     title: 'Imóvel localizado na Rua Mata Machado, Nª 9/11/21/25',
-    message: 'Você está no Imóvel número 92, situado na esquina da Praça Getúlio Vargas com a Rua Mata Machado. Esta edificação térrea destaca-se por ser dividida em três espaços comerciais com pinturas coloridas e independentes. Seu topo traz uma platibanda decorada com rosáceas, rostos neoclássicos e desenhos de coroas de louro em massa, mantendo o charme do centro histórico',
+    message: 'Você está no Imóvel de casas geminadas, situado na esquina da Praça Getúlio Vargas com a Rua Mata Machado. Esta edificação térrea destaca-se por ser dividida em três espaços comerciais com pinturas coloridas e independentes. Seu topo traz uma platibanda decorada com rosáceas, rostos neoclássicos e desenhos de coroas de louro em massa, mantendo o charme do centro histórico',
     latitude: -15.490781849957987,
     longitude: -44.360469191914696,
     radius: 15,
@@ -1154,15 +1159,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360449, -15.49061]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/81_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/81_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/81_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/81_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1182,10 +1187,10 @@ export const POINTS_OF_INTEREST = [
       [-44.360185, -15.490585]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/84_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/84_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       },
     ]
   },
@@ -1205,15 +1210,15 @@ export const POINTS_OF_INTEREST = [
       [-44.360137, -15.490253]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/85_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/85_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/85_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/85_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1233,15 +1238,15 @@ export const POINTS_OF_INTEREST = [
       [-44.359274, -15.489545]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/87_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/87_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/87_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/87_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1261,15 +1266,15 @@ export const POINTS_OF_INTEREST = [
       [-44.358855, -15.488867]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/89_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/89_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/89_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/89_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1289,15 +1294,15 @@ export const POINTS_OF_INTEREST = [
       [-44.358357, -15.488666]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/92_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/92_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/92_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/92_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1317,73 +1322,73 @@ export const POINTS_OF_INTEREST = [
       [-44.358265, -15.488485]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/93_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/93_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/93_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/93_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
   {
-   id: 'imovel_94',
-   title: 'Imóvel localizado na Rua Mata Machado, Nº 413/419/423',
-   message: 'Você está diante da casa residencial térrea de números 419/423, construída no limite da calçada e encostada nas vizinhas. O imóvel apresenta duas etapas bem visíveis na fachada: do lado direito, traz acabamento em tom claro com pilastras nas quinas e moldura decorativa abaixo do telhado; do lado esquerdo, possui pintura simples. As portas e janelas têm formato retangular reto e fechamento em madeira, com o telhado de telhas de barro caindo para a rua.',
-   latitude: -15.487994995731786,
-   longitude: -44.35787887397768,
-   radius: 15,
-   type: 'Colonial',
-   polygon: [
+    id: 'imovel_94',
+    title: 'Imóvel localizado na Rua Mata Machado, Nº 413/419/423',
+    message: 'Você está diante da casa residencial térrea de números 413/419/423, construída no limite da calçada e encostada nas vizinhas. O imóvel apresenta duas etapas bem visíveis na fachada: do lado direito, traz acabamento em tom claro com pilastras nas quinas e moldura decorativa abaixo do telhado; do lado esquerdo, possui pintura simples. As portas e janelas têm formato retangular reto e fechamento em madeira, com o telhado de telhas de barro caindo para a rua.',
+    latitude: -15.487994995731786,
+    longitude: -44.35787887397768,
+    radius: 15,
+    type: 'Colonial',
+    polygon: [
       [-44.358062, -15.487989],
       [-44.357885, -15.488123],
       [-44.357799, -15.48803],
       [-44.357981, -15.487865],
       [-44.358062, -15.487989]
-   ],
-   imagens: [
-     {
-       id: '1',
-       imagem: require('../../assets/images/94_1.png'),
-       descricao: 'Inventário IEPHA - 1985'
-     },
-     {
-       id: '2',
-       imagem: require('../../assets/images/94_2.png'),
-       descricao: 'Inventário IEPHA - Atualizado'
-     }
-   ]
+    ],
+    imagens: [
+      {
+        id: '1',
+        imagem: require('../../assets/images/94_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
+      },
+      {
+        id: '2',
+        imagem: require('../../assets/images/94_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
+      }
+    ]
   },
   {
-   id: 'imovel_95',
-   title: 'Imóvel localizado na Rua Mata Machado, Nº 433',
-   message: 'Você está diante da casa residencial de número 95, construída no limite da calçada e com acesso feito por uma pequena escada na entrada principal. A fachada traz pilastras nas quinas e molduras decorativas no topo e ao redor das aberturas, criando um bonito contraste de cores com a pintura da parede. A composição conta com uma porta de madeira ladeada por duas janelas de um lado e uma do outro, todas com fechamento em madeira.',
-   latitude: -15.487929774860937,
-   longitude: -44.357810245770146,
-   radius: 15,
-   type: 'Colonial',
-   polygon: [
-    [-44.357937, -15.487849],
-    [-44.35776, -15.487979],
-    [-44.357717, -15.487901],
-    [-44.357852, -15.487751],
-    [-44.357937, -15.487849]
-   ],
-   imagens: [
-     {
-       id: '1',
-       imagem: require('../../assets/images/95_1.png'),
-       descricao: 'Inventário IEPHA - 1985'
-     },
-     {
-       id: '2',
-       imagem: require('../../assets/images/95_2.png'),
-       descricao: 'Inventário IEPHA - Atualizado'
-     }
-   ]
+    id: 'imovel_95',
+    title: 'Imóvel localizado na Rua Mata Machado, Nº 433',
+    message: 'Você está diante da casa residencial de número 433, construída no limite da calçada e com acesso feito por uma pequena escada na entrada principal. A fachada traz pilastras nas quinas e molduras decorativas no topo e ao redor das aberturas, criando um bonito contraste de cores com a pintura da parede. A composição conta com uma porta de madeira ladeada por duas janelas de um lado e uma do outro, todas com fechamento em madeira.',
+    latitude: -15.487929774860937,
+    longitude: -44.357810245770146,
+    radius: 15,
+    type: 'Colonial',
+    polygon: [
+      [-44.357937, -15.487849],
+      [-44.35776, -15.487979],
+      [-44.357717, -15.487901],
+      [-44.357852, -15.487751],
+      [-44.357937, -15.487849]
+    ],
+    imagens: [
+      {
+        id: '1',
+        imagem: require('../../assets/images/95_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
+      },
+      {
+        id: '2',
+        imagem: require('../../assets/images/95_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
+      }
+    ]
   },
   {
     id: 'imovel_97',
@@ -1401,15 +1406,25 @@ export const POINTS_OF_INTEREST = [
       [-44.357584, -15.487461]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/97_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/97_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/97_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/97_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
+      },
+      {
+        id: '3',
+        imagem: require('../../assets/images/97_3.png'),
+        descricao: 'Autoria própria - Atualizado'
+      },
+      {
+        id: '4',
+        imagem: require('../../assets/images/97_4.png'),
+        descricao: 'Autoria própria - Atualizado'
       }
     ]
   },
@@ -1429,10 +1444,10 @@ export const POINTS_OF_INTEREST = [
       [-44.357761, -15.487255]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/98_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/98_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       },
     ]
   },
@@ -1452,15 +1467,15 @@ export const POINTS_OF_INTEREST = [
       [-44.358892, -15.487715]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/99_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/99_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/99_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/99_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1480,10 +1495,10 @@ export const POINTS_OF_INTEREST = [
       [-44.360776, -15.490155]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/100_1.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/100_1.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       },
     ]
   },
@@ -1506,15 +1521,15 @@ export const POINTS_OF_INTEREST = [
       [-44.359579, -15.491328]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/101_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/101_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/101_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/101_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   },
@@ -1534,15 +1549,15 @@ export const POINTS_OF_INTEREST = [
       [-44.358995, -15.490413]
     ],
     imagens: [
-      { 
-        id: '1', 
-        imagem: require('../../assets/images/103_1.png'), 
-        descricao: 'Inventário IEPHA - 1985' 
+      {
+        id: '1',
+        imagem: require('../../assets/images/103_1.png'),
+        descricao: 'Inventário IEPHA - 1985'
       },
-      { 
-        id: '2', 
-        imagem: require('../../assets/images/103_2.png'), 
-        descricao: 'Inventário IEPHA - Atualizado' 
+      {
+        id: '2',
+        imagem: require('../../assets/images/103_2.png'),
+        descricao: 'Inventário IEPHA - Atualizado'
       }
     ]
   }
