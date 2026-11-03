@@ -8,20 +8,12 @@ export const INITIAL_ZOOM = 18;
 
 export const POINTS_OF_INTEREST = [
 
-<<<<<<< HEAD
-
-=======
->>>>>>> code
   // Núcleo Histórico
 
   {
     id: 'prefeitura_municipal',
     title: 'Prédio Histórico da Prefeitura Municipal de Januária',
-<<<<<<< HEAD
-    message: 'Você chegou ao prédio histórico da Prefeitura Municipal de Januária. Este casarão, datado de 1890, tem estilo eclético e chama a atenção pelas suas cores vibrantes em azul e branco. Durante muito tempo, foi o coração administrativo da cidade. Hoje, abriga o Centro de Atendimento ao Turista (CAT), Centro Cultural, Museu de Artes e Ofícios e a Biblioteca Municipal Professor Manoel Ambrósio. Aproveite para entrar e descobrir mais sobre Januária.',
-=======
     message: 'Você chegou ao prédio histórico da Prefeitura Municipal de Januária. Este casarão, datado de 1890, tem estilo eclético e chama atenção pelas suas cores vibrantes em azul e branco. Durante muito tempo, foi o coração administrativo da cidade. Hoje, abriga o Centro de Atendimento ao Turista (CAT). Aproveite para entrar e descobrir mais sobre Januária.',
->>>>>>> code
     latitude: -15.488692266036272,
     longitude: -44.36216932359738,
     radius: 15,
@@ -189,11 +181,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'imovel_12',
     title: 'Imóvel localizado na Rua Cônego Livínio, Nº 24/28/32',
-<<<<<<< HEAD
-    message: 'Você chegou ao conjunto de imóveis de números 24, 28 e 32 da Rua Cônego Livínio. De tipo colonial, as fachadas apresentam sete óculos circulares sobre os vãos, pequenas aberturas na parte superior que contribuem para a ornamentação dos imóveis e também podem favorecer a iluminação e a ventilação naturais.',
-=======
     message: ' Você chegou ao conjunto de imóveis de números 24, 28 e 32 da Rua Cônego Livínio. De tipo colonial, as fachadas apresentam sete óculos circulares sobre os vãos, pequenas aberturas na parte superior que contribuem para a ornamentação dos imóveis e também podem favorecer a iluminação e a ventilação naturais.',
->>>>>>> code
     latitude: -15.490475290076127,
     longitude: -44.36089654999652,
     radius: 15,
@@ -249,11 +237,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'ponto_x',
     title: 'Lanchonete Ponto X',
-<<<<<<< HEAD
-    message: 'Você chegou ao imóvel número 114 da Praça Getúlio Vargas, onde há algumas décadas funciona a Lanchonete Ponto X. De estilo eclético, a construção se destaca pela platibanda ornamentada com rosáceas vazadas e pela interessante coluna de esquina, que apresenta a parte superior decorada. Os imóveis geminados da Rua Mata-Machado seguem características arquitetônicas semelhantes.',
-=======
     message: ' Você chegou ao imóvel número 114 da Praça Getúlio Vargas, onde há algumas décadas funciona a Lanchonete Ponto X. De estilo eclético, a construção se destaca pela platibanda ornamentada com rosáceas vazadas e pela interessante coluna de esquina, que apresenta a parte superior decorada. Os imóveis geminados da Rua Mata-Machado seguem características arquitetônicas semelhantes.',
->>>>>>> code
     latitude: -15.490841607366924,
     longitude: -44.360563459707386,
     radius: 15,
@@ -315,19 +299,11 @@ export const POINTS_OF_INTEREST = [
     radius: 15,
     type: 'Colonial',
     polygon: [
-<<<<<<< HEAD
-      [-44.359858, -15.490785],
-      [-44.359761, -15.490884],
-      [-44.359681, -15.490806],
-      [-44.359761, -15.490718],
-      [-44.359858, -15.490785]
-=======
       [-44.359885, -15.490765],
       [-44.359735, -15.49093],
       [-44.3596, -15.490806],
       [-44.359772, -15.490641],
       [-44.359885, -15.490765]
->>>>>>> code
     ],
     imagens: [
       {
@@ -396,11 +372,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'imovel_26',
     title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 62',
-<<<<<<< HEAD
-    text: 'Você chegou ao imóvel localizado na Rua Lindolfo Caetano, nº 62. De tipologia eclética, a edificação apresenta cunhais ornamentados e platibanda reta com relevos geométricos. O principal destaque é o portão com características monumentaos, localizado ao lado do imóvel, com frontão emoldurado em alvenaria, linhas triangulares e abertura em arco, composição que remete às antigas Capelas dos Passos da região aurífera de Minas Gerais.',
-=======
     message: 'Você está diante do imóvel térreo de número 62, implantado no alinhamento da rua com parede-meia de um dos lados. Sua fachada destaca-se pelos cunhais ornamentados e moldura decorativa no topo, encimados por uma platibanda reta com relevos geométricos. A composição inclui porta de madeira central, janelas com grades de ferro e uma grande porta de enrolar em aço. O telhado possui calhas e canos projetados na fachada para escoamento da água.',
->>>>>>> code
     latitude: -15.48956846305711,
     longitude: -44.358772131975776,
     radius: 15,
@@ -428,11 +400,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'imovel_28',
     title: 'Imóvel localizado na Rua Lindolfo Caetano, Nº 120',
-<<<<<<< HEAD
-    text: 'Você chegou ao imóvel localizado na Rua Lindolfo Caetano, nº 120. Esta edificação de uso residencial tem como principal destaque a platibanda ornamentada por pilaretes encimados por pináculos e recortes na alvenaria que formam folhas ornamentais. Na parte superior da lateral, os óculos circulares são características que reforçam a tipologia regional do imóvel. Já na parte inferior, o barrado revestido com pedras descaracteriza a configuração original do imóvel.',
-=======
     message: 'Você está diante do imóvel residencial térreo de alto pé-direito, implantado no alinhamento da via. O principal destaque da edificação é sua platibanda trabalhada com pilaretes encimados por pináculos e vedações rendilhadas em alvenaria. A fachada amarela conta com sete vãos de verga reta (uma porta central ladeada por seis janelas de madeira com tapa-vento em veneziana) e apresenta um revestimento de pedras na base.',
->>>>>>> code
     latitude: -15.489189188843834,
     longitude: -44.35921145451291,
     radius: 15,
@@ -455,11 +423,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'imovel_30',
     title: 'Imóvel localizado Rua Lindolfo Caetano, Nº 229',
-<<<<<<< HEAD
-    text: 'Você chegou ao imóvel localizado na Rua Lindolfo Caetano, nº 229. Em processo de arruinamento, a edificação que era de uso residencial apresentava óculos circulares no oitão voltado para a esquina, característica que permitia classificá-la como de tipologia regional. Sua fachada também apresentava uma platibanda ornamentada por linhas sóbrias.',
-=======
     message: 'Você está diante desta casa de esquina de um andar, localizada no cruzamento da Rua Lindolfo Caetano com a Rua Francisco Sá. O imóvel foi construído bem no limite da calçada e chama a atenção por sua parede lateral alta na esquina, que traz pequenos furos redondos no topo para ventilação. As janelas têm formato retangular e são protegidas por grades de ferro, enquanto a parte da frente conta com uma mureta escondendo o telhado de telhas de barro. ',
->>>>>>> code
     latitude: -15.488579545087962,
     longitude: -44.36013427047611,
     radius: 15,
@@ -1071,14 +1035,6 @@ export const POINTS_OF_INTEREST = [
         id: '2',
         imagem: require('../../assets/images/73_2.png'),
         descricao: 'Inventário IEPHA - Atualizado'
-<<<<<<< HEAD
-      },
-      {
-        id: '3',
-        imagem: require('../../assets/images/73_3.png'),
-        descricao: 'Autoria Própria - 2026'
-=======
->>>>>>> code
       }
     ]
   },
@@ -1381,11 +1337,7 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'imovel_94',
     title: 'Imóvel localizado na Rua Mata Machado, Nº 413/419/423',
-<<<<<<< HEAD
-    message: 'Você está diante da casa residencial térrea de números 419/423, construída no limite da calçada e encostada nas vizinhas. O imóvel apresenta duas etapas bem visíveis na fachada: do lado direito, traz acabamento em tom claro com pilastras nas quinas e moldura decorativa abaixo do telhado; do lado esquerdo, possui pintura simples. As portas e janelas têm formato retangular reto e fechamento em madeira, com o telhado de telhas de barro caindo para a rua.',
-=======
     message: 'Você está diante da casa residencial térrea de números 413/419/423, construída no limite da calçada e encostada nas vizinhas. O imóvel apresenta duas etapas bem visíveis na fachada: do lado direito, traz acabamento em tom claro com pilastras nas quinas e moldura decorativa abaixo do telhado; do lado esquerdo, possui pintura simples. As portas e janelas têm formato retangular reto e fechamento em madeira, com o telhado de telhas de barro caindo para a rua.',
->>>>>>> code
     latitude: -15.487994995731786,
     longitude: -44.35787887397768,
     radius: 15,
@@ -1413,29 +1365,17 @@ export const POINTS_OF_INTEREST = [
   {
     id: 'imovel_95',
     title: 'Imóvel localizado na Rua Mata Machado, Nº 433',
-<<<<<<< HEAD
-    message: 'Você está diante da casa residencial de número 95, construída no limite da calçada e com acesso feito por uma pequena escada na entrada principal. A fachada traz pilastras nas quinas e molduras decorativas no topo e ao redor das aberturas, criando um bonito contraste de cores com a pintura da parede. A composição conta com uma porta de madeira ladeada por duas janelas de um lado e uma do outro, todas com fechamento em madeira.',
-=======
     message: 'Você está diante da casa residencial de número 433, construída no limite da calçada e com acesso feito por uma pequena escada na entrada principal. A fachada traz pilastras nas quinas e molduras decorativas no topo e ao redor das aberturas, criando um bonito contraste de cores com a pintura da parede. A composição conta com uma porta de madeira ladeada por duas janelas de um lado e uma do outro, todas com fechamento em madeira.',
->>>>>>> code
     latitude: -15.487929774860937,
     longitude: -44.357810245770146,
     radius: 15,
     type: 'Colonial',
     polygon: [
-<<<<<<< HEAD
-      [-44.35783, -15.487797],
-      [-44.357916, -15.48789],
-      [-44.357766, -15.488004],
-      [-44.357669, -15.487916],
-      [-44.35783, -15.487797]
-=======
       [-44.357937, -15.487849],
       [-44.35776, -15.487979],
       [-44.357717, -15.487901],
       [-44.357852, -15.487751],
       [-44.357937, -15.487849]
->>>>>>> code
     ],
     imagens: [
       {
@@ -1475,8 +1415,6 @@ export const POINTS_OF_INTEREST = [
         id: '2',
         imagem: require('../../assets/images/97_2.png'),
         descricao: 'Inventário IEPHA - Atualizado'
-<<<<<<< HEAD
-=======
       },
       {
         id: '3',
@@ -1487,7 +1425,6 @@ export const POINTS_OF_INTEREST = [
         id: '4',
         imagem: require('../../assets/images/97_4.png'),
         descricao: 'Autoria própria - Atualizado'
->>>>>>> code
       }
     ]
   },
