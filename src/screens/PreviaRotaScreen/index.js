@@ -17,7 +17,7 @@ export default function PreviaRotaScreen({ route, navigation }) {
   
   // Para guardar a distância e duração reais da API
   const [distanciaCalculada, setDistanciaCalculada] = useState('Calculando...');
-  const [duracaoCalculada, setDuracaoCalculada] = useState('Calculando...');
+  const [duracaoCalculada, setDuracaoCalculada] = useState(rotaSelecionada?.duration|| 'Calculando...');
 
   const insets = useSafeAreaInsets(); 
 
@@ -108,7 +108,9 @@ export default function PreviaRotaScreen({ route, navigation }) {
 
           const segundos = rota.duration;
           const minutos = Math.round(segundos / 60);
-          setDuracaoCalculada(minutos + ' min');
+          if (!rotaSelecionada?.duration) {
+            setDuracaoCalculada(minutos + ' min');
+          }
         }
       } catch (error) {
         console.log("Erro ao buscar rota completa na prévia:", error);

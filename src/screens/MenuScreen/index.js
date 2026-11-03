@@ -78,7 +78,7 @@ export default function MenuScreen({ navigation }) {
 
           {ROUTES_LIST && ROUTES_LIST.map((rota) => {
             const displayDistance = metricasRotas[rota.id]?.distance || (rota.distance !== '... ' && rota.distance !== '...' ? rota.distance : 'Calculando...');
-            const displayDuration = metricasRotas[rota.id]?.duration || (rota.duration !== '... ' && rota.duration !== '...' ? rota.duration : 'Calculando...');
+            const displayDuration = rota.duration || metricasRotas[rota.id]?.duration || 'Tempo indisponível';
 
             return (
               <View key={rota.id} style={styles.card}>
