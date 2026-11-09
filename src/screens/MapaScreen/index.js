@@ -50,7 +50,7 @@ export default function MapaScreen({ route, navigation }) {
   const [showRouteFinished, setShowRouteFinished] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [activePointData, setActivePointData] = useState(null);
-  const DEBUG_SHOW_POLYGONS = false;
+  const DEBUG_SHOW_POLYGONS = false; 
 
   useEffect(() => {
     if (rotaSelecionada && rotaSelecionada.sequence) {
