@@ -11,7 +11,7 @@ import { styles } from './styles';
 
 export default function PreviaRotaScreen({ route, navigation }) {
   const { rotaSelecionada } = route.params || {};
-  const [isResumoOpen, setIsResumoOpen] = useState(true);
+  const [isResumoOpen, setIsResumoOpen] = useState(false);
   
   const [fullRouteCoordinates, setFullRouteCoordinates] = useState([]);
   
@@ -124,7 +124,13 @@ export default function PreviaRotaScreen({ route, navigation }) {
 
   const handleIniciarCaminhada = () => {
     if (rotaSelecionada) {
-      navigation.navigate('Mapa', { rotaSelecionada });
+      navigation.navigate('Mapa', { rotaSelecionada, modo: 'tour' });
+    }
+  };
+
+  const handleExplorarRota = () => {
+    if (rotaSelecionada) {
+      navigation.navigate('Mapa', { rotaSelecionada, modo: 'autonomo' });
     }
   };
 
@@ -224,13 +230,55 @@ export default function PreviaRotaScreen({ route, navigation }) {
           </View>
 
           <TouchableOpacity 
-            style={styles.startButton} 
+            style={[styles.startButton, { marginBottom: 4 }]} 
             onPress={handleIniciarCaminhada} 
             activeOpacity={0.8}
           >
             <FontAwesome5 name="location-arrow" size={18} color="#FFF" />
             <Text style={styles.startButtonText}>Iniciar caminhada</Text>
           </TouchableOpacity>
+
+          <Text style={{
+            fontSize: 12,
+            color: '#5A6778',
+            textAlign: 'center',
+            paddingHorizontal: 6,
+            marginBottom: 12,
+          }}>
+            Acompanhe o trajeto pelo mapa com alertas ao se aproximar.
+          </Text>
+
+          <TouchableOpacity 
+            style={[
+              styles.startButton, 
+              { 
+                marginTop: 0, 
+                marginBottom: 4,
+                paddingVertical: 10,
+                backgroundColor: '#F1F5F9',
+                borderWidth: 1,
+                borderColor: '#CBD5E1',
+                elevation: 0,
+              }
+            ]} 
+            onPress={handleExplorarRota} 
+            activeOpacity={0.8}
+          >
+            <MaterialIcons name="touch-app" size={18} color="#334155" />
+            <Text style={[styles.startButtonText, { color: '#334155', fontSize: 15 }]}>
+              Explorar rota
+            </Text>
+          </TouchableOpacity>
+
+          <Text style={{
+            fontSize: 12,
+            color: '#5A6778',
+            textAlign: 'center',
+            paddingHorizontal: 6,
+            marginBottom: 18,
+          }}>
+            Veja as mesmas fotos, histórias e áudios do passeio, sem precisar caminhar.
+          </Text>
 
           <View style={styles.accordionContainer}>
             <TouchableOpacity

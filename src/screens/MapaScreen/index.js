@@ -30,7 +30,8 @@ Mapbox.setAccessToken(MAPBOX_TOKEN);
 export default function MapaScreen({ route, navigation }) {
   
   // 4. CAPTURANDO A ROTA QUE O MENU ENVIOU
-  const { rotaSelecionada } = route.params || {};
+  const { rotaSelecionada, modo = 'tour' } = route.params || {};
+  const isAutonomo = modo === 'autonomo';
 
   // Estados de Localização e Rota
   const [ultimaInstrucaoFalada, setUltimaInstrucaoFalada] = useState('');
@@ -50,19 +51,68 @@ export default function MapaScreen({ route, navigation }) {
   const [showRouteFinished, setShowRouteFinished] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [activePointData, setActivePointData] = useState(null);
+  const [audioAtivo, setAudioAtivo] = useState(true);
+  const [pontosVisitados, setPontosVisitados] = useState([]);
   const DEBUG_SHOW_POLYGONS = false; 
+
+  const handleToggleAudio = () => {
+    setAudioAtivo((prev) => {
+      const novoEstado = !prev;
+      if (!novoEstado) {
+        Speech.stop();
+      } else if (showAlert && activePointData?.message) {
+        Speech.stop();
+        Speech.speak(activePointData.message, {
+          language: 'pt-BR',
+          pitch: 1.0,
+          rate: 0.9,
+          voice: 'pt-br-x-ptd-network',
+        });
+      }
+      return novoEstado;
+    });
+  };
+
+  const abrirPonto = (pointData) => {
+    if (!pointData) return;
+    const idx = rotaAtiva.indexOf(pointData.id);
+    if (idx !== -1) setIndiceAtual(idx);
+
+    setIsPointActive(true);
+    setActivePointData({
+      title: pointData.title,
+      message: pointData.message,
+      imagens: pointData.imagens,
+    });
+    setShowAlert(true);
+    setUltimoPontoAvisado(pointData.id);
+    setPontosVisitados((prev) =>
+      prev.includes(pointData.id) ? prev : [...prev, pointData.id]
+    );
+
+    Speech.stop();
+    if (audioAtivo) {
+      Speech.speak(pointData.message, {
+        language: 'pt-BR',
+        pitch: 1.0,
+        rate: 0.9,
+        voice: 'pt-br-x-ptd-network',
+      });
+    }
+  };
 
   useEffect(() => {
     if (rotaSelecionada && rotaSelecionada.sequence) {
       setRotaAtiva(rotaSelecionada.sequence);
       setIndiceAtual(0);
+      setPontosVisitados([]);
       setStartTime(Date.now());
       fetchFullRoute(rotaSelecionada.sequence);
 
       const primeiroId = rotaSelecionada.sequence[0];
       const primeiroPonto = POINTS_OF_INTEREST.find(p => p.id === primeiroId);
 
-      if (primeiroPonto && cameraRef.current) {
+      if (!isAutonomo && primeiroPonto && cameraRef.current) {
         cameraRef.current.setCamera({
           centerCoordinate: [primeiroPonto.longitude, primeiroPonto.latitude],
           zoomLevel: INITIAL_ZOOM,
@@ -148,6 +198,7 @@ export default function MapaScreen({ route, navigation }) {
 
   // Monitoramento de GPS e Proximidade usando Turf.js e Polígonos
   useEffect(() => {
+    if (isAutonomo) return;
     let subscription;
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -182,12 +233,14 @@ export default function MapaScreen({ route, navigation }) {
                   setShowAlert(true);
                   setUltimoPontoAvisado(pointData.id); 
                   Speech.stop();
-                  Speech.speak(pointData.message, { 
-                    language: 'pt-BR', 
-                    pitch: 1.0, 
-                    rate: 0.9,
-                    voice: 'pt-br-x-ptd-network'
-                  });
+                  if (audioAtivo) {
+                    Speech.speak(pointData.message, { 
+                      language: 'pt-BR', 
+                      pitch: 1.0, 
+                      rate: 0.9,
+                      voice: 'pt-br-x-ptd-network'
+                    });
+                  }
                   
                 }
               } catch (error) {
@@ -199,10 +252,11 @@ export default function MapaScreen({ route, navigation }) {
       );
     })();
     return () => subscription?.remove();
-  }, [rotaAtiva, indiceAtual, showAlert, ultimoPontoAvisado]);
+  }, [rotaAtiva, indiceAtual, showAlert, ultimoPontoAvisado, isAutonomo, audioAtivo]);
 
   // Atualiza traçado das ruas conforme o usuário anda
   useEffect(() => {
+    if (isAutonomo) return;
     if (userLocation && rotaAtiva[indiceAtual]) {
       const target = POINTS_OF_INTEREST.find(p => p.id === rotaAtiva[indiceAtual]);
       if (target) {
@@ -223,7 +277,7 @@ export default function MapaScreen({ route, navigation }) {
 
   useEffect(() => {
     // Se a tela do ponto estiver aberta, o GPS não tem permissão para falar.
-    if (isPointActive || showRouteFinished) return;
+    if (isAutonomo || !audioAtivo || isPointActive || showRouteFinished) return;
 
     if (instruction) {
       const atual = analisarInstrucao(instruction);
@@ -246,7 +300,7 @@ export default function MapaScreen({ route, navigation }) {
         setUltimaDistanciaFalada(atual.distancia);
       }
     }
-  }, [instruction, isPointActive, showRouteFinished]);
+  }, [instruction, isPointActive, showRouteFinished, ultimaInstrucaoFalada, ultimaDistanciaFalada, isAutonomo, audioAtivo]);
 
   const handleRecenter = () => {
     if (userLocation && cameraRef.current) {
@@ -261,9 +315,39 @@ export default function MapaScreen({ route, navigation }) {
 
   const inactivePoints = useMemo(() => {
     if (rotaAtiva.length === 0) return [];
-    const futureIds = rotaAtiva.slice(indiceAtual + 1);
-    return futureIds.map(id => POINTS_OF_INTEREST.find(p => p.id === id)).filter(Boolean);
-  }, [rotaAtiva, indiceAtual]);
+    const ids = isAutonomo
+      ? rotaAtiva.filter((_, idx) => idx !== indiceAtual)
+      : rotaAtiva.slice(indiceAtual + 1);
+    return ids.map(id => POINTS_OF_INTEREST.find(p => p.id === id)).filter(Boolean);
+  }, [rotaAtiva, indiceAtual, isAutonomo]);
+
+  const autonomoCameraConfig = useMemo(() => {
+    if (!isAutonomo || rotaAtiva.length === 0) return null;
+    const pontos = rotaAtiva
+      .map(id => POINTS_OF_INTEREST.find(p => p.id === id))
+      .filter(Boolean);
+    if (pontos.length === 0) return null;
+
+    if (pontos.length === 1) {
+      return {
+        centerCoordinate: [pontos[0].longitude, pontos[0].latitude],
+        zoomLevel: 16,
+      };
+    }
+
+    const lats = pontos.map(p => p.latitude);
+    const lngs = pontos.map(p => p.longitude);
+    return {
+      bounds: {
+        ne: [Math.max(...lngs), Math.max(...lats)],
+        sw: [Math.min(...lngs), Math.min(...lats)],
+        paddingTop: 60,
+        paddingBottom: 60,
+        paddingLeft: 40,
+        paddingRight: 40,
+      },
+    };
+  }, [isAutonomo, rotaAtiva]);
 
   const currentTarget = useMemo(() => {
     if (rotaAtiva.length > 0 && rotaAtiva[indiceAtual]) {
@@ -302,7 +386,7 @@ export default function MapaScreen({ route, navigation }) {
       <SafeAreaView style={styles.container} edges={['top', 'left', 'right', 'bottom']}>
         
         <Header onOpenMenu={handleOpenMenu} navigation={navigation} />
-        <NavigationCard instruction={rotaAtiva.length > 0 ? instruction : null} />
+        {!isAutonomo && <NavigationCard instruction={rotaAtiva.length > 0 ? instruction : null} />}
 
         <Mapbox.MapView 
           style={styles.map} 
@@ -311,9 +395,30 @@ export default function MapaScreen({ route, navigation }) {
           attributionPosition={{ bottom: 125, right: 10 }} 
           compassPosition={{ top: 10, right: 10 }} 
         >
-          <Mapbox.Camera ref={cameraRef} centerCoordinate={userLocation || FALLBACK_COORDS} zoomLevel={INITIAL_ZOOM} animationMode="flyto" />
-          <Mapbox.UserLocation visible={true} showsUserHeadingIndicator={true} />
-          <MapMarkers activePoint={currentTarget} inactivePoints={inactivePoints} />
+          {isAutonomo && autonomoCameraConfig ? (
+            <Mapbox.Camera
+              {...autonomoCameraConfig}
+              animationMode="moveTo"
+              animationDuration={0}
+            />
+          ) : (
+            <Mapbox.Camera
+              ref={cameraRef}
+              centerCoordinate={userLocation || FALLBACK_COORDS}
+              zoomLevel={INITIAL_ZOOM}
+              animationMode="flyto"
+            />
+          )}
+
+          <Mapbox.UserLocation visible={!isAutonomo} showsUserHeadingIndicator={!isAutonomo} />
+
+          <MapMarkers
+            activePoint={currentTarget}
+            inactivePoints={inactivePoints}
+            modoAutonomo={isAutonomo}
+            visitedPointIds={isAutonomo ? pontosVisitados : []}
+            onSelectPoint={isAutonomo ? abrirPonto : undefined}
+          />
 
           {DEBUG_SHOW_POLYGONS && currentTarget && currentTarget.polygon && (
              <Mapbox.ShapeSource 
@@ -338,11 +443,13 @@ export default function MapaScreen({ route, navigation }) {
           )}
         </Mapbox.MapView>
         
-        <TouchableOpacity style={styles.recenterButton} onPress={handleRecenter} activeOpacity={0.7}>
-          <MaterialIcons name="my-location" size={24} color={colors.cardBackground} />
-        </TouchableOpacity>
+        {!isAutonomo && (
+          <TouchableOpacity style={styles.recenterButton} onPress={handleRecenter} activeOpacity={0.7}>
+            <MaterialIcons name="my-location" size={24} color={colors.cardBackground} />
+          </TouchableOpacity>
+        )}
 
-        {currentTarget && !showAlert && (
+        {!isAutonomo && currentTarget && !showAlert && (
           <View style={styles.destinationBadge}>
             <View style={styles.badgeIconContainer}>
               <MaterialIcons name="place" size={24} color={colors.cardBackground} />
@@ -375,16 +482,33 @@ export default function MapaScreen({ route, navigation }) {
 
         <ProximityAlert 
           isVisible={showAlert} 
-          data={activePointData} 
+          data={activePointData}
+          audioAtivo={audioAtivo}
+          onToggleAudio={handleToggleAudio}
           onDismiss={() => { 
             setShowAlert(false); 
             setIsPointActive(false); 
             Speech.stop(); 
           }}
           onClose={() => { 
+            Speech.stop();
+
+            if (isAutonomo) {
+              if (indiceAtual < rotaAtiva.length - 1) {
+                const proximoId = rotaAtiva[indiceAtual + 1];
+                const proximoPonto = POINTS_OF_INTEREST.find(p => p.id === proximoId);
+                if (proximoPonto) {
+                  abrirPonto(proximoPonto);
+                  return;
+                }
+              }
+              setShowAlert(false);
+              setIsPointActive(false);
+              return;
+            }
+
             setShowAlert(false); 
             setIsPointActive(false); 
-            Speech.stop(); 
             setUltimaInstrucaoFalada(''); 
             setInstruction('');
             

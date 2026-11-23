@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
 import { styles } from './styles';
 
-export function ProximityAlert({ isVisible, onClose, onDismiss, data }) {
+export function ProximityAlert({ isVisible, onClose, onDismiss, data, audioAtivo = true, onToggleAudio }) {
   const [imagemAtualIndex, setImagemAtualIndex] = useState(0);
   const insets = useSafeAreaInsets(); 
 
@@ -48,10 +48,35 @@ export function ProximityAlert({ isVisible, onClose, onDismiss, data }) {
             <MaterialIcons name="close" size={28} color="#333" />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={handleNextPoint} style={styles.nextButton}>
-            <Text style={styles.nextButtonText}>Próximo</Text>
-            <MaterialIcons name="arrow-forward" size={20} color="#FFF" />
-          </TouchableOpacity>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            {onToggleAudio && (
+              <TouchableOpacity 
+                onPress={onToggleAudio} 
+                activeOpacity={0.7}
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 20,
+                  backgroundColor: 'rgba(28, 43, 64, 0.08)',
+                  borderWidth: 1,
+                  borderColor: 'rgba(28, 43, 64, 0.15)',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <MaterialIcons 
+                  name={audioAtivo ? "volume-up" : "volume-off"} 
+                  size={22} 
+                  color={audioAtivo ? colors.cardBackground : "#777"} 
+                />
+              </TouchableOpacity>
+            )}
+
+            <TouchableOpacity onPress={handleNextPoint} style={styles.nextButton}>
+              <Text style={styles.nextButtonText}>Próximo</Text>
+              <MaterialIcons name="arrow-forward" size={20} color="#FFF" />
+            </TouchableOpacity>
+          </View>
         </View>
 
         <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
