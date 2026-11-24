@@ -9,6 +9,13 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingBottom: 15,
   },
+  headerTopRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 15,
+  },
   backButton: {
     flexDirection: 'row',
     alignItems: 'center',

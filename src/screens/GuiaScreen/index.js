@@ -5,77 +5,74 @@ import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
+import { FooterIF } from '../../components/FooterIF';
 
 export default function GuiaScreen({ navigation }) {
-  const insets = useSafeAreaInsets(); 
+    const insets = useSafeAreaInsets();
 
-  const openLink = (url) => {
-    Linking.openURL(url).catch((err) => console.error("Erro ao abrir link:", err));
-  };
+    const openLink = (url) => {
+        Linking.openURL(url).catch((err) => console.error("Erro ao abrir link:", err));
+    };
 
-  return (
-    <SafeAreaProvider>
-        <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
-            <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
-            
-            <ImageBackground 
-                source={require('../../../assets/pattern.png')} 
-                style={{ flex: 1, width: '100%' }} 
-                resizeMode="repeat"
-                imageStyle={{ opacity: 0.5 }} 
-            >
+    return (
+        <SafeAreaProvider>
+            <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
+                <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
 
-                <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+                <ImageBackground
+                    source={require('../../../assets/pattern.png')}
+                    style={{ flex: 1, width: '100%' }}
+                    resizeMode="repeat"
+                    imageStyle={{ opacity: 0.5 }}
+                >
 
-                    <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
-                        <View style={styles.headerTopRow}>
-                            <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                                <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
-                                <Text style={styles.backButtonText}>Voltar</Text>
-                            </TouchableOpacity>
+                    <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
 
-                            <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
-                                <Image 
-                                    source={require('../../../assets/images/extras/ifnmg.png')} 
-                                    style={styles.logoIfnmg}
-                                    resizeMode="contain"
-                                />
+                        <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
+                            <View style={styles.headerTopRow}>
+                                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                                    <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
+                                    <Text style={styles.backButtonText}>Voltar</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity onPress={() => openLink('https://ifnmg.edu.br/')}>
+                                </TouchableOpacity>
+                            </View>
+
+                            <Text style={styles.headerTitle}>Descubra Januária</Text>
+                        </View>
+
+                        <View style={styles.contentWrapper}>
+                            <Image
+                                source={require('../../../assets/images/extras/guiajanu.png')}
+                                style={styles.guiaLogo}
+                                resizeMode="contain"
+                            />
+                            <Text style={styles.title}>Portal Guia Janu</Text>
+
+                            <Text style={styles.paragraph}>
+                                Quer conhecer ainda mais sobre as belezas, a cultura e a história da nossa cidade?
+                            </Text>
+                            <Text style={styles.paragraph}>
+                                O <Text style={styles.bold}>Guia Janu</Text> é o portal oficial do nosso projeto de extensão. Lá você encontra um acervo completo sobre a gastronomia local, as tradições, opções de hospedagem, eventos e as maravilhas naturais da região, como o Rio São Francisco e o Rio Pandeiros.
+                            </Text>
+                            <Text style={styles.paragraph}>
+                                Acesse o portal e planeje a sua próxima aventura com informações detalhadas e dicas exclusivas para aproveitar o melhor de Januária!
+                            </Text>
+
+                            <TouchableOpacity
+                                style={styles.primaryButton}
+                                onPress={() => openLink('https://www.guiajanu.com.br/')}
+                            >
+                                <Text style={styles.primaryButtonText}>Acessar GuiaJanu.com.br</Text>
+                                <MaterialIcons name="open-in-new" size={20} color="#FFF" style={{ marginLeft: 8 }} />
                             </TouchableOpacity>
                         </View>
-                        
-                        <Text style={styles.headerTitle}>Descubra Januária</Text> 
-                    </View>
-                    
-                    <View style={styles.contentWrapper}>
-                        <Image 
-                            source={require('../../../assets/images/extras/guiajanu.png')} 
-                            style={styles.guiaLogo}
-                            resizeMode="contain"
-                        />
-                        <Text style={styles.title}>Portal Guia Janu</Text>
-                        
-                        <Text style={styles.paragraph}>
-                            Quer conhecer ainda mais sobre as belezas, a cultura e a história da nossa cidade? 
-                        </Text>
-                        <Text style={styles.paragraph}>
-                            O <Text style={styles.bold}>Guia Janu</Text> é o portal oficial do nosso projeto de extensão. Lá você encontra um acervo completo sobre a gastronomia local, as tradições, opções de hospedagem, eventos e as maravilhas naturais da região, como o Rio São Francisco e o Rio Pandeiros.
-                        </Text>
-                        <Text style={styles.paragraph}>
-                            Acesse o portal e planeje a sua próxima aventura com informações detalhadas e dicas exclusivas para aproveitar o melhor de Januária!
-                        </Text>
 
-                        <TouchableOpacity 
-                            style={styles.primaryButton} 
-                            onPress={() => openLink('https://www.guiajanu.com.br/')}
-                        >
-                            <Text style={styles.primaryButtonText}>Acessar GuiaJanu.com.br</Text>
-                            <MaterialIcons name="open-in-new" size={20} color="#FFF" style={{ marginLeft: 8 }} />
-                        </TouchableOpacity>
-                    </View>
-
-                </ScrollView>
-            </ImageBackground>
-        </SafeAreaView>
-    </SafeAreaProvider>
-  );
+                        <FooterIF />
+                    </ScrollView>
+                </ImageBackground>
+            </SafeAreaView>
+        </SafeAreaProvider>
+    );
 }

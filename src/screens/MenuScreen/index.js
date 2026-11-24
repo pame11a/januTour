@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, ImageBackground, Image } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
@@ -8,6 +8,8 @@ import { ROUTES_LIST } from '../../data/routes';
 import { POINTS_OF_INTEREST, MAPBOX_TOKEN } from '../../config/constants'; 
 
 import { styles } from './styles';
+
+import { FooterIF } from '../../components/FooterIF';
 
 export default function MenuScreen({ navigation }) {
   const [rotaExpandida, setRotaExpandida] = useState(null);
@@ -73,7 +75,7 @@ export default function MenuScreen({ navigation }) {
           
           <View style={styles.header}>
             <MaterialIcons name="alt-route" size={28} color="#1C2B40" />
-            <Text style={styles.title}>Rotas - Trajetos</Text>
+            <Text style={styles.title}>Trajetos</Text>
           </View>
 
           {ROUTES_LIST && ROUTES_LIST.map((rota) => {
@@ -146,6 +148,8 @@ export default function MenuScreen({ navigation }) {
               <MaterialIcons name="people-outline" size={22} color="#1C2B40" />
               <Text style={styles.footerButtonText}>Sobre Nós</Text>
             </TouchableOpacity>
+
+            <FooterIF/>
           </View>
         </ScrollView>
       </ImageBackground>

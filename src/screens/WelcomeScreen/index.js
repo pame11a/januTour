@@ -5,49 +5,71 @@ import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 
 export default function WelcomeScreen({ navigation }) {
   return (
-    
+
     <View style={styles.container}>
-        <ExpoStatusBar style="dark" />
-        <View style={styles.spotlight} />
-        <Image 
-            source={require('../../../assets/pattern.png')} 
-            style={styles.pattern}
-            resizeMode="repeat"
-        />
-        
-        <View style={styles.logoShadowContainer}>
-            <View style={styles.logoRoundWrapper}>
-            <Image 
-                source={require('../../../assets/logo.png')} 
-                style={styles.logo}
-                resizeMode="cover" 
-            />
-            </View>
+      <ExpoStatusBar style="dark" />
+      <View style={styles.spotlight} />
+      <Image
+        source={require('../../../assets/pattern.png')}
+        style={styles.pattern}
+        resizeMode="repeat"
+      />
+
+      <View style={styles.logoShadowContainer}>
+        <View style={styles.logoRoundWrapper}>
+          <Image
+            source={require('../../../assets/logo.png')}
+            style={styles.logo}
+            resizeMode="cover"
+          />
         </View>
+      </View>
 
       <View style={styles.textContainer}>
         <Text style={styles.title}>JanuTour</Text>
-        
+
         <Text style={styles.subtitle}>
           O que é o app Janu Tour?
         </Text>
 
         <Text style={styles.bodyText}>
           O Janu Tour é um aplicativo desenvolvido para turistas e interessados em explorar o Centro Histórico de Januária. A proposta é oferecer uma experiência guiada que permita ao usuário conhecer, de forma acessível e envolvente, o rico patrimônio arquitetônico da cidade, cuja preservação contribui para contar a história e a identidade cultural do município.
-        </Text>   
+        </Text>
 
         <Text style={styles.bodyText}>
-         Em 2024, o Centro Histórico de Januária foi oficialmente tombado pelo Instituto Estadual do Patrimônio Histórico e Artístico de Minas Gerais (IEPHA-MG), reconhecendo seu valor histórico, cultural e arquitetônico.
-         </Text>
+          Em 2024, o Centro Histórico de Januária foi oficialmente tombado pelo Instituto Estadual do Patrimônio Histórico e Artístico de Minas Gerais (IEPHA-MG), reconhecendo seu valor histórico, cultural e arquitetônico.
+        </Text>
       </View>
 
-      <TouchableOpacity 
-          style={styles.button} 
-          onPress={() => navigation.navigate('Menu')}
-          activeOpacity={0.8}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('Menu')}
+        activeOpacity={0.8}
       >
         <Text style={styles.buttonText}>ENTRAR</Text>
       </TouchableOpacity>
+      <View style={{ position: 'absolute', bottom: 0, alignSelf: 'center' }}>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: 10,
+            marginBottom: 28,
+            gap: 8,
+          }}
+        >
+          <Text style={{ fontSize: 11, color: '#1C2B40', fontWeight: '500' }}>
+            Desenvolvido por:
+          </Text>
+          <Image
+            source={require('../../../assets/images/extras/logoIF_horizontalColorida.png')}
+            style={{ width: 105, height: 34 }}
+            resizeMode="contain"
+          />
+        </View>
+      </View>
     </View>
   );
 }

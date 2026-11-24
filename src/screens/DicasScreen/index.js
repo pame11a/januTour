@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, Image, ImageBackground, Modal } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, Image, ImageBackground, Modal } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
 import { dicasData } from '../../config/dicasData';
+import { FooterIF } from '../../components/FooterIF';
 
 function CardItem({ item }) {
   const [indiceFoto, setIndiceFoto] = useState(0);
@@ -34,7 +35,9 @@ function CardItem({ item }) {
           <View style={styles.imageContainer}>
             <TouchableOpacity
               onPress={fotoAnterior}
-              style={[styles.arrowButton, { opacity: imagensDisponiveis[indiceFoto].isInfografico ? 0 : (indiceFoto === 0 ? 0.3 : 1) }
+              style={[
+                styles.arrowButton,
+                { opacity: imagensDisponiveis[indiceFoto].isInfografico ? 0 : (indiceFoto === 0 ? 0.3 : 1) }
               ]}
               disabled={indiceFoto === 0}
             >
@@ -57,7 +60,9 @@ function CardItem({ item }) {
 
             <TouchableOpacity
               onPress={proximaFoto}
-              style={[styles.arrowButton, { opacity: imagensDisponiveis[indiceFoto].isInfografico ? 0 : (indiceFoto === imagensDisponiveis.length - 1 ? 0.3 : 1) }
+              style={[
+                styles.arrowButton,
+                { opacity: imagensDisponiveis[indiceFoto].isInfografico ? 0 : (indiceFoto === imagensDisponiveis.length - 1 ? 0.3 : 1) }
               ]}
               disabled={indiceFoto === imagensDisponiveis.length - 1 || imagensDisponiveis[indiceFoto].isInfografico}
             >
@@ -102,10 +107,12 @@ export default function DicasScreen({ navigation }) {
 
   const renderHeader = () => (
     <View style={[styles.header, { paddingTop: insets.top + 10, paddingHorizontal: 0, marginBottom: 15 }]}>
-      <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-        <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
-        <Text style={styles.backButtonText}>Voltar</Text>
-      </TouchableOpacity>
+      <View style={styles.headerTopRow}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+          <Ionicons name="arrow-back" size={24} color={colors.cardBackground} />
+          <Text style={styles.backButtonText}>Voltar</Text>
+        </TouchableOpacity>
+      </View>
 
       <Text style={styles.headerTitle}>Dicas e histórias</Text>
     </View>
@@ -121,14 +128,18 @@ export default function DicasScreen({ navigation }) {
         resizeMode="repeat"
         imageStyle={{ opacity: 0.5 }}
       >
-        <FlatList
-          data={dicasData}
-          keyExtractor={(item) => item.id}
-          ListHeaderComponent={renderHeader}
-          renderItem={({ item }) => <CardItem item={item} />}
+        <ScrollView
           contentContainerStyle={styles.listContent}
           showsVerticalScrollIndicator={false}
-        />
+        >
+          {renderHeader()}
+
+          {dicasData.map((item) => (
+            <CardItem key={item.id} item={item} />
+          ))}
+
+          <FooterIF />
+        </ScrollView>
       </ImageBackground>
     </SafeAreaView>
   );
