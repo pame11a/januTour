@@ -39,6 +39,10 @@ export const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
   },
+  logoIfCompleta: {
+    width: 65, 
+    height: 75,
+  },
   logoIfnmg: {
     width: 70, 
     height: 30,

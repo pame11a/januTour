@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { View, Text, ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
@@ -8,24 +8,25 @@ import Mapbox from '@rnmapbox/maps';
 // Importando os pontos de interesse e o Token do Mapbox
 import { POINTS_OF_INTEREST, MAPBOX_TOKEN } from '../../config/constants';
 import { styles } from './styles';
+import { FooterIF } from '../../components/FooterIF';
 
 export default function PreviaRotaScreen({ route, navigation }) {
   const { rotaSelecionada } = route.params || {};
   const [isResumoOpen, setIsResumoOpen] = useState(true);
-  
+
   const [fullRouteCoordinates, setFullRouteCoordinates] = useState([]);
-  
+
   // Para guardar a distância e duração reais da API
   const [distanciaCalculada, setDistanciaCalculada] = useState('Calculando...');
   const [duracaoCalculada, setDuracaoCalculada] = useState('Calculando...');
 
-  const insets = useSafeAreaInsets(); 
+  const insets = useSafeAreaInsets();
 
   const routePoints = useMemo(() => {
     if (!rotaSelecionada || !rotaSelecionada.sequence) return [];
     return rotaSelecionada.sequence
       .map(id => POINTS_OF_INTEREST.find(p => p.id === id))
-      .filter(Boolean); 
+      .filter(Boolean);
   }, [rotaSelecionada]);
 
   const statsImoveis = useMemo(() => {
@@ -36,26 +37,26 @@ export default function PreviaRotaScreen({ route, navigation }) {
         counts.naoTombado++;
       } else if (ponto.type) {
         // Padroniza para letras minúsculas para evitar erros de digitação
-        const tipo = ponto.type.toLowerCase(); 
-        
+        const tipo = ponto.type.toLowerCase();
+
         if (tipo.includes('colonial')) counts.colonial++;
         if (tipo.includes('regional')) counts.regional++;
         if (tipo.includes('eclético') || tipo.includes('ecletico')) counts.ecletico++;
         // Garante que não vai contar 'protomoderno' como 'moderno' duas vezes
         if (tipo.includes('protomoderno')) {
-            counts.protomoderno++;
+          counts.protomoderno++;
         } else if (tipo.includes('moderno')) {
-            counts.moderno++;
+          counts.moderno++;
         }
       }
     });
-    
+
     return counts;
   }, [routePoints]);
 
   const mapCameraConfig = useMemo(() => {
     if (routePoints.length === 0) return null;
-    
+
     if (routePoints.length === 1) {
       return {
         centerCoordinate: [routePoints[0].longitude, routePoints[0].latitude],
@@ -65,7 +66,7 @@ export default function PreviaRotaScreen({ route, navigation }) {
 
     const lats = routePoints.map(p => p.latitude);
     const lngs = routePoints.map(p => p.longitude);
-    
+
     return {
       bounds: {
         ne: [Math.max(...lngs), Math.max(...lats)],
@@ -87,10 +88,10 @@ export default function PreviaRotaScreen({ route, navigation }) {
       }
       try {
         const coords = routePoints.map(p => `${p.longitude},${p.latitude}`).join(';');
-        
+
         const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${coords}?geometries=geojson&overview=full&access_token=${MAPBOX_TOKEN}`;
         const response = await fetch(url);
-        
+
         if (!response.ok) return;
 
         const data = await response.json();
@@ -129,40 +130,42 @@ export default function PreviaRotaScreen({ route, navigation }) {
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
       <ExpoStatusBar style="dark" backgroundColor="transparent" translucent={true} />
-      
-      <ImageBackground 
-        source={require('../../../assets/pattern.png')} 
+
+      <ImageBackground
+        source={require('../../../assets/pattern.png')}
         style={styles.previaBg}
         resizeMode="repeat"
         imageStyle={{ opacity: 0.5 }}
       >
-        <ScrollView 
+        <ScrollView
           contentContainerStyle={[styles.scrollContent, { paddingTop: insets.top + 20 }]}
           showsVerticalScrollIndicator={false}
         >
-          
-          <TouchableOpacity 
-            style={styles.backButton} 
-            onPress={() => navigation.goBack()}
-            activeOpacity={0.7}
-          >
-            <MaterialIcons name="arrow-back" size={24} color="#1C2B40" />
-            <Text style={styles.backButtonText}>Voltar</Text>
-          </TouchableOpacity>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', marginBottom: 15 }}>
+            <TouchableOpacity
+              style={[styles.backButton, { marginBottom: 0 }]}
+              onPress={() => navigation.goBack()}
+              activeOpacity={0.7}
+            >
+              <MaterialIcons name="arrow-back" size={24} color="#1C2B40" />
+              <Text style={styles.backButtonText}>Voltar</Text>
+            </TouchableOpacity>
+          </View>
 
           <View style={styles.titleContainer}>
             <Text style={styles.title}>{rotaSelecionada?.title || 'Trajeto Núcleo Histórico'}</Text>
           </View>
 
           <View style={styles.mapContainer}>
-            <Mapbox.MapView 
-              style={styles.map} 
+            <Mapbox.MapView
+              style={styles.map}
               styleURL={Mapbox.StyleURL.Street}
-              compassEnabled={false} 
-              logoEnabled={false} 
+              compassEnabled={false}
+              logoEnabled={false}
               attributionEnabled={false}
-              scrollEnabled={false} 
-              zoomEnabled={false}   
+              scrollEnabled={false}
+              zoomEnabled={false}
               pitchEnabled={false}
             >
               {mapCameraConfig && (
@@ -174,22 +177,22 @@ export default function PreviaRotaScreen({ route, navigation }) {
               )}
 
               {fullRouteCoordinates.length > 0 && (
-                <Mapbox.ShapeSource 
-                  id="previaRouteSource" 
-                  shape={{ 
-                    type: 'Feature', 
+                <Mapbox.ShapeSource
+                  id="previaRouteSource"
+                  shape={{
+                    type: 'Feature',
                     geometry: { type: 'LineString', coordinates: fullRouteCoordinates }
                   }}
                 >
-                  <Mapbox.LineLayer 
-                    id="previaRouteLayer" 
-                    style={{ 
-                      lineColor: '#0077b6', 
-                      lineWidth: 4, 
+                  <Mapbox.LineLayer
+                    id="previaRouteLayer"
+                    style={{
+                      lineColor: '#0077b6',
+                      lineWidth: 4,
                       lineOpacity: 0.7,
                       lineJoin: 'round',
                       lineCap: 'round'
-                    }} 
+                    }}
                   />
                 </Mapbox.ShapeSource>
               )}
@@ -221,9 +224,9 @@ export default function PreviaRotaScreen({ route, navigation }) {
             </Mapbox.MapView>
           </View>
 
-          <TouchableOpacity 
-            style={styles.startButton} 
-            onPress={handleIniciarCaminhada} 
+          <TouchableOpacity
+            style={styles.startButton}
+            onPress={handleIniciarCaminhada}
             activeOpacity={0.8}
           >
             <FontAwesome5 name="location-arrow" size={18} color="#FFF" />
@@ -237,10 +240,10 @@ export default function PreviaRotaScreen({ route, navigation }) {
               onPress={() => setIsResumoOpen(!isResumoOpen)}
             >
               <Text style={styles.accordionTitle}>Resumo:</Text>
-              <MaterialIcons 
-                name={isResumoOpen ? "expand-less" : "expand-more"} 
-                size={26} 
-                color="#1C2B40" 
+              <MaterialIcons
+                name={isResumoOpen ? "expand-less" : "expand-more"}
+                size={26}
+                color="#1C2B40"
               />
             </TouchableOpacity>
 
@@ -250,12 +253,12 @@ export default function PreviaRotaScreen({ route, navigation }) {
                   <Text style={styles.summaryLabel}>Distância: </Text>
                   {distanciaCalculada}
                 </Text>
-                
+
                 <Text style={styles.summaryText}>
                   <Text style={styles.summaryLabel}>Duração estimada: </Text>
                   {duracaoCalculada}
                 </Text>
-                
+
                 <Text style={styles.summaryText}>
                   <Text style={styles.summaryLabel}>Quantidade de Imóveis: </Text>
                   {routePoints.length}
@@ -264,7 +267,7 @@ export default function PreviaRotaScreen({ route, navigation }) {
                 <Text style={[styles.summaryLabel, { marginTop: 10, marginBottom: 5 }]}>
                   Imóveis por tipo:
                 </Text>
-                
+
                 <Text style={styles.summaryText}>- Colonial: {statsImoveis.colonial}</Text>
                 <Text style={styles.summaryText}>- Regional: {statsImoveis.regional}</Text>
                 <Text style={styles.summaryText}>- Eclético: {statsImoveis.ecletico}</Text>
@@ -275,6 +278,7 @@ export default function PreviaRotaScreen({ route, navigation }) {
             )}
           </View>
 
+          <FooterIF/>
         </ScrollView>
       </ImageBackground>
     </SafeAreaView>

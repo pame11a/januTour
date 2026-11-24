@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { View, Text, Platform, TouchableOpacity, Switch, Image} from 'react-native';
+import { View, Text, Platform, TouchableOpacity, Switch, Image } from 'react-native';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import Mapbox from '@rnmapbox/maps';
@@ -27,7 +27,7 @@ Mapbox.setAccessToken(MAPBOX_TOKEN);
 
 // 3. RECEBENDO AS PROPS ROUTE E NAVIGATION
 export default function MapaScreen({ route, navigation }) {
-  
+
   // 4. CAPTURANDO A ROTA QUE O MENU ENVIOU
   const { rotaSelecionada } = route.params || {};
 
@@ -45,6 +45,9 @@ export default function MapaScreen({ route, navigation }) {
   const [activePointData, setActivePointData] = useState(null);
   const DEBUG_SHOW_POLYGONS = false;
 
+  //Estado para controlar a altura do card inferior e posicionar as logos 
+  const [bottomCardHeight, setBottomCardHeight] = useState(0);
+
   useEffect(() => {
     if (rotaSelecionada && rotaSelecionada.sequence) {
       setRotaAtiva(rotaSelecionada.sequence);
@@ -59,7 +62,7 @@ export default function MapaScreen({ route, navigation }) {
           centerCoordinate: [primeiroPonto.longitude, primeiroPonto.latitude],
           zoomLevel: INITIAL_ZOOM,
           animationMode: 'flyTo',
-          animationDuration: 2000, 
+          animationDuration: 2000,
         });
       }
     }
@@ -80,14 +83,14 @@ export default function MapaScreen({ route, navigation }) {
 
       const route = data.routes[0];
       setRouteCoordinates(route.geometry.coordinates);
-      
+
       if (route.legs && route.legs[0].steps && route.legs[0].steps.length > 0) {
         const steps = route.legs[0].steps;
 
         if (steps.length > 1) {
-          const distanciaAteManobra = Math.round(steps[0].distance); 
-          const proximaManobra = steps[1].maneuver.instruction; 
-          
+          const distanciaAteManobra = Math.round(steps[0].distance);
+          const proximaManobra = steps[1].maneuver.instruction;
+
           setInstruction(`Em ${distanciaAteManobra}m: ${proximaManobra}`);
         } else {
           setInstruction(steps[0].maneuver.instruction);
@@ -125,10 +128,10 @@ export default function MapaScreen({ route, navigation }) {
 
   const pularDestino = () => {
     if (rotaAtiva.length === 0) return;
-    Speech.stop(); 
-    setShowAlert(false); 
+    Speech.stop();
+    setShowAlert(false);
     setIndiceAtual((prev) => (prev + 1) % rotaAtiva.length);
-    setRouteCoordinates([]); 
+    setRouteCoordinates([]);
   };
 
   // Monitoramento de GPS e Proximidade usando Turf.js e Polígonos
@@ -146,22 +149,22 @@ export default function MapaScreen({ route, navigation }) {
 
           if (rotaAtiva.length > 0 && !showAlert) {
             const pointData = POINTS_OF_INTEREST.find(p => p.id === rotaAtiva[indiceAtual]);
-            
+
             // Verifica se o ponto possui o polígono desenhado
             if (pointData && pointData.polygon) {
               try {
                 const userPt = point(newCoords);
                 // O Turf espera um array contendo o anel do polígono
-                const targetPoly = polygon([pointData.polygon]); 
-                
+                const targetPoly = polygon([pointData.polygon]);
+
                 const isInside = booleanPointInPolygon(userPt, targetPoly);
 
                 // Gatilho ativado apenas se o usuário estiver DENTRO do polígono
                 if (isInside) {
-                  setActivePointData({ 
-                    title: pointData.title, 
-                    message: pointData.message, 
-                    imagens: pointData.imagens 
+                  setActivePointData({
+                    title: pointData.title,
+                    message: pointData.message,
+                    imagens: pointData.imagens
                   });
                   setShowAlert(true);
                   Speech.stop();
@@ -226,7 +229,7 @@ export default function MapaScreen({ route, navigation }) {
     } catch (error) {
       return "Erro GPS";
     }
-  }, [userLocation, currentTarget]); 
+  }, [userLocation, currentTarget]);
 
   // Ajuste de segurança para garantir que a função onOpenMenu não quebre caso mude a prop
   const handleOpenMenu = () => {
@@ -240,65 +243,91 @@ export default function MapaScreen({ route, navigation }) {
   return (
     <SafeAreaProvider>
       <ExpoStatusBar style="light" backgroundColor={colors.cardBackground} translucent={false} />
-      
+
       <SafeAreaView style={styles.container} edges={['top', 'left', 'right', 'bottom']}>
-        
+
         <Header onOpenMenu={handleOpenMenu} navigation={navigation} />
         <NavigationCard instruction={rotaAtiva.length > 0 ? instruction : null} />
 
-        <Mapbox.MapView 
-          style={styles.map} 
+        <Mapbox.MapView
+          style={styles.map}
           styleURL={Mapbox.StyleURL.Street}
-          logoPosition={{ bottom: 125, left: 10 }} 
-          attributionPosition={{ bottom: 125, right: 10 }} 
-          compassPosition={{ top: 10, right: 10 }} 
+          logoPosition={{
+            bottom: currentTarget && !showAlert ? bottomCardHeight + 62 : 12,
+            left: 10,
+          }}
+          attributionPosition={{
+            bottom: currentTarget && !showAlert ? bottomCardHeight + 62 : 12,
+            right: 10,
+          }}
+          compassPosition={{ top: 10, right: 10 }}
         >
           <Mapbox.Camera ref={cameraRef} centerCoordinate={userLocation || FALLBACK_COORDS} zoomLevel={INITIAL_ZOOM} animationMode="flyto" />
           <Mapbox.UserLocation visible={true} showsUserHeadingIndicator={true} />
           <MapMarkers activePoint={currentTarget} inactivePoints={inactivePoints} />
 
           {DEBUG_SHOW_POLYGONS && currentTarget && currentTarget.polygon && (
-             <Mapbox.ShapeSource 
-                id="activePolygonSource" 
-                shape={{ type: 'Feature', geometry: { type: 'Polygon', coordinates: [currentTarget.polygon] } }}
-             >
-                <Mapbox.FillLayer id="activePolygonFill" style={{ fillColor: colors.cardBackground, fillOpacity: 0.3 }} />
-                <Mapbox.LineLayer id="activePolygonLine" style={{ lineColor: colors.cardBackground, lineWidth: 2 }} />
-             </Mapbox.ShapeSource>
+            <Mapbox.ShapeSource
+              id="activePolygonSource"
+              shape={{ type: 'Feature', geometry: { type: 'Polygon', coordinates: [currentTarget.polygon] } }}
+            >
+              <Mapbox.FillLayer id="activePolygonFill" style={{ fillColor: colors.cardBackground, fillOpacity: 0.3 }} />
+              <Mapbox.LineLayer id="activePolygonLine" style={{ lineColor: colors.cardBackground, lineWidth: 2 }} />
+            </Mapbox.ShapeSource>
           )}
 
           {fullRouteCoordinates.length > 0 && (
-            <Mapbox.ShapeSource id="fullRouteSource" shape={{ type: 'Feature', geometry: { type: 'LineString', coordinates: fullRouteCoordinates }}}>
+            <Mapbox.ShapeSource id="fullRouteSource" shape={{ type: 'Feature', geometry: { type: 'LineString', coordinates: fullRouteCoordinates } }}>
               <Mapbox.LineLayer id="fullRouteLayer" style={{ lineColor: '#9E9E9E', lineWidth: 4, lineOpacity: 0.5 }} />
             </Mapbox.ShapeSource>
           )}
 
           {routeCoordinates.length > 0 && (
-            <Mapbox.ShapeSource id="routeSource" shape={{ type: 'Feature', geometry: { type: 'LineString', coordinates: routeCoordinates }}}>
+            <Mapbox.ShapeSource id="routeSource" shape={{ type: 'Feature', geometry: { type: 'LineString', coordinates: routeCoordinates } }}>
               <Mapbox.LineLayer id="routeLayer" style={{ lineColor: '#0077b6', lineWidth: 5, lineJoin: 'round', lineDasharray: [1, 1] }} />
             </Mapbox.ShapeSource>
           )}
         </Mapbox.MapView>
-        
+
+        <Image
+          source={require('../../../assets/images/extras/logoIF__horizontal.png')}
+          style={{
+            position: 'absolute',
+            left: 10,
+            bottom: currentTarget && !showAlert ? bottomCardHeight + 100 : 42,
+            width: 105,
+            height: 36,
+            elevation: 10,
+            zIndex: 10,
+          }}
+          resizeMode="contain"
+        />
+
         <TouchableOpacity style={styles.recenterButton} onPress={handleRecenter} activeOpacity={0.7}>
           <MaterialIcons name="my-location" size={24} color={colors.cardBackground} />
         </TouchableOpacity>
 
         {currentTarget && !showAlert && (
-          <View style={styles.destinationBadge}>
+          <View
+            style={styles.destinationBadge}
+            onLayout={(event) => {
+              const { height } = event.nativeEvent.layout;
+              setBottomCardHeight(height);
+            }}
+          >
             <View style={styles.badgeIconContainer}>
               <MaterialIcons name="place" size={24} color={colors.cardBackground} />
             </View>
-            
+
             <View style={styles.badgeTextContainer}>
-              <Text 
-                style={styles.destinationTitle} 
-                numberOfLines={2} 
+              <Text
+                style={styles.destinationTitle}
+                numberOfLines={2}
                 ellipsizeMode="tail"
               >
                 {currentTarget.title}
               </Text>
-              
+
               <View style={styles.badgeFooter}>
                 <Text style={styles.destinationDistance}>
                   Distância: <Text style={{ fontWeight: 'bold' }}>{distanceLabel}</Text>
